@@ -20,7 +20,11 @@ const HeroSection = () => {
           </p>
         </div>
 
-        <div className="animate-fade-up-delay-2">
+        <div className="animate-fade-up-delay-2 space-y-6">
+          <p className="text-base md:text-lg text-foreground font-medium max-w-xl mx-auto">
+            Entra nella waitlist oggi e ricevi 30 giorni di tecnologia AI Premium completamente gratis. 
+            I primi 20 agricoltori avranno accesso esclusivo al lancio.
+          </p>
           <WaitlistForm />
         </div>
       </div>
