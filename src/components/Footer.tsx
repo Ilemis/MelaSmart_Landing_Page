@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import iconMelasmart from "@/assets/icon-melasmart.png";
 
 const Footer = () => {
@@ -12,12 +13,12 @@ const Footer = () => {
           />
           <div className="flex flex-col items-center gap-2 text-sm text-muted-foreground">
             <p>© {new Date().getFullYear()} MelaSmart. Tutti i diritti riservati.</p>
-            <a
-              href="#privacy"
+            <Link
+              to="/privacy"
               className="hover:text-foreground transition-colors duration-200"
             >
               Privacy Policy
-            </a>
+            </Link>
           </div>
         </div>
       </div>
