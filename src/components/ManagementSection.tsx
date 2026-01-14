@@ -48,8 +48,8 @@ const ManagementSection = () => {
             </div>
             <h3 className="text-xl font-semibold mb-2">Registro e Calibrazione</h3>
             <p className="text-muted-foreground leading-relaxed">
-              Quaderno di campagna PDF scaricabile autocompilato. Grafici dei costi 
-              in base ai prodotti utilizzati.
+              Quaderno di campagna PDF scaricabile autocompilato. Gestione e calibrazione 
+              atomizzatore con calcolo teorico preciso regolabile.
             </p>
           </div>
         </div>
