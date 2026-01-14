@@ -90,11 +90,11 @@ const WaitlistForm = () => {
         className="w-full"
         disabled={isSubmitting}
       >
-        {isSubmitting ? "Invio in corso..." : "Unisciti alla Waitlist"}
+        {isSubmitting ? "Invio in corso..." : "Prenota il tuo posto gratis"}
       </Button>
 
       <p className="text-center text-sm text-muted-foreground">
-        Accedi in anteprima esclusiva.
+        ⏰ Offerta limitata ai primi 20 iscritti
       </p>
     </form>
   );
