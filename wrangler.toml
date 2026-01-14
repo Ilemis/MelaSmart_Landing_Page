@@ -1,26 +1,3 @@
-# Cloudflare Pages configuration
 name = "melasmart-landing-page"
 compatibility_date = "2026-01-14"
 pages_build_output_dir = "dist"
-
-# Build configuration
-[build]
-command = "npm install && npm run build"
-cwd = "."
-watch_dir = "src"
-
-# Output directory for Vite
-[build.upload]
-dir = "dist"
-
-# Environment variables
-[vars]
-NODE_VERSION = "20"
-
-# Production environment
-[env.production]
-name = "melasmart-production"
-
-# Preview/staging environment  
-[env.preview]
-name = "melasmart-preview"
