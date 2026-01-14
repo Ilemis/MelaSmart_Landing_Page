@@ -15,7 +15,7 @@ dir = "dist"
 
 # Environment variables
 [vars]
-NODE_VERSION = "18"
+NODE_VERSION = "20"
 
 # Production environment
 [env.production]
