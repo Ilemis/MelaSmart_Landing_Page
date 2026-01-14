@@ -13,7 +13,7 @@ const ManagementSection = () => {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           <div className="p-8 rounded-3xl bg-card border border-border hover-lift">
             <div className="w-12 h-12 rounded-2xl bg-accent flex items-center justify-center text-accent-foreground mb-4">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -37,6 +37,19 @@ const ManagementSection = () => {
             <p className="text-muted-foreground leading-relaxed">
               Analisi dei costi al centesimo. Prevedi le scorte, ottimizza gli acquisti 
               e tieni traccia di ogni prodotto.
+            </p>
+          </div>
+
+          <div className="p-8 rounded-3xl bg-card border border-border hover-lift">
+            <div className="w-12 h-12 rounded-2xl bg-accent flex items-center justify-center text-accent-foreground mb-4">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Registro e Calibrazione</h3>
+            <p className="text-muted-foreground leading-relaxed">
+              Quaderno di campagna PDF scaricabile autocompilato. Grafici dei costi 
+              in base ai prodotti utilizzati.
             </p>
           </div>
         </div>
