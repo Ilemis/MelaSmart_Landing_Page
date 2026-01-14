@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <title>MelaSmart</title>
+  <script>
+    // Single Page App redirect for GitHub Pages
+    // Converts path to query string to preserve routing
+    const segment = 1; // Number of path segments to keep (repo name)
+    const path = window.location.pathname.slice(1).split('/').slice(segment).join('/');
+    const query = window.location.search;
+    const hash = window.location.hash;
+    
+    if (path || query || hash) {
+      window.location.replace(
+        window.location.origin + 
+        window.location.pathname.split('/').slice(0, segment + 1).join('/') + 
+        '/?p=/' + path + 
+        (query ? '&q=' + encodeURIComponent(query.slice(1)) : '') +
+        hash
+      );
+    } else {
+      window.location.replace(window.location.origin + '/melasmart/');
+    }
+  </script>
+</head>
+<body>
+  <p>Reindirizzamento in corso...</p>
+</body>
+</html>
