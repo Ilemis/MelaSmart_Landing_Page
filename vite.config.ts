@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: mode === 'production' ? '/melasmart/' : '/',
+  base: mode === 'production' ? '/MelaSmart_Landing_Page/' : '/',
   server: {
     host: "::",
     port: 8080,
