@@ -2,6 +2,13 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 const WaitlistForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -75,6 +82,28 @@ const WaitlistForm = () => {
         required
         className="w-full"
       />
+
+      <Input
+        type="number"
+        name="ettari"
+        placeholder="Ettari gestiti (opzionale)"
+        className="w-full"
+        min="0"
+      />
+
+      <Select name="sfida">
+        <SelectTrigger className="w-full">
+          <SelectValue placeholder="Sfida principale (opzionale)" />
+        </SelectTrigger>
+        <SelectContent>
+          <SelectItem value="sprechi">Sprechi</SelectItem>
+          <SelectItem value="burocrazia">Burocrazia</SelectItem>
+          <SelectItem value="malattie">Malattie delle piante</SelectItem>
+          <SelectItem value="meteo">Condizioni meteo</SelectItem>
+          <SelectItem value="costi">Costi di produzione</SelectItem>
+          <SelectItem value="altro">Altro</SelectItem>
+        </SelectContent>
+      </Select>
 
       <Textarea
         name="message"
