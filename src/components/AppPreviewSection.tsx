@@ -1,5 +1,12 @@
 import screenshotAssistente from "@/assets/screenshot-assistente.jpg";
 import screenshotMagazzino from "@/assets/screenshot-magazzino.jpg";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const screenshots = [
   {
@@ -13,6 +20,25 @@ const screenshots = [
     description: "Monitora scorte, costi e ricevi suggerimenti intelligenti per gli acquisti.",
   },
 ];
+
+const ScreenshotCard = ({ screenshot }: { screenshot: typeof screenshots[0] }) => (
+  <div className="group relative h-full">
+    <div className="absolute inset-0 bg-gradient-to-br from-melasmart-green/10 to-transparent rounded-4xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+    <div className="relative glass rounded-4xl p-6 hover-lift h-full">
+      <div className="relative overflow-hidden rounded-3xl bg-secondary/30 flex justify-center">
+        <img
+          src={screenshot.image}
+          alt={screenshot.title}
+          className="w-auto max-h-[500px] object-contain"
+        />
+      </div>
+      <div className="mt-6 text-center">
+        <h3 className="text-xl font-semibold mb-2">{screenshot.title}</h3>
+        <p className="text-muted-foreground">{screenshot.description}</p>
+      </div>
+    </div>
+  </div>
+);
 
 const AppPreviewSection = () => {
   return (
@@ -30,28 +56,28 @@ const AppPreviewSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+        {/* Desktop: Grid */}
+        <div className="hidden md:grid md:grid-cols-2 gap-8 lg:gap-12">
           {screenshots.map((screenshot, index) => (
-            <div
-              key={index}
-              className="group relative"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-melasmart-green/10 to-transparent rounded-4xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="relative glass rounded-4xl p-6 hover-lift">
-                <div className="relative overflow-hidden rounded-3xl bg-secondary/30 flex justify-center">
-                  <img
-                    src={screenshot.image}
-                    alt={screenshot.title}
-                    className="w-auto max-h-[500px] object-contain"
-                  />
-                </div>
-                <div className="mt-6 text-center">
-                  <h3 className="text-xl font-semibold mb-2">{screenshot.title}</h3>
-                  <p className="text-muted-foreground">{screenshot.description}</p>
-                </div>
-              </div>
-            </div>
+            <ScreenshotCard key={index} screenshot={screenshot} />
           ))}
+        </div>
+
+        {/* Mobile: Carousel */}
+        <div className="md:hidden">
+          <Carousel className="w-full">
+            <CarouselContent>
+              {screenshots.map((screenshot, index) => (
+                <CarouselItem key={index}>
+                  <ScreenshotCard screenshot={screenshot} />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="flex justify-center gap-4 mt-6">
+              <CarouselPrevious className="relative static translate-y-0" />
+              <CarouselNext className="relative static translate-y-0" />
+            </div>
+          </Carousel>
         </div>
       </div>
     </section>
