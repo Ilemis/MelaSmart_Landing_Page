@@ -1,73 +1,46 @@
-# Welcome to your Lovable project
+# MelaSmart: Precision Farming Evolution 🍎🌱
+  **L'ecosistema intelligente per il futuro dell'agricoltura di precisione.**
+  
+  [![PWA Ready](https://img.shields.io/badge/PWA-Ready-brightgreen)](https://ilemis.github.io/MelaSmart_Landing_Page/)
+  [![AI Powered](https://img.shields.io/badge/AI-Agronomist-blue)](https://ilemis.github.io/MelaSmart_Landing_Page/)
+  [![Precision Farming](https://img.shields.io/badge/Agri--Tech-4.0-darkgreen)](https://ilemis.github.io/MelaSmart_Landing_Page/)
+</div>
 
-## Project info
+---
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## 🚀 Visione
+MelaSmart non è solo un software di gestione, ma un **copilota agronomico avanzato**. Progettato per le moderne aziende agricole (Smart Farming 4.0), l’applicativo ottimizza ogni fase del trattamento fitosanitario, riducendo l'impatto ambientale e massimizzando l'efficacia operativa attraverso il "Nano-Dosaggio" e l'Intelligenza Artificiale.
 
-## How can I edit this code?
+## ✨ Ultime Novità
 
-There are several ways of editing your application.
+*   **⚡ PWA Native Experience**: Accedi a MelaSmart direttamente dalla home del tuo smartphone, con prestazioni fluide e interfaccia ottimizzata per il campo.
+*   **🧬 Fenologia Granulare BBCH**: Algoritmi di crescita auto-adattivi. Il sistema calcola lo sviluppo della chioma (TRV) basandosi sulla fase fenologica specifica, includendo dinamiche di dormienza e riduzione fogliare.
+*   **🛡️ Delta T & Meteo Advanced**: Integrazione di parametri critici come il **Delta T** e il **Rischio Evaporazione**, essenziali per stabilire la finestra di trattamento ideale.
+*   **🧪 Wizard di Miscelazione 2.0**: Un assistente passo-passo che genera ricette operative precise per ogni singola botte (Tank Mix), eliminando sprechi e calcoli manuali.
 
-**Use Lovable**
+## 🛠️ Pilastri Tecnologici
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+### 🧠 MelaSmart AI (Context-Aware)
+Un assistente virtuale basato su LLM di ultima generazione che analizza in tempo reale i dati del tuo appezzamento, il meteo locale e le varietà colturali per fornire consulenze proattive e specifiche.
 
-Changes made via Lovable will be committed automatically to this repo.
+### 📐 Motore di Calcolo TRV (Tree Row Volume)
+Ottimizzazione idrica basata sulla volumetria reale della parete fogliare. Tratta solo ciò che serve, risparmiando acqua e principi attivi fino al 30%.
 
-**Use your preferred IDE**
+### 🗺️ GIS Lite & Multi-Field Management
+Mappatura interattiva degli appezzamenti con gestione simultanea della fenologia e calcolo automatico della superficie cumulativa.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### 📊 Magazzino Predittivo & Costing
+Gestione dinamica delle scorte con proiezione dei consumi futuri basata sullo storico operativo e analisi dei costi al centesimo.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### 📋 Registro e Calibrazione
+Quaderno di campagna PDF scaricabile autocompilato. Gestione e calibrazione atomizzatore con calcolo teorico preciso regolabile.
 
-Follow these steps:
+-----------------------------------------------------
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### 📅 Roadmap 2026
+Stiamo selezionando le prime aziende agricole per i beta-test in campo della stagione 2026.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+[![Iscriviti alla Waitlist](https://img.shields.io/badge/CLICCA_QUI-Iscriviti_alla_Waitlist-brightgreen?style=for-the-badge&logo=googlechrome&logoColor=white)](https://ilemis.github.io/MelaSmart_Landing_Page/)
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+---
+© 2026 MelaSmart - Innovazione in campo.
