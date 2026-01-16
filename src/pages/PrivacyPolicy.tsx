@@ -97,7 +97,7 @@ const PrivacyPolicy = () => {
               <div className="mt-4 p-4 rounded-xl bg-muted/50 border border-border">
                 <p className="font-semibold text-foreground">MelaSmart</p>
                 <p className="text-muted-foreground">Startup innovativa nel settore AgriTech</p>
-                <p className="text-muted-foreground">Email: privacy@melasmart.it</p>
+                <p className="text-muted-foreground">Email: melasmart@proton.me</p>
               </div>
             </div>
           </section>
@@ -330,8 +330,8 @@ const PrivacyPolicy = () => {
               </div>
               <p>
                 Per esercitare i tuoi diritti, contattaci all'indirizzo{" "}
-                <a href="mailto:privacy@melasmart.it" className="text-primary hover:underline">
-                  privacy@melasmart.it
+                <a href="mailto:melasmart@proton.me" className="text-primary hover:underline">
+                  melasmart@proton.me
                 </a>
               </p>
             </div>
@@ -440,10 +440,10 @@ const PrivacyPolicy = () => {
                   <div>
                     <p className="font-semibold text-foreground">Email</p>
                     <a 
-                      href="mailto:privacy@melasmart.it" 
+                      href="mailto:melasmart@proton.me" 
                       className="text-primary hover:underline"
                     >
-                      privacy@melasmart.it
+                      melasmart@proton.me
                     </a>
                   </div>
                 </div>
