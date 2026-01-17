@@ -1,4 +1,4 @@
-import { Bot, FileSearch, Beaker, MessageSquare, User, Sparkles, AlertTriangle, CheckCircle2, ThermometerSnowflake, Droplets } from "lucide-react";
+import { Bot, FileSearch, Beaker, MessageSquare, User, Sparkles, AlertTriangle, CheckCircle2, ThermometerSnowflake, Droplets, Leaf } from "lucide-react";
 
 const AgronomoAISection = () => {
   const features = [
@@ -58,119 +58,134 @@ const AgronomoAISection = () => {
           ))}
         </div>
 
-        {/* Chat Example */}
+        {/* AI Response Example */}
         <div className="animate-fade-up-delay-2">
           <div className="text-center mb-8">
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent text-accent-foreground text-sm font-medium">
               <Sparkles className="w-4 h-4" />
-              Esempio di conversazione reale
+              Esempio di risposta reale
             </span>
           </div>
           
           <div className="bg-card rounded-3xl border border-border overflow-hidden shadow-xl max-w-4xl mx-auto">
-            {/* Chat Header */}
-            <div className="bg-gradient-to-r from-primary/10 to-primary/5 px-6 py-4 border-b border-border flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
-                <Bot className="w-5 h-5 text-primary" />
-              </div>
-              <div>
-                <h4 className="font-semibold text-sm">Agronomo AI</h4>
-                <p className="text-xs text-muted-foreground">Esperto in melicoltura</p>
-              </div>
-              <div className="ml-auto flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                <span className="text-xs text-muted-foreground">Online</span>
+            {/* Question Header */}
+            <div className="bg-gradient-to-r from-primary/10 to-primary/5 px-6 py-5 border-b border-border">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                  <User className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <p className="text-xs text-muted-foreground mb-1">La tua domanda</p>
+                  <p className="font-medium text-foreground">
+                    "Ciao, domani alle 14 posso trattare con i prodotti selezionati?"
+                  </p>
+                </div>
               </div>
             </div>
 
-            {/* Chat Messages */}
-            <div className="p-6 space-y-6 max-h-[600px] overflow-y-auto">
-              {/* User Message */}
-              <div className="flex gap-3 justify-end">
-                <div className="bg-primary text-primary-foreground rounded-2xl rounded-tr-sm px-5 py-3 max-w-md">
-                  <p className="text-sm">Ciao, domani alle 14 posso trattare con i prodotti selezionati?</p>
+            {/* AI Response */}
+            <div className="p-6 space-y-5">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+                  <Bot className="w-5 h-5 text-primary" />
                 </div>
-                <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center flex-shrink-0">
-                  <User className="w-4 h-4 text-muted-foreground" />
+                <div>
+                  <p className="font-semibold text-sm">Agronomo AI</p>
+                  <p className="text-xs text-muted-foreground">Risposta personalizzata</p>
                 </div>
               </div>
 
-              {/* AI Response */}
-              <div className="flex gap-3">
-                <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                  <Bot className="w-4 h-4 text-primary" />
+              <p className="text-sm">Ciao! Analizziamo la situazione per domani.</p>
+              
+              {/* Alert Box */}
+              <div className="bg-destructive/10 border border-destructive/30 rounded-xl p-4 flex items-start gap-3">
+                <AlertTriangle className="w-5 h-5 text-destructive flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-semibold text-sm text-destructive">Risposta Rapida: NO, ti sconsiglio vivamente di trattare domani alle 14:00.</p>
                 </div>
-                <div className="bg-muted rounded-2xl rounded-tl-sm px-5 py-4 max-w-2xl space-y-4">
-                  <p className="text-sm">Ciao! Analizziamo la situazione per domani.</p>
-                  
-                  {/* Alert Box */}
-                  <div className="bg-destructive/10 border border-destructive/30 rounded-xl p-4 flex items-start gap-3">
-                    <AlertTriangle className="w-5 h-5 text-destructive flex-shrink-0 mt-0.5" />
-                    <div>
-                      <p className="font-semibold text-sm text-destructive">Risposta Rapida: NO</p>
-                      <p className="text-sm text-muted-foreground mt-1">Ti sconsiglio vivamente di trattare domani alle 14:00.</p>
-                    </div>
+              </div>
+
+              <p className="font-semibold text-sm">Motivazioni e Consigli Pratici:</p>
+
+              {/* Reason Cards */}
+              <div className="space-y-4">
+                <div className="bg-background/50 rounded-xl p-4 border border-border">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Droplets className="w-4 h-4 text-blue-500" />
+                    <span className="font-semibold text-sm text-destructive">1. Rischio Bagnatura/Nebbia (CRITICO!)</span>
                   </div>
-
-                  <p className="font-semibold text-sm">Motivazioni e Consigli Pratici:</p>
-
-                  {/* Reason Cards */}
-                  <div className="space-y-3">
-                    <div className="bg-background/50 rounded-xl p-3 border border-border">
-                      <div className="flex items-center gap-2 mb-2">
-                        <Droplets className="w-4 h-4 text-blue-500" />
-                        <span className="font-medium text-sm text-destructive">Rischio Bagnatura/Nebbia (CRITICO!)</span>
-                      </div>
-                      <p className="text-xs text-muted-foreground leading-relaxed">
-                        I prodotti come Dodina e Dithianon necessitano di asciugare correttamente. Con nebbia, non asciugherebbero, riducendo drasticamente l'efficacia.
-                      </p>
-                    </div>
-
-                    <div className="bg-background/50 rounded-xl p-3 border border-border">
-                      <div className="flex items-center gap-2 mb-2">
-                        <ThermometerSnowflake className="w-4 h-4 text-cyan-500" />
-                        <span className="font-medium text-sm text-amber-600">Temperature Troppo Basse</span>
-                      </div>
-                      <p className="text-xs text-muted-foreground leading-relaxed">
-                        Le temperature massime previste di 5.7°C sono molto basse. Attendi temperature diurne più miti per ottimizzare l'azione dei fungicidi.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Recommendation */}
-                  <div className="bg-primary/10 border border-primary/30 rounded-xl p-4">
-                    <div className="flex items-center gap-2 mb-2">
-                      <CheckCircle2 className="w-5 h-5 text-primary" />
-                      <span className="font-semibold text-sm">Cosa farei al tuo posto:</span>
-                    </div>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      <strong>Rinvia il trattamento.</strong> Cerca una giornata con assenza di nebbia, temperature sopra 8-10°C e bassa umidità. Considerando la fase di riposo, hai tempo per riprogrammare.
-                    </p>
-                  </div>
-
-                  {/* Quantities */}
-                  <div className="bg-background/50 rounded-xl p-4 border border-border">
-                    <p className="font-semibold text-sm mb-3">📊 Quantità per la tua area (0.29 ha):</p>
-                    <div className="grid grid-cols-3 gap-3 text-center">
-                      <div className="bg-muted rounded-lg p-2">
-                        <p className="text-xs text-muted-foreground">Dodina Syllit 65</p>
-                        <p className="font-bold text-sm">0.398 kg</p>
-                      </div>
-                      <div className="bg-muted rounded-lg p-2">
-                        <p className="text-xs text-muted-foreground">Delan® 70 WG</p>
-                        <p className="font-bold text-sm">0.216 kg</p>
-                      </div>
-                      <div className="bg-muted rounded-lg p-2">
-                        <p className="text-xs text-muted-foreground">Acqua</p>
-                        <p className="font-bold text-sm">102.2 L</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <p className="text-sm text-muted-foreground italic">
-                    In sintesi, la miscela è compatibile ma le condizioni meteo sono sfavorevoli. <strong>Meglio aspettare!</strong> 🍎
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Questo è il problema principale. I prodotti come Dodina e Dithianon (Delan) necessitano di asciugare correttamente sulla vegetazione per formare un film protettivo efficace e aderire bene. Con il rischio di nebbia e bagnatura, i prodotti non asciugherebbero o asciugherebbero molto lentamente, riducendo drasticamente la loro efficacia, favorendo il dilavamento e potenzialmente creando problemi di fitotossicità (anche se in riposo invernale il rischio è minore, l'efficacia è comunque compromessa). Trattare su vegetazione già bagnata o con nebbia in arrivo è controproducente.
                   </p>
                 </div>
+
+                <div className="bg-background/50 rounded-xl p-4 border border-border">
+                  <div className="flex items-center gap-2 mb-2">
+                    <ThermometerSnowflake className="w-4 h-4 text-cyan-500" />
+                    <span className="font-semibold text-sm text-amber-600">2. Temperature Troppo Basse</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Le temperature massime previste di 5.7°C sono molto basse. Sebbene Dodina sia efficace anche a temperature fresche, e Delan abbia una buona attività in un range ampio, l'assorbimento e l'attività sistemica (limitata per questi prodotti, ma comunque un aspetto) sarebbero molto rallentati. È preferibile attendere temperature diurne un po' più miti per ottimizzare l'azione dei fungicidi.
+                  </p>
+                </div>
+
+                <div className="bg-background/50 rounded-xl p-4 border border-border">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Leaf className="w-4 h-4 text-green-500" />
+                    <span className="font-semibold text-sm text-primary">3. Fase Fenologica (BBCH 0)</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Siamo in pieno riposo invernale. L'obiettivo di questo trattamento è probabilmente la riduzione dell'inoculo svernante della ticchiolatura. In questa fase, l'efficacia del trattamento è meno urgente rispetto a fasi successive di riapertura delle gemme. Questo ti dà il tempo di aspettare condizioni migliori.
+                  </p>
+                </div>
+              </div>
+
+              {/* Recommendation */}
+              <div className="bg-primary/10 border border-primary/30 rounded-xl p-5">
+                <div className="flex items-center gap-2 mb-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary" />
+                  <span className="font-semibold text-sm">Cosa farei al tuo posto:</span>
+                </div>
+                <div className="space-y-3 text-sm text-muted-foreground leading-relaxed">
+                  <p>
+                    <strong>Rinvia il trattamento.</strong> È fondamentale aspettare una giornata con assenza di nebbia, rischio bagnatura nullo e, possibilmente, temperature diurne in lieve aumento, che permettano una rapida asciugatura del prodotto sulla pianta.
+                  </p>
+                  <p>
+                    <strong>Monitora il meteo per i prossimi giorni</strong> e cerca una finestra di bel tempo stabile. Idealmente, cerca una giornata con bassa umidità, temperature che salgano sopra i 8-10°C per alcune ore e assenza di vento eccessivo (il 7.4 km/h previsto per domani sarebbe accettabile, ma non compensa gli altri fattori negativi).
+                  </p>
+                  <p>
+                    <strong>Considerando la fase di riposo, hai tempo per riprogrammare</strong> senza compromettere l'efficacia della strategia fitosanitaria generale.
+                  </p>
+                </div>
+              </div>
+
+              {/* Quantities */}
+              <div className="bg-background/50 rounded-xl p-5 border border-border">
+                <p className="font-semibold text-sm mb-4">📊 Quantità per la tua area (per quando potrai trattare):</p>
+                <div className="grid grid-cols-3 gap-4 text-center">
+                  <div className="bg-muted rounded-lg p-3">
+                    <p className="text-xs text-muted-foreground mb-1">Dodina Syllit 65</p>
+                    <p className="text-xs text-muted-foreground">1.38 kg/ha × 0.2886 ha</p>
+                    <p className="font-bold text-base mt-1">0.398 kg</p>
+                  </div>
+                  <div className="bg-muted rounded-lg p-3">
+                    <p className="text-xs text-muted-foreground mb-1">Delan® 70 WG</p>
+                    <p className="text-xs text-muted-foreground">0.75 kg/ha × 0.2886 ha</p>
+                    <p className="font-bold text-base mt-1">0.216 kg</p>
+                  </div>
+                  <div className="bg-muted rounded-lg p-3">
+                    <p className="text-xs text-muted-foreground mb-1">Acqua</p>
+                    <p className="text-xs text-muted-foreground">354 L/ha × 0.2886 ha</p>
+                    <p className="font-bold text-base mt-1">102.2 L</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Summary */}
+              <div className="bg-muted/50 rounded-xl p-4 border-l-4 border-primary">
+                <p className="text-sm leading-relaxed">
+                  <strong>In sintesi,</strong> la miscela Dodina + Delan è tecnicamente compatibile e il loro utilizzo in fase di riposo ha senso per la strategia anti-ticchiolatura, ma le condizioni meteo di domani sono assolutamente sfavorevoli. <strong>Meglio aspettare!</strong> 🍎
+                </p>
               </div>
             </div>
           </div>
