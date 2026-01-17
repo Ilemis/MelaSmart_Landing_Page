@@ -1,5 +1,7 @@
 import screenshotAssistente from "@/assets/screenshot-assistente.jpg";
 import screenshotMagazzino from "@/assets/screenshot-magazzino.jpg";
+import screenshotVolume from "@/assets/screenshot-volume.jpg";
+import screenshotMiscela from "@/assets/screenshot-miscela.jpg";
 import {
   Carousel,
   CarouselContent,
@@ -18,6 +20,16 @@ const screenshots = [
     image: screenshotMagazzino,
     title: "Magazzino Predittivo",
     description: "Monitora scorte, costi e ricevi suggerimenti intelligenti per gli acquisti.",
+  },
+  {
+    image: screenshotVolume,
+    title: "Volume Acqua",
+    description: "Calcola automaticamente il volume d'acqua ottimale per ogni trattamento.",
+  },
+  {
+    image: screenshotMiscela,
+    title: "Creazione Miscela",
+    description: "Componi miscele con prodotti, dosi ed etichette sempre a portata di mano.",
   },
 ];
 
