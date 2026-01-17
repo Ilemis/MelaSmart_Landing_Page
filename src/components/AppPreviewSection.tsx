@@ -11,8 +11,8 @@ import {
 const screenshots = [
   {
     image: screenshotAssistente,
-    title: "Assistente Agronomo",
-    description: "IA che ti guida nella creazione di miscele e trattamenti ottimali.",
+    title: "Home Dashboard",
+    description: "Panoramica giornaliera con finestre di trattamento e condizioni meteo ottimali.",
   },
   {
     image: screenshotMagazzino,
