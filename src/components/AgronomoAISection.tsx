@@ -31,9 +31,9 @@ const AgronomoAISection = () => {
             Intelligenza Artificiale
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Agronomo AI:
+            MelaSmart AI™ Copilot:
             <br />
-            <span className="text-gradient-green">il tuo copilota in campo.</span>
+            <span className="text-gradient-green">il tuo agronomo virtuale.</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Tre strumenti AI che lavorano insieme per velocizzare il tuo lavoro quotidiano 
