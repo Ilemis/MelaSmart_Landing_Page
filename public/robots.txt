@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ilemis.github.io/MelaSmart_Landing_Page/sitemap.xml
+Sitemap: https://melasmart.com/sitemap.xml
