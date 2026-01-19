@@ -1,9 +1,9 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
+import PWASection from "@/components/PWASection";
 import FarmerOriginSection from "@/components/FarmerOriginSection";
 import ValueSection from "@/components/ValueSection";
 import AgronomoAISection from "@/components/AgronomoAISection";
-import VisionSection from "@/components/VisionSection";
 import AppPreviewSection from "@/components/AppPreviewSection";
 import MeteoSection from "@/components/MeteoSection";
 import ManagementSection from "@/components/ManagementSection";
@@ -15,10 +15,10 @@ const Index = () => {
       <Header />
       <main>
         <HeroSection />
+        <PWASection />
         <FarmerOriginSection />
         <ValueSection />
         <AgronomoAISection />
-        <VisionSection />
         <AppPreviewSection />
         <MeteoSection />
         <ManagementSection />
