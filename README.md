@@ -1,9 +1,9 @@
 # MelaSmart: Precision Farming Evolution 🍎🌱
   **L'ecosistema intelligente per il futuro dell'agricoltura di precisione.**
   
-  [![PWA Ready](https://img.shields.io/badge/PWA-Ready-brightgreen)](https://ilemis.github.io/MelaSmart_Landing_Page/)
-  [![AI Powered](https://img.shields.io/badge/AI-Agronomist-blue)](https://ilemis.github.io/MelaSmart_Landing_Page/)
-  [![Precision Farming](https://img.shields.io/badge/Agri--Tech-4.0-darkgreen)](https://ilemis.github.io/MelaSmart_Landing_Page/)
+  [![PWA Ready](https://img.shields.io/badge/PWA-Ready-brightgreen)](https://MelaSmart.com)
+  [![AI Powered](https://img.shields.io/badge/AI-Agronomist-blue)](https://melasmart.com)
+  [![Precision Farming](https://img.shields.io/badge/Agri--Tech-4.0-darkgreen)](https://melasmart.com)
 </div>
 
 ---
@@ -40,7 +40,7 @@ Quaderno di campagna PDF scaricabile autocompilato. Gestione e calibrazione atom
 ### 📅 Roadmap 2026
 Stiamo selezionando le prime aziende agricole per i beta-test in campo della stagione 2026.
 
-[![Iscriviti alla Waitlist](https://img.shields.io/badge/CLICCA_QUI-Iscriviti_alla_Waitlist-brightgreen?style=for-the-badge&logo=googlechrome&logoColor=white)](https://ilemis.github.io/MelaSmart_Landing_Page/)
+[![Iscriviti alla Waitlist](https://img.shields.io/badge/CLICCA_QUI-Iscriviti_alla_Waitlist-brightgreen?style=for-the-badge&logo=googlechrome&logoColor=white)](https://MelaSmart.com)
 
 ---
 © 2026 MelaSmart - Innovazione in campo.
