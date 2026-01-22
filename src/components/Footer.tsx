@@ -35,7 +35,6 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col items-center gap-2 text-sm text-muted-foreground">
-            <p>Creato da Emiliano Criscuoli</p>
             <p>© {new Date().getFullYear()} MelaSmart. Tutti i diritti riservati.</p>
             <Link
               to="/privacy"
