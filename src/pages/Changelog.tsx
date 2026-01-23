@@ -37,9 +37,9 @@ interface ChangelogEntry {
 const changelogData: ChangelogEntry[] = [
   {
     version: "v0.1.0",
-    date: "Coming Soon",
+    date: "08/01/2026",
     changes: [
-      { type: "nuovo", description: "Lancio ufficiale di MelaSmart PWA" },
+      { type: "migliorato", description: "autoscroll in cima ad ogni cambio di tab" },
       { type: "nuovo", description: "Gestione magazzino con tracciabilità completa" },
       { type: "nuovo", description: "Calcolatore miscele intelligente" },
       { type: "nuovo", description: "Assistente AI Agronomo integrato" },
