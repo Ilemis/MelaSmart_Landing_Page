@@ -1,7 +1,9 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import { Link } from "react-router-dom";
+import { ArrowLeft, FileText } from "lucide-react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import iconMelasmart from "@/assets/icon-melasmart.png";
+import Footer from "@/components/Footer";
 
 // ============================================
 // 📝 CHANGELOG DATA - MODIFICA QUI PER AGGIUNGERE NUOVE VOCI
@@ -48,7 +50,7 @@ const changelogData: ChangelogEntry[] = [
   // Esempio di nuova versione:
   // {
   //   version: "v0.2.0",
-  //   date: "15 Febbraio 2025",
+  //   date: "08/02/2026",
   //   changes: [
   //     { type: "nuovo", description: "Nuova funzione X" },
   //     { type: "fix", description: "Risolto bug Y" },
@@ -79,57 +81,79 @@ const badgeConfig = {
 const Changelog = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Header />
+      {/* Header */}
+      <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex items-center justify-between">
+            <Link to="/" className="flex items-center gap-3 group">
+              <img
+                src={iconMelasmart}
+                alt="MelaSmart"
+                className="h-10 w-10 rounded-xl"
+              />
+              <span className="font-semibold text-lg text-foreground">MelaSmart</span>
+            </Link>
+            <Link
+              to="/"
+              className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <ArrowLeft className="h-4 w-4" />
+              <span>Torna alla Home</span>
+            </Link>
+          </div>
+        </div>
+      </header>
       
-      <main className="container mx-auto px-4 py-16 md:py-24">
-        <div className="max-w-3xl mx-auto">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Changelog App
-            </h1>
-            <p className="text-muted-foreground text-lg">
-              Tutte le novità e gli aggiornamenti dell'app MelaSmart.
-            </p>
+      <main className="container mx-auto px-4 py-12 max-w-3xl">
+        {/* Hero Section */}
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 mb-6">
+            <FileText className="h-8 w-8 text-primary" />
           </div>
+          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+            Changelog App
+          </h1>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Tutte le novità e gli aggiornamenti dell'app MelaSmart.
+          </p>
+        </div>
 
-          {/* Timeline */}
-          <div className="space-y-6">
-            {changelogData.map((entry, index) => (
-              <Card key={index} className="bg-card/50 border-border/50 backdrop-blur-sm">
-                <CardHeader className="pb-2">
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                    <h2 className="text-xl font-semibold text-foreground">
-                      {entry.version}
-                    </h2>
-                    <span className="text-sm text-muted-foreground">
-                      {entry.date}
-                    </span>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3">
-                    {entry.changes.map((change, changeIndex) => {
-                      const config = badgeConfig[change.type];
-                      return (
-                        <li key={changeIndex} className="flex items-start gap-3">
-                          <Badge 
-                            variant="outline" 
-                            className={`${config.className} shrink-0 text-xs`}
-                          >
-                            {config.emoji} {config.label}
-                          </Badge>
-                          <span className="text-muted-foreground">
-                            {change.description}
-                          </span>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+        {/* Timeline */}
+        <div className="space-y-6">
+          {changelogData.map((entry, index) => (
+            <Card key={index} className="bg-card/50 border-border/50 backdrop-blur-sm">
+              <CardHeader className="pb-2">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                  <h2 className="text-xl font-semibold text-foreground">
+                    {entry.version}
+                  </h2>
+                  <span className="text-sm text-muted-foreground">
+                    {entry.date}
+                  </span>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-3">
+                  {entry.changes.map((change, changeIndex) => {
+                    const config = badgeConfig[change.type];
+                    return (
+                      <li key={changeIndex} className="flex items-start gap-3">
+                        <Badge 
+                          variant="outline" 
+                          className={`${config.className} shrink-0 text-xs`}
+                        >
+                          {config.emoji} {config.label}
+                        </Badge>
+                        <span className="text-muted-foreground">
+                          {change.description}
+                        </span>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </main>
 
