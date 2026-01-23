@@ -49,6 +49,12 @@ const Footer = () => {
                 FAQ
               </Link>
               <Link
+                to="/changelog"
+                className="hover:text-foreground transition-colors duration-200"
+              >
+                Changelog
+              </Link>
+              <Link
                 to="/privacy"
                 className="hover:text-foreground transition-colors duration-200"
               >
