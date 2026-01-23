@@ -22,7 +22,7 @@ const faqData = [
     id: "faq-1",
     question: "Cos'è MelaSmart?",
     answer:
-      "MelaSmart è un'app di precisione agricola progettata specificamente per la melicoltura. Utilizza intelligenza artificiale per ottimizzare la gestione del tuo meleto.",
+      "MelaSmart è un'app di precisione agricola progettata specificamente per la melicoltura (in futuro saranno integrate altre cultivar). Utilizza intelligenza artificiale per ottimizzare la gestione del tuo meleto.",
   },
   {
     id: "faq-2",
@@ -34,7 +34,7 @@ const faqData = [
     id: "faq-3",
     question: "L'app sarà gratuita?",
     answer:
-      "Offriremo un piano gratuito con funzionalità base. Per funzionalità avanzate e supporto professionale, saranno disponibili piani a pagamento.",
+      "Offriremo un piano gratuito con funzionalità base. Per funzionalità avanzate e supporto professionale, saranno disponibili piani a pagamento molto accessibili.",
   },
   {
     id: "faq-4",
