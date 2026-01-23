@@ -36,6 +36,14 @@ interface ChangelogEntry {
 // Queste sono le novità dell'APP MelaSmart, non della landing page
 const changelogData: ChangelogEntry[] = [
   {
+    version: "v0.1.2",
+    date: "22/01/2026",
+    changes: [
+      { type: "nuovo", description: "Aggiunto carosello per oggi e domani nel grafico finestra trattamenti" },
+      { type: "fix", description: "Icona cestino nelle card prodotto correttamente posizionata" },
+    ],
+  },
+  {
     version: "v0.1.0",
     date: "08/01/2026",
     changes: [
