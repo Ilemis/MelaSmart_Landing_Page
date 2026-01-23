@@ -31,28 +31,30 @@ interface ChangelogEntry {
 }
 
 // 👇 AGGIUNGI NUOVE VOCI QUI (le più recenti in alto)
+// Queste sono le novità dell'APP MelaSmart, non della landing page
 const changelogData: ChangelogEntry[] = [
   {
-    version: "v0.2.0",
-    date: "23 Gennaio 2025",
-    changes: [
-      { type: "nuovo", description: "Aggiunta pagina Changelog per tracciare gli aggiornamenti" },
-      { type: "nuovo", description: "Aggiunta pagina FAQ con struttura accordion" },
-      { type: "nuovo", description: "Aggiunta pagina Contatti con form e link social" },
-      { type: "migliorato", description: "Migliorata navigazione nel footer" },
-    ],
-  },
-  {
     version: "v0.1.0",
-    date: "20 Gennaio 2025",
+    date: "Coming Soon",
     changes: [
-      { type: "nuovo", description: "Lancio della landing page MelaSmart" },
-      { type: "nuovo", description: "Sezione Hero con waitlist" },
-      { type: "nuovo", description: "Sezioni informative: Meteo, Gestione, AI Agronomo" },
-      { type: "nuovo", description: "Privacy Policy e pagina Welcome" },
+      { type: "nuovo", description: "Lancio ufficiale di MelaSmart PWA" },
+      { type: "nuovo", description: "Gestione magazzino con tracciabilità completa" },
+      { type: "nuovo", description: "Calcolatore miscele intelligente" },
+      { type: "nuovo", description: "Assistente AI Agronomo integrato" },
+      { type: "nuovo", description: "Dashboard meteo in tempo reale" },
     ],
   },
-  // 👆 AGGIUNGI ALTRE VOCI SOPRA QUESTA LINEA
+  // 👆 AGGIUNGI ALTRE VERSIONI SOPRA QUESTA LINEA
+  // Esempio di nuova versione:
+  // {
+  //   version: "v0.2.0",
+  //   date: "15 Febbraio 2025",
+  //   changes: [
+  //     { type: "nuovo", description: "Nuova funzione X" },
+  //     { type: "fix", description: "Risolto bug Y" },
+  //     { type: "migliorato", description: "Ottimizzata velocità Z" },
+  //   ],
+  // },
 ];
 
 // Configurazione badge per tipo di cambiamento
@@ -84,10 +86,10 @@ const Changelog = () => {
           {/* Header */}
           <div className="text-center mb-12">
             <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Changelog
+              Changelog App
             </h1>
             <p className="text-muted-foreground text-lg">
-              Il diario del progetto. Segui l'evoluzione di MelaSmart.
+              Tutte le novità e gli aggiornamenti dell'app MelaSmart.
             </p>
           </div>
 
