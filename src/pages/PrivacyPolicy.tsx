@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, Shield, Mail, Calendar, FileText } from "lucide-react";
+import { ArrowLeft, Shield, Calendar, FileText } from "lucide-react";
 import iconMelasmart from "@/assets/icon-melasmart.png";
 
 const PrivacyPolicy = () => {
@@ -67,7 +67,6 @@ const PrivacyPolicy = () => {
               { id: "cookie", label: "Cookie Policy" },
               { id: "sicurezza", label: "Sicurezza" },
               { id: "modifiche", label: "Modifiche alla Policy" },
-              { id: "contatti", label: "Contatti" },
             ].map((item) => (
               <li key={item.id}>
                 <a
@@ -421,38 +420,6 @@ const PrivacyPolicy = () => {
             </div>
           </section>
 
-          {/* Section 11 */}
-          <section id="contatti" className="scroll-mt-24">
-            <h2 className="text-2xl font-bold text-foreground mb-4 flex items-center gap-3">
-              <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 text-primary text-sm font-bold">11</span>
-              Contatti
-            </h2>
-            <div className="space-y-4 text-muted-foreground leading-relaxed">
-              <p>
-                Per qualsiasi domanda relativa a questa Privacy Policy o al trattamento dei tuoi dati 
-                personali, puoi contattarci:
-              </p>
-              <div className="p-6 rounded-2xl border border-border bg-card">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                    <Mail className="h-6 w-6 text-primary" />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-foreground">Email</p>
-                    <a 
-                      href="mailto:melasmart@proton.me" 
-                      className="text-primary hover:underline"
-                    >
-                      melasmart@proton.me
-                    </a>
-                  </div>
-                </div>
-                <p className="text-sm">
-                  Risponderemo alla tua richiesta entro 30 giorni, come previsto dalla normativa vigente.
-                </p>
-              </div>
-            </div>
-          </section>
         </div>
 
         {/* Footer CTA */}
@@ -464,11 +431,10 @@ const PrivacyPolicy = () => {
             Siamo qui per aiutarti. Non esitare a contattarci.
           </p>
           <Link
-            to="/"
+            to="/contatti"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors"
           >
-            <ArrowLeft className="h-4 w-4" />
-            Torna alla Home
+            Vai ai Contatti
           </Link>
         </div>
       </main>

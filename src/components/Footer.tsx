@@ -34,14 +34,28 @@ const Footer = () => {
             </a>
           </div>
 
-          <div className="flex flex-col items-center gap-2 text-sm text-muted-foreground">
+          <div className="flex flex-col items-center gap-3 text-sm text-muted-foreground">
+            <div className="flex items-center gap-4">
+              <Link
+                to="/contatti"
+                className="hover:text-foreground transition-colors duration-200"
+              >
+                Contatti
+              </Link>
+              <Link
+                to="/faq"
+                className="hover:text-foreground transition-colors duration-200"
+              >
+                FAQ
+              </Link>
+              <Link
+                to="/privacy"
+                className="hover:text-foreground transition-colors duration-200"
+              >
+                Privacy Policy
+              </Link>
+            </div>
             <p>© {new Date().getFullYear()} MelaSmart. Tutti i diritti riservati.</p>
-            <Link
-              to="/privacy"
-              className="hover:text-foreground transition-colors duration-200"
-            >
-              Privacy Policy
-            </Link>
           </div>
         </div>
       </div>
