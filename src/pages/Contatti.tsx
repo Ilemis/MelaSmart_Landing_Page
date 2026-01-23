@@ -24,7 +24,7 @@ const Contatti = () => {
 
     try {
       // Per ora simuliamo l'invio - potrai integrare un servizio come Formspree
-      const response = await fetch("https://formspree.io/f/YOUR_FORM_ID", {
+      const response = await fetch("https://formspree.io/f/xojewvgo", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -126,7 +126,7 @@ const Contatti = () => {
                   id="email"
                   name="email"
                   type="email"
-                  placeholder="la.tua@email.com"
+                  placeholder="example@email.com"
                   value={formData.email}
                   onChange={handleChange}
                   required
