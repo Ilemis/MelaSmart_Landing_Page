@@ -36,6 +36,15 @@ interface ChangelogEntry {
 // Queste sono le novità dell'APP MelaSmart, non della landing page
 const changelogData: ChangelogEntry[] = [
   {
+    version: "v0.1.3",
+    date: "25/01/2026",
+    changes: [
+      { type: "migliorato", description: "Magazzino: aggiunta dinamica di un prodotto, ora viene ricalcolata la quantità e il prezzo rispetto a quello già presente" },
+      { type: "fix", description: "Risolta la modalita campo che nn permetteva di scrollare una lunga lista prodotti" },
+      { type: "nuovo", description: "Aggiunta la gestione della obsolescenza dei dati nel database" },
+    ],
+  },
+  {
     version: "v0.1.2",
     date: "22/01/2026",
     changes: [
