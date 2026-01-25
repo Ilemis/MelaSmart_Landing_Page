@@ -6,7 +6,7 @@ import ValueSection from "@/components/ValueSection";
 import AgronomoAISection from "@/components/AgronomoAISection";
 import AppPreviewSection from "@/components/AppPreviewSection";
 import MeteoSection from "@/components/MeteoSection";
-import ManagementSection from "@/components/ManagementSection";
+
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -21,7 +21,7 @@ const Index = () => {
         <AgronomoAISection />
         <AppPreviewSection />
         <MeteoSection />
-        <ManagementSection />
+        
       </main>
       <Footer />
     </div>
