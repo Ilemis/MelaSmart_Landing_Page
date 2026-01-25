@@ -48,6 +48,12 @@ const faqData = [
     answer:
       "Puoi scriverci all'indirizzo melasmart@proton.me oppure utilizzare il form nella pagina Contatti. Siamo sempre aperti a nuove collaborazioni nel settore AgriTech.",
   },
+  {
+    id: "faq-6",
+    question: "Come posso installare la Progressive Web App (PWA)?",
+    answer: "Puoi installare la PWA semplicemente aprendo il sito nel browser del tuo dispositivo e selezionando 'Aggiungi alla schermata Home'. Non serve scaricare nulla dal store. Se non vedi l'opzione, prova a svuotare la cache del browser e ricaricare la pagina"
+  }
+
   // =====================================================
   // AGGIUNGI NUOVE FAQ QUI SOTTO
   // Copia il formato sopra:
