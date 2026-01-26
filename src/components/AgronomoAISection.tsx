@@ -7,18 +7,21 @@ const AgronomoAISection = () => {
       title: "Parsing e Importazione Prodotti",
       description:
         "Cerca prodotti fitosanitari e importa automaticamente tutti i dati strutturati: Nome, Principio Attivo, Tipo, Dosaggio standard, Numero di Registrazione e Avversità. Pronti per il tuo database in un click.",
+      note: "Se il prodotto è già presente nel database MelaSmart, non verranno consumati crediti AI.",
     },
     {
       icon: <Beaker className="w-6 h-6" />,
       title: "Ricerca Dosaggio Etichetta",
       description:
         "Trova istantaneamente le dosi di etichetta ministeriale (dose/hl e dose/ha) per ogni prodotto e principio attivo su melo. Sempre aggiornato grazie all'integrazione con ricerca web.",
+      note: null,
     },
     {
       icon: <MessageSquare className="w-6 h-6" />,
       title: "AI Agronomo Esperto",
       description:
         "Un agronomo virtuale specializzato nella coltivazione del melo. Risponde alle tue domande considerando fase fenologica, dati meteo e contesto per consigli pratici e immediati.",
+      note: null,
     },
   ];
 
@@ -54,6 +57,12 @@ const AgronomoAISection = () => {
               <p className="text-muted-foreground text-sm leading-relaxed">
                 {feature.description}
               </p>
+              {feature.note && (
+                <p className="text-xs text-primary mt-3 flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+                  {feature.note}
+                </p>
+              )}
             </div>
           ))}
         </div>
