@@ -67,8 +67,7 @@ const ValueSection = () => {
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Le app professionali per l'agricoltura costano centinaia di euro all'anno. 
-            MelaSmart offre le stesse funzionalità — e molto di più — ad una 
-            <strong className="text-foreground"> frazione del costo</strong>.
+            MelaSmart offre le stesse funzionalità ad una <strong className="text-foreground"> frazione del costo</strong>.
           </p>
         </div>
 
