@@ -7,6 +7,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import iconMelasmart from "@/assets/icon-melasmart.png";
+import Footer from "@/components/Footer";
 
 // =====================================================
 // FAQ DATA - MODIFICA QUI LE DOMANDE E RISPOSTE
@@ -139,14 +140,7 @@ const FAQ = () => {
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="py-8 border-t border-border mt-12">
-        <div className="container mx-auto px-4 text-center">
-          <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} MelaSmart. Tutti i diritti riservati.
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

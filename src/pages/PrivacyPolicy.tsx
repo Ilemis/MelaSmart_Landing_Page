@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft, Shield, Calendar, FileText } from "lucide-react";
 import iconMelasmart from "@/assets/icon-melasmart.png";
+import Footer from "@/components/Footer";
 
 const PrivacyPolicy = () => {
   const lastUpdated = "14 Gennaio 2025";
@@ -439,14 +440,7 @@ const PrivacyPolicy = () => {
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="py-8 border-t border-border mt-12">
-        <div className="container mx-auto px-4 text-center">
-          <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} MelaSmart. Tutti i diritti riservati.
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
