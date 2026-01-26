@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft, Mail, MessageSquare, Linkedin, Twitter, Bug } from "lucide-react";
+import Footer from "@/components/Footer";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -239,14 +240,7 @@ const Contatti = () => {
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="py-8 border-t border-border mt-12">
-        <div className="container mx-auto px-4 text-center">
-          <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} MelaSmart. Tutti i diritti riservati.
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
