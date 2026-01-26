@@ -14,7 +14,7 @@ const AgronomoAISection = () => {
       title: "Ricerca Dosaggio Etichetta",
       description:
         "Trova istantaneamente le dosi di etichetta ministeriale (dose/hl e dose/ha) per ogni prodotto e principio attivo su melo. Sempre aggiornato grazie all'integrazione con ricerca web.",
-      note: null,
+      note: "Se il prodotto è già presente nel database MelaSmart, non verranno consumati crediti AI.",
     },
     {
       icon: <MessageSquare className="w-6 h-6" />,
