@@ -21,7 +21,7 @@ const AgronomoAISection = () => {
       title: "AI Agronomo Esperto",
       description:
         "Un agronomo virtuale specializzato nella coltivazione del melo o della cultivar che selezioni. Risponde alle tue domande considerando fase fenologica, dati meteo e contesto per consigli pratici e immediati.",
-      note: costa 1 credito AI,
+      note: "Costa 1 credito AI.",
     },
   ];
 
