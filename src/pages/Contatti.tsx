@@ -24,7 +24,7 @@ const Contatti = () => {
     setIsSubmitting(true);
 
     try {
-      // Per ora simuliamo l'invio - potrai integrare un servizio come Formspree
+      // Iintegrato servizio di Formspree col seguente link
       const response = await fetch("https://formspree.io/f/xojewvgo", {
         method: "POST",
         headers: {
@@ -98,7 +98,7 @@ const Contatti = () => {
             Contattaci
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Non solo una mail, ma un punto di riferimento. Siamo qui per ascoltarti.
+            Siamo a disposizione per qualsiasi suggerimento.
           </p>
         </div>
 
