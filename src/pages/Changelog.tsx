@@ -35,6 +35,14 @@ interface ChangelogEntry {
 // 👇 AGGIUNGI NUOVE VOCI QUI (le più recenti in alto)
 // Queste sono le novità dell'APP MelaSmart, non della landing page
 const changelogData: ChangelogEntry[] = [
+   {
+    version: "v0.2.0",
+    date: "02/02/2026",
+    changes: [
+      { type: "nuovo", description: "Diventa Preimum con STRIPE" },
+      { type: "migliorato", description: "Sezione profilo: migliorata UX/UI con tre sezioni separate: Profilo, Abbonamento, Supporto" },
+    ],
+  },
   {
     version: "v0.1.4",
     date: "27/01/2026",
