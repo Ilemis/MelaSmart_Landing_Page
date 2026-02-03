@@ -67,6 +67,7 @@ const PrivacyPolicy = () => {
               { id: "diritti", label: "I Tuoi Diritti" },
               { id: "cookie", label: "Cookie Policy" },
               { id: "sicurezza", label: "Sicurezza" },
+              { id: "disclaimer-ai", label: "Disclaimer Intelligenza Artificiale" },
               { id: "modifiche", label: "Modifiche alla Policy" },
             ].map((item) => (
               <li key={item.id}>
@@ -401,10 +402,103 @@ const PrivacyPolicy = () => {
             </div>
           </section>
 
-          {/* Section 10 */}
+          {/* Section 10 - Disclaimer AI */}
+          <section id="disclaimer-ai" className="scroll-mt-24">
+            <h2 className="text-2xl font-bold text-foreground mb-4 flex items-center gap-3">
+              <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-destructive/10 text-destructive text-sm font-bold">10</span>
+              Disclaimer sull'Intelligenza Artificiale e Prodotti Fitosanitari
+            </h2>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <div className="p-4 rounded-xl border border-destructive/30 bg-destructive/5">
+                <p className="font-semibold text-foreground mb-3">
+                  ⚠️ AVVISO IMPORTANTE - LEGGERE ATTENTAMENTE
+                </p>
+                <p className="mb-3">
+                  L'applicazione MelaSmart utilizza tecnologie di Intelligenza Artificiale (AI) per fornire 
+                  suggerimenti relativi a miscele di prodotti fitosanitari, ricerca di etichette ministeriali, 
+                  dosaggi e limitazioni d'uso. <strong className="text-foreground">Tali informazioni hanno 
+                  carattere puramente indicativo e informativo e non costituiscono in alcun modo consulenza 
+                  professionale agronomica, tecnica o legale.</strong>
+                </p>
+              </div>
+
+              <div className="space-y-3">
+                <h3 className="font-semibold text-foreground">Limitazione di Responsabilità</h3>
+                <p>
+                  MelaSmart e i suoi sviluppatori, collaboratori, partner e affiliati:
+                </p>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-2">
+                    <span className="text-destructive mt-1">•</span>
+                    <span><strong className="text-foreground">Non garantiscono</strong> l'accuratezza, la completezza, l'affidabilità o l'adeguatezza delle informazioni fornite dall'AI, inclusi suggerimenti su miscele, dosaggi, compatibilità tra prodotti e limitazioni d'uso.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-destructive mt-1">•</span>
+                    <span><strong className="text-foreground">Non si assumono alcuna responsabilità</strong> per danni diretti, indiretti, incidentali, consequenziali, speciali o punitivi derivanti dall'uso o dall'impossibilità di usare le informazioni fornite dall'applicazione.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-destructive mt-1">•</span>
+                    <span><strong className="text-foreground">Non sono responsabili</strong> per eventuali danni alle colture, all'ambiente, alla salute umana o animale, o per qualsiasi perdita economica derivante dall'applicazione dei suggerimenti forniti.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-destructive mt-1">•</span>
+                    <span><strong className="text-foreground">Non rispondono</strong> per errori, omissioni, inesattezze o obsolescenza delle informazioni relative a etichette ministeriali, autorizzazioni, revoche o modifiche normative.</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="space-y-3">
+                <h3 className="font-semibold text-foreground">Obbligo dell'Utente</h3>
+                <p>
+                  L'utente riconosce e accetta che:
+                </p>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">✓</span>
+                    <span>I suggerimenti forniti dall'AI devono essere <strong className="text-foreground">sempre verificati</strong> consultando le etichette ufficiali dei prodotti fitosanitari, la normativa vigente e i database ministeriali aggiornati.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">✓</span>
+                    <span>Prima dell'applicazione di qualsiasi prodotto fitosanitario, è <strong className="text-foreground">obbligatorio</strong> consultare un tecnico agronomico abilitato o un professionista del settore.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">✓</span>
+                    <span>L'uso di prodotti fitosanitari è regolamentato dalla legge e deve avvenire nel <strong className="text-foreground">rispetto delle normative nazionali ed europee</strong> vigenti, incluso il Reg. (CE) n. 1107/2009 e il D.Lgs. 150/2012.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">✓</span>
+                    <span>La <strong className="text-foreground">responsabilità finale</strong> per qualsiasi decisione relativa all'uso di prodotti fitosanitari ricade esclusivamente sull'utente.</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="p-4 rounded-xl border border-border bg-card">
+                <h3 className="font-semibold text-foreground mb-2">Natura dei Dati AI</h3>
+                <p className="text-sm">
+                  Le informazioni generate dall'Intelligenza Artificiale si basano su modelli statistici e dati 
+                  di addestramento che potrebbero non riflettere le condizioni specifiche del territorio, 
+                  le ultime modifiche normative, le revoche di autorizzazioni o le particolari esigenze 
+                  agronomiche dell'utente. I modelli AI possono produrre risultati errati, incompleti o 
+                  non aggiornati (fenomeno noto come "allucinazione").
+                </p>
+              </div>
+
+              <div className="p-4 rounded-xl border border-border bg-card">
+                <h3 className="font-semibold text-foreground mb-2">Manleva</h3>
+                <p className="text-sm">
+                  Utilizzando l'applicazione MelaSmart, l'utente accetta di <strong className="text-foreground">manlevare 
+                  e tenere indenne</strong> MelaSmart, i suoi sviluppatori, dipendenti, collaboratori e partner da 
+                  qualsiasi reclamo, danno, perdita, costo o spesa (incluse le spese legali) derivanti 
+                  dall'uso delle informazioni fornite dall'applicazione o dalla violazione dei presenti termini.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* Section 11 */}
           <section id="modifiche" className="scroll-mt-24">
             <h2 className="text-2xl font-bold text-foreground mb-4 flex items-center gap-3">
-              <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 text-primary text-sm font-bold">10</span>
+              <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 text-primary text-sm font-bold">11</span>
               Modifiche alla Privacy Policy
             </h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
