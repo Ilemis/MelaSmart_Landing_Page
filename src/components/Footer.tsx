@@ -35,7 +35,7 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col items-center gap-3 text-sm text-muted-foreground">
-            <div className="flex items-center gap-4">
+            <div className="flex flex-wrap justify-center items-center gap-4">
               <Link
                 to="/contatti"
                 className="hover:text-foreground transition-colors duration-200"
@@ -53,6 +53,12 @@ const Footer = () => {
                 className="hover:text-foreground transition-colors duration-200"
               >
                 Changelog
+              </Link>
+              <Link
+                to="/termini"
+                className="hover:text-foreground transition-colors duration-200"
+              >
+                Termini e Condizioni
               </Link>
               <Link
                 to="/privacy"
