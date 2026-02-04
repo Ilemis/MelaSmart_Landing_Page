@@ -59,7 +59,7 @@ const faqData = [
     question: "Come viene gestito l'abbonamento?",
     answer: 
       "Per garantirti la massima sicurezza, non memorizziamo i dati della tua carta. Tutti i pagamenti sono gestiti da STRIPE, leader mondiale nei pagamenti digitali, che garantisce transazioni criptate e protette.",
-  }
+  },
   {
     id: "faq-8",
     question: "Posso fidarmi ciecamente dei dosaggi suggeriti dall'IA?",
@@ -83,7 +83,7 @@ const faqData = [
     question: "I miei dati sui trattamenti e sui terreni sono al sicuro?",
     answer: 
       "Assolutamente sì. La privacy è una nostra priorità. I dati inseriti sono utilizzati esclusivamente per fornirti i calcoli corretti e non vengono ceduti a terzi. Per i pagamenti, ci affidiamo alla crittografia di STRIPE per una sicurezza di livello bancario.",
-  }
+  },
   {
     id: "faq-12",
     question: "Come fa l'IA a sapere se è il momento giusto per un trattamento?",
