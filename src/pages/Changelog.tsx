@@ -35,7 +35,17 @@ interface ChangelogEntry {
 // 👇 AGGIUNGI NUOVE VOCI QUI (le più recenti in alto)
 // Queste sono le novità dell'APP MelaSmart, non della landing page
 const changelogData: ChangelogEntry[] = [
-   {
+  {
+    version: "v0.2.1",
+    date: "03/02/2026",
+    changes: [
+      { type: "nuovo", description: "Database Melasmart: 27 prodotti disponibili" },
+      { type: "nuovo", description: "Aggiunta sezione termini e servizi" },
+      { type: "migliorato", description: "Sezione profilo: inserito banner premium per abbonarsi con stripe" },
+      { type: "fix", description: "Risolto bug che non aggiornava il calcolo delle chiamate a gemini nel magazzino" },
+    ],
+  }, 
+  {
     version: "v0.2.0",
     date: "02/02/2026",
     changes: [
