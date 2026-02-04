@@ -15,11 +15,11 @@ const Index = () => {
       <Header />
       <main>
         <HeroSection />
+        <AppPreviewSection />
         <PWASection />
         <FarmerOriginSection />
         <ValueSection />
         <AgronomoAISection />
-        <AppPreviewSection />
         <MeteoSection />
         
       </main>
