@@ -23,7 +23,7 @@ const faqData = [
     id: "faq-1",
     question: "Cos'è MelaSmart?",
     answer:
-      "MelaSmart è un'app di precisione agricola progettata specificamente per la melicoltura (in futuro saranno integrate altre cultivar). Utilizza intelligenza artificiale per ottimizzare la gestione del tuo meleto.",
+      "MelaSmart è un'app di precisione agricola progettata specificamente per la melicoltura (in futuro saranno integrate altre cultivar). Utilizza intelligenza artificiale per ottimizzare la gestione del tuo meleto, facilitando il calcolo preciso delle dosi per l'atomizzatore e la consultazione rapida dei prodotti fitosanitari.",
   },
   {
     id: "faq-2",
@@ -57,8 +57,38 @@ const faqData = [
   {
     id: "faq-7",
     question: "Come viene gestito l'abbonamento?",
-    answer: "Abbiamo utilizzato STRIPE per garantire la massima sicurezza per i pagamenti e la gestione"
+    answer: "Per garantirti la massima sicurezza, non memorizziamo i dati della tua carta. Tutti i pagamenti sono gestiti da STRIPE, leader mondiale nei pagamenti digitali, che garantisce transazioni criptate e protette."
   }
+  {
+    id: "faq-8",
+    question: "Posso fidarmi ciecamente dei dosaggi suggeriti dall'IA?",
+    answer:
+      "L'IA di MelaSmart è un potente assistente che estrae dati dalle etichette, ma può commettere errori (allucinazioni). Le informazioni fornite hanno valore puramente indicativo: l'unica fonte legale e sicura rimane l'etichetta ministeriale cartacea presente sulla confezione del prodotto."
+  },
+  {
+    id: "faq-9",
+    question: "Come funziona il calcolo per l'atomizzatore?",
+    answer:
+      "MelaSmart incrocia i dati del tuo appezzamento (ettari) con i parametri del tuo atomizzatore il calcolo del TRV e le dosi del prodotto selezionato. Ti aiuta a determinare la quantità esatta di miscela e prodotto necessaria, riducendo sprechi e rischi di sovradosaggio."
+  },
+  {
+    id: "faq-10",
+    question: "Cosa succede se cerco un prodotto non registrato per il melo?",
+    answer:
+      "Il nostro agronomo digitale è istruito per darti informazioni specifiche sulla melicoltura. Se un prodotto non è autorizzato per l'uso su melo o non è presente nei database ministeriali aggiornati, l'app ti avviserà della mancata corrispondenza per proteggere la tua coltura."
+  },
+  {
+    id: "faq-11",
+    question: "I miei dati sui trattamenti e sui terreni sono al sicuro?",
+    answer:
+      "Assolutamente sì. La privacy è una nostra priorità. I dati inseriti sono utilizzati esclusivamente per fornirti i calcoli corretti e non vengono ceduti a terzi. Per i pagamenti, ci affidiamo alla crittografia di STRIPE per una sicurezza di livello bancario."
+  }
+  {
+    id: "faq-12",
+    question: "Come fa l'IA a sapere se è il momento giusto per un trattamento?",
+    answer:
+      "L'assistente di MelaSmart non fornisce risposte generiche, ma analizza costantemente tre pilastri fondamentali: il contesto temporale, la fase fenologica (scala BBCH) specifica del melo e le condizioni meteo. Integriamo un sistema AgriMeteo che elabora dati di Open-Meteo tramite un nostro algoritmo proprietario. Questo ci permette di valutare l'idoneità dei trattamenti in base a finestre di intervento ideali, segnalandoti ad esempio se il vento eccessivo o piogge imminenti potrebbero vanificare l'efficacia del prodotto."
+  },
 
   // =====================================================
   // AGGIUNGI NUOVE FAQ QUI SOTTO
