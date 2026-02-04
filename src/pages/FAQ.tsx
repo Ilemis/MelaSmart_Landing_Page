@@ -52,43 +52,50 @@ const faqData = [
   {
     id: "faq-6",
     question: "Come posso installare la Progressive Web App (PWA)?",
-    answer: "Puoi installare la PWA semplicemente aprendo il sito nel browser del tuo dispositivo e selezionando 'Aggiungi alla schermata Home'. Non serve scaricare nulla dal store. Se non vedi l'opzione, prova a svuotare la cache del browser e ricaricare la pagina"
+    answer: "Puoi installare la PWA semplicemente aprendo il sito nel browser del tuo dispositivo e selezionando 'Aggiungi alla schermata Home'. Non serve scaricare nulla dal store. Se non vedi l'opzione, prova a svuotare la cache del browser e ricaricare la pagina.",
   },
   {
     id: "faq-7",
     question: "Come viene gestito l'abbonamento?",
-    answer: "Per garantirti la massima sicurezza, non memorizziamo i dati della tua carta. Tutti i pagamenti sono gestiti da STRIPE, leader mondiale nei pagamenti digitali, che garantisce transazioni criptate e protette."
+    answer: 
+      "Per garantirti la massima sicurezza, non memorizziamo i dati della tua carta. Tutti i pagamenti sono gestiti da STRIPE, leader mondiale nei pagamenti digitali, che garantisce transazioni criptate e protette.",
   }
   {
     id: "faq-8",
     question: "Posso fidarmi ciecamente dei dosaggi suggeriti dall'IA?",
-    answer:
-      "L'IA di MelaSmart è un potente assistente che estrae dati dalle etichette, ma può commettere errori (allucinazioni). Le informazioni fornite hanno valore puramente indicativo: l'unica fonte legale e sicura rimane l'etichetta ministeriale cartacea presente sulla confezione del prodotto."
+    answer: 
+      "L'IA di MelaSmart è un potente assistente che estrae dati dalle etichette, ma può commettere errori (allucinazioni). Le informazioni fornite hanno valore puramente indicativo: l'unica fonte legale e sicura rimane l'etichetta ministeriale cartacea presente sulla confezione del prodotto.",
   },
   {
     id: "faq-9",
     question: "Come funziona il calcolo per l'atomizzatore?",
-    answer:
-      "MelaSmart incrocia i dati del tuo appezzamento (ettari) con i parametri del tuo atomizzatore il calcolo del TRV e le dosi del prodotto selezionato. Ti aiuta a determinare la quantità esatta di miscela e prodotto necessaria, riducendo sprechi e rischi di sovradosaggio."
+    answer: 
+      "MelaSmart incrocia i dati del tuo appezzamento (ettari) con i parametri del tuo atomizzatore il calcolo del TRV e le dosi del prodotto selezionato. Ti aiuta a determinare la quantità esatta di miscela e prodotto necessaria, riducendo sprechi e rischi di sovradosaggio.",
   },
   {
     id: "faq-10",
     question: "Cosa succede se cerco un prodotto non registrato per il melo?",
-    answer:
-      "Il nostro agronomo digitale è istruito per darti informazioni specifiche sulla melicoltura. Se un prodotto non è autorizzato per l'uso su melo o non è presente nei database ministeriali aggiornati, l'app ti avviserà della mancata corrispondenza per proteggere la tua coltura."
+    answer: 
+      "Il nostro agronomo digitale è istruito per darti informazioni specifiche sulla melicoltura. Se un prodotto non è autorizzato per l'uso su melo o non è presente nei database ministeriali aggiornati, l'app ti avviserà della mancata corrispondenza per proteggere la tua coltura.",
   },
   {
     id: "faq-11",
     question: "I miei dati sui trattamenti e sui terreni sono al sicuro?",
-    answer:
-      "Assolutamente sì. La privacy è una nostra priorità. I dati inseriti sono utilizzati esclusivamente per fornirti i calcoli corretti e non vengono ceduti a terzi. Per i pagamenti, ci affidiamo alla crittografia di STRIPE per una sicurezza di livello bancario."
+    answer: 
+      "Assolutamente sì. La privacy è una nostra priorità. I dati inseriti sono utilizzati esclusivamente per fornirti i calcoli corretti e non vengono ceduti a terzi. Per i pagamenti, ci affidiamo alla crittografia di STRIPE per una sicurezza di livello bancario.",
   }
   {
     id: "faq-12",
     question: "Come fa l'IA a sapere se è il momento giusto per un trattamento?",
-    answer:
-      "L'assistente di MelaSmart non fornisce risposte generiche, ma analizza costantemente tre pilastri fondamentali: il contesto temporale, la fase fenologica (scala BBCH) specifica del melo e le condizioni meteo. Integriamo un sistema AgriMeteo che elabora dati di Open-Meteo tramite un nostro algoritmo proprietario. Questo ci permette di valutare l'idoneità dei trattamenti in base a finestre di intervento ideali, segnalandoti ad esempio se il vento eccessivo o piogge imminenti potrebbero vanificare l'efficacia del prodotto."
+    answer: 
+      "L'assistente di MelaSmart non fornisce risposte generiche, ma analizza costantemente tre pilastri fondamentali: il contesto temporale, la fase fenologica (scala BBCH) specifica del melo e le condizioni meteo. Integriamo un sistema AgriMeteo che elabora dati di Open-Meteo tramite un nostro algoritmo proprietario. Questo ci permette di valutare l'idoneità dei trattamenti in base a finestre di intervento ideali, segnalandoti ad esempio se il vento eccessivo o piogge imminenti potrebbero vanificare l'efficacia del prodotto.",
   },
+  {
+    id: "faq-13",
+    question: "Cosa devo fare se riscontro un errore in un calcolo o in un'etichetta?",
+    answer: 
+      "La precisione è la nostra priorità, ma l'IA può commettere imprecisioni. Se noti discrepanze tra i dati dell'app e l'etichetta ufficiale, ti preghiamo di segnalarcelo immediatamente tramite la sezione Supporto. La tua segnalazione aiuterà l'algoritmo a imparare e a diventare sempre più preciso per tutta la comunità.",
+  }
 
   // =====================================================
   // AGGIUNGI NUOVE FAQ QUI SOTTO
