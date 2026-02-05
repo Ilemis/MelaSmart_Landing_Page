@@ -96,6 +96,12 @@ const faqData = [
     answer: 
       "La precisione è la nostra priorità, ma l'IA può commettere imprecisioni. Se noti discrepanze tra i dati dell'app e l'etichetta ufficiale, ti preghiamo di segnalarcelo immediatamente tramite la sezione Supporto. La tua segnalazione aiuterà l'algoritmo a imparare e a diventare sempre più preciso per tutta la comunità.",
   }
+  {
+    id: "faq-14",
+    question: "L’app funziona anche offline?",
+    answer: 
+      "Sì. L’interfaccia dell’app resta disponibile anche senza connessione: puoi aprire MelaSmart e usare le funzioni di base. Le funzionalità che richiedono dati online (es. meteo, sincronizzazione o API esterne) non sono disponibili finché la rete non torna, ma l’app non si blocca e mostra chiaramente lo stato offline.",
+  }
 
   // =====================================================
   // AGGIUNGI NUOVE FAQ QUI SOTTO
