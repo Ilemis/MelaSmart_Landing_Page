@@ -36,6 +36,14 @@ interface ChangelogEntry {
 // Queste sono le novità dell'APP MelaSmart, non della landing page
 const changelogData: ChangelogEntry[] = [
   {
+    version: "v0.2.2",
+    date: "05/02/2026",
+    changes: [
+      { type: "nuovo", description: "Implementato la possibilità di simulare la chiusura degli ugelli nella sezione di calibrazione dell'atomizzatore. Questa funzione permette di ottenere calcoli precisi dei litri/ettaro anche quando alcuni ugelli vengono chiusi fisicamente (es. durante il dirado)" },
+      { type: "nuovo", description: "Aggiunto bottone nel magazzino per popup info prodotto" },
+     ],
+  }, 
+  {
     version: "v0.2.1",
     date: "03/02/2026",
     changes: [
