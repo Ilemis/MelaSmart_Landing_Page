@@ -95,7 +95,7 @@ const faqData = [
     question: "Cosa devo fare se riscontro un errore in un calcolo o in un'etichetta?",
     answer: 
       "La precisione è la nostra priorità, ma l'IA può commettere imprecisioni. Se noti discrepanze tra i dati dell'app e l'etichetta ufficiale, ti preghiamo di segnalarcelo immediatamente tramite la sezione Supporto. La tua segnalazione aiuterà l'algoritmo a imparare e a diventare sempre più preciso per tutta la comunità.",
-  }
+  },
   {
     id: "faq-14",
     question: "L’app funziona anche offline?",
