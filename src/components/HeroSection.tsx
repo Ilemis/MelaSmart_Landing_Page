@@ -3,7 +3,7 @@ import heroBanner from "@/assets/hero-banner.png";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-20 pb-16 px-4 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center pt-28 pb-16 px-4 overflow-hidden">
       {/* Background Image */}
       <div
         className="absolute inset-0 z-0"
