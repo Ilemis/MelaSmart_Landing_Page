@@ -1,9 +1,23 @@
 import WaitlistForm from "@/components/WaitlistForm";
+import heroBanner from "@/assets/hero-banner.png";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center pt-20 pb-16 px-4">
-      <div className="container mx-auto max-w-4xl text-center">
+    <section className="relative min-h-screen flex items-center justify-center pt-20 pb-16 px-4 overflow-hidden">
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: `url(${heroBanner})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      />
+      {/* Dark overlay for text readability */}
+      <div className="absolute inset-0 z-0 bg-background/80 backdrop-blur-[2px]" />
+
+      <div className="container mx-auto max-w-4xl text-center relative z-10">
         <div className="animate-fade-up">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight">
             MelaSmart: Il futuro
