@@ -24,9 +24,9 @@ const HeroSection = () => {
       <div className="container mx-auto max-w-4xl text-center relative z-10">
         <div className="animate-fade-up">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight drop-shadow-[0_2px_10px_hsl(var(--background))]">
-            MelaSmart: Il futuro
+            MelaSmart: Gestione
             <br />
-            <span className="text-gradient-green drop-shadow-[0_2px_10px_hsl(var(--background))]">dell'agricoltura di precisione.</span>
+            <span className="text-gradient-green drop-shadow-[0_2px_10px_hsl(var(--background))]">Professionale del Frutteto.</span>
           </h1>
         </div>
 
