@@ -14,8 +14,12 @@ const HeroSection = () => {
           backgroundRepeat: "no-repeat",
         }}
       />
-      {/* Dark overlay for text readability */}
-      <div className="absolute inset-0 z-0 bg-background/80 backdrop-blur-[2px]" />
+      {/* Soft overlay for text readability */}
+      <div className="absolute inset-0 z-0 bg-background/50" />
+      {/* Top fade to blend with header/background */}
+      <div className="absolute top-0 left-0 right-0 h-40 z-[1] bg-gradient-to-b from-background to-transparent" />
+      {/* Bottom fade to blend with next section */}
+      <div className="absolute bottom-0 left-0 right-0 h-40 z-[1] bg-gradient-to-t from-background to-transparent" />
 
       <div className="container mx-auto max-w-4xl text-center relative z-10">
         <div className="animate-fade-up">
