@@ -23,15 +23,15 @@ const HeroSection = () => {
 
       <div className="container mx-auto max-w-4xl text-center relative z-10">
         <div className="animate-fade-up">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight drop-shadow-[0_2px_10px_hsl(var(--background))]">
             MelaSmart: Il futuro
             <br />
-            <span className="text-gradient-green">dell'agricoltura di precisione.</span>
+            <span className="text-gradient-green drop-shadow-[0_2px_10px_hsl(var(--background))]">dell'agricoltura di precisione.</span>
           </h1>
         </div>
 
         <div className="animate-fade-up-delay-1">
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed">
+          <p className="text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto mb-12 leading-relaxed font-medium drop-shadow-[0_1px_8px_hsl(var(--background))]">
             Il copilota agronomico avanzato che trasforma i dati in decisioni.
             <br className="hidden md:block" />
             Ottimizza i trattamenti, riduci l'impatto ambientale, massimizza il raccolto.
