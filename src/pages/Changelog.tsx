@@ -36,6 +36,16 @@ interface ChangelogEntry {
 // Queste sono le novità dell'APP MelaSmart, non della landing page
 const changelogData: ChangelogEntry[] = [
   {
+    version: "v0.3.0",
+    date: "11/02/2026",
+    changes: [
+      { type: "fix", description: "Se il prodotto ha solo la dose per ettolitro, viene calcolata automaticamente la dose per ettaro" },
+      { type: "nuovo", description: "Regole per l'aggiornamento delle etichette ministeriali e del dosaggio: se i dati sono più vecchi di 2 mesi (etichette) o 3 mesi (dosaggi), vengono aggiornati automaticamente" },
+      { type: "nuovo", description: "Dataset ministeriale utilizzato quando possibile per popolare il database MelaSmart con tutti i dati disponibili" },
+      { type: "migliorato", description: "Nel magazzino, popup intelligente che mostra i dati più rilevanti di ogni prodotto: Principio Attivo, dose standard, descrizione prodotto, stato amministrativo" },
+    ],
+  },
+  {
     version: "v0.2.2",
     date: "05/02/2026",
     changes: [
