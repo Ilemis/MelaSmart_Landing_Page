@@ -266,10 +266,14 @@ const TerminiCondizioni = () => {
               <p className="text-muted-foreground leading-relaxed mb-4">
                 MelaSmart utilizza dati pubblici resi disponibili dal{" "}
                 <strong>Ministero della Salute</strong> della Repubblica Italiana, relativi 
-                ai prodotti fitosanitari e alle relative etichette autorizzate.
+                ai prodotti fitosanitari e alle relative etichette autorizzate. Tali dati 
+                possono essere integrati nell'App sia tramite accesso diretto alla banca dati 
+                ministeriale, sia attraverso informazioni estrapolate dall'intelligenza 
+                artificiale (Google Gemini) che attinge a fonti pubbliche disponibili online, 
+                inclusi i dati ministeriali.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Tali dati sono distribuiti con licenza{" "}
+                I dati ministeriali sono distribuiti con licenza{" "}
                 <a
                   href="https://www.dati.gov.it/content/italian-open-data-license-v20"
                   target="_blank"
@@ -280,6 +284,12 @@ const TerminiCondizioni = () => {
                 </a>
                 , pubblicata da FormezPA, che ne consente il libero riutilizzo, anche per 
                 finalità commerciali, a condizione di citare la fonte del dato.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-4 text-sm">
+                Si precisa che le informazioni generate dall'intelligenza artificiale, pur 
+                potendo basarsi su dati ministeriali, sono soggette ai limiti descritti nella 
+                sezione 3 (Disclaimer sull'Intelligenza Artificiale) e devono sempre essere 
+                verificate dall'utente sulle fonti ufficiali.
               </p>
               <div className="bg-muted/50 rounded-lg p-4 border border-border">
                 <p className="text-sm text-muted-foreground leading-relaxed">
