@@ -56,18 +56,23 @@ const TerminiCondizioni = () => {
                   </a>
                 </li>
                 <li>
+                  <a href="#fonti-dati" className="text-primary hover:underline">
+                    7. Fonti dei Dati e Licenze
+                  </a>
+                </li>
+                <li>
                   <a href="#modifiche" className="text-primary hover:underline">
-                    7. Modifiche ai Termini
+                    8. Modifiche ai Termini
                   </a>
                 </li>
                 <li>
                   <a href="#legge-applicabile" className="text-primary hover:underline">
-                    8. Legge Applicabile
+                    9. Legge Applicabile
                   </a>
                 </li>
                 <li>
                   <a href="#contatti" className="text-primary hover:underline">
-                    9. Contatti
+                    10. Contatti
                   </a>
                 </li>
               </ul>
@@ -255,9 +260,48 @@ const TerminiCondizioni = () => {
               </p>
             </section>
 
-            {/* 7. Modifiche */}
+            {/* 7. Fonti dei Dati e Licenze */}
+            <section id="fonti-dati">
+              <h2 className="text-2xl font-semibold mb-4">7. Fonti dei Dati e Licenze</h2>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                MelaSmart utilizza dati pubblici resi disponibili dal{" "}
+                <strong>Ministero della Salute</strong> della Repubblica Italiana, relativi 
+                ai prodotti fitosanitari e alle relative etichette autorizzate.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                Tali dati sono distribuiti con licenza{" "}
+                <a
+                  href="https://www.dati.gov.it/content/italian-open-data-license-v20"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline font-medium"
+                >
+                  Italian Open Data Licence v2.0 (IODL 2.0)
+                </a>
+                , pubblicata da FormezPA, che ne consente il libero riutilizzo, anche per 
+                finalità commerciali, a condizione di citare la fonte del dato.
+              </p>
+              <div className="bg-muted/50 rounded-lg p-4 border border-border">
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  <strong className="text-foreground">Attribuzione:</strong> I dati relativi ai prodotti fitosanitari 
+                  e alle etichette ministeriali utilizzati in MelaSmart sono forniti dal{" "}
+                  <strong>Ministero della Salute — Banca Dati dei Prodotti Fitosanitari</strong>.{" "}
+                  Licenza:{" "}
+                  <a
+                    href="https://www.dati.gov.it/content/italian-open-data-license-v20"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:underline"
+                  >
+                    IODL 2.0
+                  </a>.
+                </p>
+              </div>
+            </section>
+
+            {/* 8. Modifiche */}
             <section id="modifiche">
-              <h2 className="text-2xl font-semibold mb-4">7. Modifiche ai Termini</h2>
+              <h2 className="text-2xl font-semibold mb-4">8. Modifiche ai Termini</h2>
               <p className="text-muted-foreground leading-relaxed">
                 MelaSmart si riserva il diritto di modificare i presenti Termini e Condizioni 
                 in qualsiasi momento. Le modifiche saranno effettive dal momento della loro 
@@ -266,9 +310,9 @@ const TerminiCondizioni = () => {
               </p>
             </section>
 
-            {/* 8. Legge Applicabile */}
+            {/* 9. Legge Applicabile */}
             <section id="legge-applicabile">
-              <h2 className="text-2xl font-semibold mb-4">8. Legge Applicabile</h2>
+              <h2 className="text-2xl font-semibold mb-4">9. Legge Applicabile</h2>
               <p className="text-muted-foreground leading-relaxed">
                 I presenti Termini e Condizioni sono regolati dalla legge italiana. Per qualsiasi 
                 controversia derivante dall'interpretazione o dall'esecuzione dei presenti termini 
@@ -276,9 +320,9 @@ const TerminiCondizioni = () => {
               </p>
             </section>
 
-            {/* 9. Contatti */}
+            {/* 10. Contatti */}
             <section id="contatti">
-              <h2 className="text-2xl font-semibold mb-4">9. Contatti</h2>
+              <h2 className="text-2xl font-semibold mb-4">10. Contatti</h2>
               <p className="text-muted-foreground leading-relaxed">
                 Per qualsiasi domanda relativa ai presenti Termini e Condizioni, è possibile 
                 contattarci attraverso la{" "}
