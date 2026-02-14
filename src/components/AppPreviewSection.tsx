@@ -19,7 +19,7 @@ const screenshots = [
   {
     image: screenshotMagazzino,
     title: "Magazzino Predittivo",
-    description: "Monitora scorte, costi e ricevi suggerimenti intelligenti per gli acquisti.",
+    description: "Monitora scorte, costi, imposta soglie di allerta. In ogni card prodotto puoi attivare un popup che scarica le info ministeriali come data smaltimento scorte e stato amministrativo e ricevi suggerimenti intelligenti per gli acquisti.",
   },
   {
     image: screenshotVolume,
