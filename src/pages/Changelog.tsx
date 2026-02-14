@@ -36,6 +36,14 @@ interface ChangelogEntry {
 // Queste sono le novità dell'APP MelaSmart, non della landing page
 const changelogData: ChangelogEntry[] = [
   {
+    version: "v0.4.2",
+    date: "14/02/2026",
+    changes: [
+      { type: "nuovo", description: "Selezione cultivar: ora è possibile scegliere tra melo e vite, con Agronomo AI dedicato, fasi fenologiche specifiche e gestione prodotti calibrata sulle avversità di ciascuna coltura. L'app si apre a un pubblico più ampio senza sacrificare la precisione che la contraddistingue" },
+      { type: "fix", description: "Se il prodotto ha solo la dose per ettolitro, viene ora calcolata automaticamente la dose per ettaro" },
+    ],
+  },
+  {
     version: "v0.3.0",
     date: "11/02/2026",
     changes: [
