@@ -3,6 +3,7 @@ import screenshotMagazzino from "@/assets/screenshot-magazzino.jpg";
 import screenshotVolume from "@/assets/screenshot-volume.jpg";
 import screenshotMiscela from "@/assets/screenshot-miscela.jpg";
 import screenshotStrategia from "@/assets/screenshot-strategia.jpg";
+import screenshotCampi from "@/assets/screenshot-campi.jpg";
 import {
   Carousel,
   CarouselContent,
@@ -21,6 +22,11 @@ const screenshots = [
     image: screenshotMagazzino,
     title: "Magazzino Predittivo",
     description: "Monitora scorte, costi, imposta soglie di allerta. In ogni card prodotto puoi attivare un popup che scarica le info ministeriali come data smaltimento scorte e stato amministrativo e ricevi suggerimenti intelligenti per gli acquisti.",
+  },
+  {
+    image: screenshotCampi,
+    title: "Wizard step 1",
+    description: "Selezione dei campi target e bottone dedicato per entrare nella modalità GIS lite Disegna Campo.",
   },
   {
     image: screenshotMiscela,
