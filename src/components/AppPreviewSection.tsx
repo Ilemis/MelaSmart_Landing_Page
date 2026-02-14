@@ -14,7 +14,7 @@ const screenshots = [
   {
     image: screenshotAssistente,
     title: "Home Dashboard",
-    description: "Panoramica giornaliera con finestre di trattamento e condizioni meteo ottimali.",
+    description: "Panoramica giornaliera con finestre di trattamento, fase fenologica, MelaSmart AI™ Copilot, viste veloci su scorte e ultimi trattamenti.",
   },
   {
     image: screenshotMagazzino,
@@ -23,13 +23,13 @@ const screenshots = [
   },
   {
     image: screenshotVolume,
-    title: "Volume Acqua",
-    description: "Calcola automaticamente il volume d'acqua ottimale per ogni trattamento.",
+    title: "Wizard step 3",
+    description: "Gestione del volume d'acqua ottimale per ogni trattamento.",
   },
   {
     image: screenshotMiscela,
-    title: "Creazione Miscela",
-    description: "Componi miscele con prodotti, dosi ed etichette sempre a portata di mano.",
+    title: "Wizard step 2",
+    description: "Componi la miscela selezionando la card prodotto e configura le dosi o cercale con AI per riscontro veloce.",
   },
 ];
 
