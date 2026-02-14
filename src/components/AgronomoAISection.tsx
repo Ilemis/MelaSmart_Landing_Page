@@ -6,14 +6,14 @@ const AgronomoAISection = () => {
       icon: <FileSearch className="w-6 h-6" />,
       title: "Parsing e Importazione Prodotti",
       description:
-        "Cerca prodotti fitosanitari e importa automaticamente tutti i dati strutturati: Nome, Principio Attivo, Tipo, Dosaggio standard, Numero di Registrazione e Avversità. I dati vengono recuperati direttamente dal dataset ministeriale quando disponibili, altrimenti tramite AI. Pronti per il tuo database in un click.",
+        "Cerca prodotti fitosanitari e importa automaticamente tutti i dati strutturati: Nome, Principio Attivo, Tipo, Dosaggio standard, Numero di Registrazione e Avversità. I dati vengono recuperati direttamente dal dataset ministeriale ed elaborati da Gemini AI. Pronti per il tuo database in un click.",
       note: "Se il prodotto è già presente nel database MelaSmart, non verranno consumati crediti AI.",
-    },
+    }
     {
       icon: <Beaker className="w-6 h-6" />,
       title: "Ricerca Dosaggio Etichetta",
       description:
-        "Trova istantaneamente le dosi di etichetta ministeriale (dose/hl e dose/ha) per ogni prodotto e principio attivo su melo. I dosaggi vengono consultati direttamente dal dataset ministeriale e, se necessario, integrati tramite ricerca web AI.",
+        "Trova istantaneamente le dosi di etichetta ministeriale (dose/hl e dose/ha) per ogni prodotto e principio attivo sulla coltura selezionata. I dosaggi vengono consultati direttamente dal dataset ministeriale e, se necessario, integrati tramite ricerca web AI.",
       note: "Se il prodotto è già presente nel database MelaSmart, non verranno consumati crediti AI.",
     },
     {
