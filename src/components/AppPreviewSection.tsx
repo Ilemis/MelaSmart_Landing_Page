@@ -2,6 +2,7 @@ import screenshotAssistente from "@/assets/screenshot-assistente.jpg";
 import screenshotMagazzino from "@/assets/screenshot-magazzino.jpg";
 import screenshotVolume from "@/assets/screenshot-volume.jpg";
 import screenshotMiscela from "@/assets/screenshot-miscela.jpg";
+import screenshotStrategia from "@/assets/screenshot-strategia.jpg";
 import {
   Carousel,
   CarouselContent,
@@ -22,14 +23,19 @@ const screenshots = [
     description: "Monitora scorte, costi, imposta soglie di allerta. In ogni card prodotto puoi attivare un popup che scarica le info ministeriali come data smaltimento scorte e stato amministrativo e ricevi suggerimenti intelligenti per gli acquisti.",
   },
   {
+    image: screenshotMiscela,
+    title: "Wizard step 2",
+    description: "Componi la miscela selezionando la card prodotto e configura le dosi o cercale con AI per riscontro veloce.",
+  },
+  {
     image: screenshotVolume,
     title: "Wizard step 3",
     description: "Gestione del volume d'acqua ottimale per ogni trattamento.",
   },
   {
-    image: screenshotMiscela,
-    title: "Wizard step 2",
-    description: "Componi la miscela selezionando la card prodotto e configura le dosi o cercale con AI per riscontro veloce.",
+    image: screenshotStrategia,
+    title: "Wizard step 4",
+    description: "Strategia miscela con dosi chiare per facile lettura, avvio modalità campo per attivare la visuale tachimetro GPS con avvisi per discostamento rispetto alla velocità target, salvataggio miscela nei preferiti.",
   },
 ];
 
