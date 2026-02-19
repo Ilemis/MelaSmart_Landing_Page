@@ -36,6 +36,14 @@ interface ChangelogEntry {
 // Queste sono le novità dell'APP MelaSmart, non della landing page
 const changelogData: ChangelogEntry[] = [
   {
+    version: "v0.5.0",
+    date: "19/02/2026",
+    changes: [
+      { type: "nuovo", description: "Ripartizione per Categoria: grafico a ciambella (Donut Chart) che mostra come viene divisa la spesa totale tra le varie tipologie di prodotti, per avere una visione immediata della distribuzione dei costi" },
+      { type: "nuovo", description: "Top 3 Prodotti più Costosi: widget dedicato che evidenzia i 3 prodotti commerciali su cui l'azienda ha investito di più, utile per identificare i principali centri di costo e valutare alternative o negoziare prezzi migliori" },
+    ],
+  },
+  {
     version: "v0.4.2",
     date: "14/02/2026",
     changes: [
