@@ -64,7 +64,7 @@ const faqData = [
     id: "faq-8",
     question: "Posso fidarmi ciecamente dei dosaggi suggeriti dall'IA?",
     answer: 
-      "L'IA di MelaSmart è un potente assistente che estrae dati dalle etichette, ma può commettere errori (allucinazioni). Le informazioni fornite hanno valore puramente indicativo: l'unica fonte legale e sicura rimane l'etichetta ministeriale cartacea presente sulla confezione del prodotto.",
+      "L'IA di MelaSmart è un potente assistente che estrae dati dalle etichette ministeriali, ma può commettere errori. Le informazioni fornite hanno valore puramente indicativo: l'unica fonte legale e sicura rimane l'etichetta ministeriale cartacea presente sulla confezione del prodotto.",
   },
   {
     id: "faq-9",
@@ -76,7 +76,7 @@ const faqData = [
     id: "faq-10",
     question: "Cosa succede se cerco un prodotto non registrato per il melo?",
     answer: 
-      "Il nostro agronomo digitale è istruito per darti informazioni specifiche sulla melicoltura. Se un prodotto non è autorizzato per l'uso su melo o non è presente nei database ministeriali aggiornati, l'app ti avviserà della mancata corrispondenza per proteggere la tua coltura.",
+      "Il nostro agronomo digitale è istruito per darti informazioni specifiche sulla melicoltura oppure sulla viticoltura. Se un prodotto non è autorizzato per l'uso su melo o su vite o non è presente nei database ministeriali aggiornati, l'app ti avviserà della mancata corrispondenza per proteggere la tua coltura.",
   },
   {
     id: "faq-11",
@@ -88,7 +88,7 @@ const faqData = [
     id: "faq-12",
     question: "Come fa l'IA a sapere se è il momento giusto per un trattamento?",
     answer: 
-      "L'assistente di MelaSmart non fornisce risposte generiche, ma analizza costantemente tre pilastri fondamentali: il contesto temporale, la fase fenologica (scala BBCH) specifica del melo e le condizioni meteo. Integriamo un sistema AgriMeteo che elabora dati di Open-Meteo tramite un nostro algoritmo proprietario. Questo ci permette di valutare l'idoneità dei trattamenti in base a finestre di intervento ideali, segnalandoti ad esempio se il vento eccessivo o piogge imminenti potrebbero vanificare l'efficacia del prodotto.",
+      "L'assistente di MelaSmart non fornisce risposte generiche, ma analizza tre pilastri fondamentali: il contesto temporale, la fase fenologica (scala BBCH) specifica per la coltura selezionata e le condizioni meteo. Integriamo un sistema AgriMeteo che elabora dati di Open-Meteo tramite un nostro algoritmo proprietario. Questo ci permette di valutare l'idoneità dei trattamenti in base a finestre di intervento ideali, segnalandoti ad esempio se il vento eccessivo o piogge imminenti potrebbero vanificare l'efficacia del prodotto.",
   },
   {
     id: "faq-13",
