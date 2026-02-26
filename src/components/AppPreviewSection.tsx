@@ -4,6 +4,7 @@ import screenshotVolume from "@/assets/screenshot-volume.jpg";
 import screenshotMiscela from "@/assets/screenshot-miscela.jpg";
 import screenshotStrategia from "@/assets/screenshot-strategia.jpg";
 import screenshotCampi from "@/assets/screenshot-campi.jpg";
+import screenshotCarpocapsa from "@/assets/screenshot-carpocapsa.png";
 import {
   Carousel,
   CarouselContent,
@@ -11,6 +12,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { Bug, Thermometer, Bell } from "lucide-react";
 
 const screenshots = [
   {
@@ -64,6 +66,65 @@ const ScreenshotCard = ({ screenshot }: { screenshot: typeof screenshots[0] }) =
   </div>
 );
 
+const CarpocapsaCard = () => (
+  <div className="group relative h-full md:col-span-2">
+    <div className="absolute inset-0 bg-gradient-to-br from-semaforo-verde/15 via-melasmart-green/10 to-semaforo-giallo/10 rounded-4xl blur-2xl opacity-60 group-hover:opacity-100 transition-opacity duration-500" />
+    <div className="relative overflow-hidden rounded-4xl border-2 border-melasmart-green/30 bg-gradient-to-br from-card via-card to-melasmart-green/5 p-8 hover-lift h-full">
+      {/* NEW badge */}
+      <div className="absolute top-4 right-4 z-10">
+        <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-semaforo-verde text-background text-xs font-bold rounded-full uppercase tracking-wider animate-pulse">
+          🆕 Novità
+        </span>
+      </div>
+
+      <div className="flex flex-col lg:flex-row gap-8 items-center">
+        {/* Screenshot */}
+        <div className="relative overflow-hidden rounded-3xl bg-secondary/20 flex justify-center lg:w-1/2 border border-melasmart-green/10">
+          <img
+            src={screenshotCarpocapsa}
+            alt="Monitoraggio Carpocapsa"
+            className="w-full max-h-[420px] object-contain"
+          />
+        </div>
+
+        {/* Content */}
+        <div className="lg:w-1/2 space-y-5">
+          <div className="flex items-center gap-3">
+            <div className="p-3 rounded-2xl bg-melasmart-green/10">
+              <Bug className="h-7 w-7 text-melasmart-green" />
+            </div>
+            <h3 className="text-2xl font-bold">Monitoraggio Carpocapsa</h3>
+          </div>
+
+          <p className="text-muted-foreground text-base leading-relaxed">
+            Registra le catture nelle trappole e il conteggio dei <strong>Gradi Giorno (GDD)</strong> parte automaticamente. Ricevi alert intelligenti al raggiungimento delle soglie critiche.
+          </p>
+
+          {/* Feature pills */}
+          <div className="flex flex-wrap gap-3">
+            <div className="inline-flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-melasmart-green/10 border border-melasmart-green/20">
+              <Thermometer className="h-4 w-4 text-melasmart-green" />
+              <span className="text-sm font-medium">Calcolo GDD automatico</span>
+            </div>
+            <div className="inline-flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-semaforo-giallo/10 border border-semaforo-giallo/30">
+              <Bell className="h-4 w-4 text-semaforo-giallo" />
+              <span className="text-sm font-medium">Alert a 55° GDD</span>
+            </div>
+            <div className="inline-flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-semaforo-rosso/10 border border-semaforo-rosso/30">
+              <Bell className="h-4 w-4 text-semaforo-rosso" />
+              <span className="text-sm font-medium">Alert a 150° GDD</span>
+            </div>
+          </div>
+
+          <p className="text-xs text-muted-foreground italic">
+            Esclusivo per coltura Melo · Ciclo a generazioni
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
 const AppPreviewSection = () => {
   return (
     <section className="py-24 bg-background">
@@ -80,6 +141,11 @@ const AppPreviewSection = () => {
           </p>
         </div>
 
+        {/* Carpocapsa highlight */}
+        <div className="hidden md:grid md:grid-cols-2 gap-8 lg:gap-12 mb-8 lg:mb-12">
+          <CarpocapsaCard />
+        </div>
+
         {/* Desktop: Grid */}
         <div className="hidden md:grid md:grid-cols-2 gap-8 lg:gap-12">
           {screenshots.map((screenshot, index) => (
@@ -89,6 +155,10 @@ const AppPreviewSection = () => {
 
         {/* Mobile: Carousel */}
         <div className="md:hidden">
+          {/* Carpocapsa highlight mobile */}
+          <div className="mb-6">
+            <CarpocapsaCard />
+          </div>
           <Carousel className="w-full">
             <CarouselContent>
               {screenshots.map((screenshot, index) => (
