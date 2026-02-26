@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
-import PWASection from "@/components/PWASection";
 import FarmerOriginSection from "@/components/FarmerOriginSection";
 import ValueSection from "@/components/ValueSection";
 import AgronomoAISection from "@/components/AgronomoAISection";
@@ -16,7 +15,6 @@ const Index = () => {
       <main>
         <HeroSection />
         <AppPreviewSection />
-        <PWASection />
         <FarmerOriginSection />
         <ValueSection />
         <AgronomoAISection />
