@@ -35,6 +35,15 @@ interface ChangelogEntry {
 // 👇 AGGIUNGI NUOVE VOCI QUI (le più recenti in alto)
 // Queste sono le novità dell'APP MelaSmart, non della landing page
 const changelogData: ChangelogEntry[] = [
+   {
+    version: "v0.6.2",
+    date: "26/02/2026",
+    changes: [
+      { type: "nuovo", description: "Feat: Solo per la cultivar MELO inserita la scheda per la gestione COMPLETA del monitoraggio Carpocapsa con gestione automatica del calcolo gradi giorno ed alert a 55° e 150°" },
+      { type: "migliorato", description: "Inserita icona grappolo o mela nelle schede prodotto magazzino e nel wizard per distinzione visiva immediata" },
+      { type: "migliorato", description: "Database Melasmart 48 prodotti disponibili" },
+    ],
+  },
   {
     version: "v0.5.0",
     date: "19/02/2026",
@@ -55,7 +64,6 @@ const changelogData: ChangelogEntry[] = [
     version: "v0.3.0",
     date: "11/02/2026",
     changes: [
-      { type: "fix", description: "Se il prodotto ha solo la dose per ettolitro, viene calcolata automaticamente la dose per ettaro" },
       { type: "nuovo", description: "Regole per l'aggiornamento delle etichette ministeriali e del dosaggio: se i dati sono più vecchi di 2 mesi (etichette) o 3 mesi (dosaggi), vengono aggiornati automaticamente" },
       { type: "nuovo", description: "Dataset ministeriale utilizzato quando possibile per popolare il database MelaSmart con tutti i dati disponibili" },
       { type: "migliorato", description: "Nel magazzino, popup intelligente che mostra i dati più rilevanti di ogni prodotto: Principio Attivo, dose standard, descrizione prodotto, stato amministrativo" },
