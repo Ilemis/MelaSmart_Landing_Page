@@ -110,24 +110,64 @@ const PrivacyPolicy = () => {
             </h2>
             <div className="space-y-4">
               <p className="text-muted-foreground leading-relaxed">
-                Raccogliamo le seguenti categorie di dati personali:
+                Raccogliamo le seguenti categorie di dati personali e aziendali:
               </p>
               
               <div className="grid gap-4">
                 <div className="p-4 rounded-xl border border-border bg-card">
-                  <h3 className="font-semibold text-foreground mb-2">Dati forniti volontariamente</h3>
+                  <h3 className="font-semibold text-foreground mb-2">Dati dell'Account e Profilo</h3>
                   <ul className="space-y-1 text-muted-foreground">
                     <li className="flex items-start gap-2">
                       <span className="text-primary mt-1">•</span>
-                      <span>Indirizzo email (tramite il form di iscrizione alla waitlist)</span>
+                      <span>Indirizzo email (per autenticazione e comunicazioni)</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-primary mt-1">•</span>
-                      <span>Nome e cognome (se forniti)</span>
+                      <span>Dati identificativi dell'Azienda Agricola: Ragione sociale, CUAA / Partita IVA, Nome del Legale Rappresentante</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-primary mt-1">•</span>
-                      <span>Qualsiasi altra informazione volontariamente comunicata</span>
+                      <span>Dati geografici ed amministrativi: Comune e Provincia della sede aziendale</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">•</span>
+                      <span>Immagine del profilo (Avatar) se caricata volontariamente</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="p-4 rounded-xl border border-border bg-card">
+                  <h3 className="font-semibold text-foreground mb-2">Dati Operativi e Gestionali (Specifici per il servizio SaaS)</h3>
+                  <ul className="space-y-1 text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">•</span>
+                      <span><strong className="text-foreground">Gestione Terreni:</strong> Localizzazione, estensione e denominazione dei campi agricoli</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">•</span>
+                      <span><strong className="text-foreground">Gestione Flotta:</strong> Dati tecnici, targhe/matricole e immagini di trattori e atomizzatori</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">•</span>
+                      <span><strong className="text-foreground">Registro dei Trattamenti:</strong> Storico dei trattamenti effettuati, inclusi prodotti utilizzati, dosaggi, volumi d'acqua e date di intervento</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">•</span>
+                      <span><strong className="text-foreground">Inventario Digitale:</strong> Elenco e dettagli dei prodotti fitosanitari salvati dall'utente</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="p-4 rounded-xl border border-border bg-card">
+                  <h3 className="font-semibold text-foreground mb-2">Dati di Pagamento (Se sottoscritto piano Premium)</h3>
+                  <ul className="space-y-1 text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">•</span>
+                      <span>Stato dell'abbonamento e cronologia fatturazione</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">•</span>
+                      <span>I dati della carta di credito <strong className="text-foreground">non vengono salvati sui nostri server</strong>, ma gestiti in modo sicuro ed esclusivo dal fornitore Stripe</span>
                     </li>
                   </ul>
                 </div>
@@ -165,21 +205,29 @@ const PrivacyPolicy = () => {
             </h2>
             <div className="space-y-4">
               <p className="text-muted-foreground leading-relaxed">
-                I tuoi dati personali sono trattati per le seguenti finalità:
+                I tuoi dati sono trattati per:
               </p>
               <div className="grid gap-3">
                 {[
                   {
-                    title: "Gestione della Waitlist",
-                    desc: "Per registrare la tua richiesta di iscrizione e contattarti quando il servizio sarà disponibile."
+                    title: "Erogazione del Servizio SaaS",
+                    desc: "Consentirti di utilizzare le funzionalità di MelaSmart (gestione trattamenti, calcolo dosaggi, simulazione malattie come la Carpocapsa)."
+                  },
+                  {
+                    title: "Generazione Documentazione",
+                    desc: "Creazione automatica di report agricoli e \"Quaderno di Campagna\"."
+                  },
+                  {
+                    title: "Supporto Agronomico IA",
+                    desc: "Elaborazione delle domande poste all'Agronomo Digitale tramite i servizi di Intelligenza Artificiale (Google Gemini)."
+                  },
+                  {
+                    title: "Gestione Amministrativa",
+                    desc: "Gestione di abbonamenti, pagamenti e obblighi fiscali tramite Stripe."
                   },
                   {
                     title: "Comunicazioni informative",
                     desc: "Per inviarti aggiornamenti sullo sviluppo del progetto MelaSmart e novità correlate."
-                  },
-                  {
-                    title: "Miglioramento del servizio",
-                    desc: "Per analizzare l'utilizzo del sito e migliorare l'esperienza utente."
                   },
                   {
                     title: "Adempimenti legali",
@@ -214,14 +262,18 @@ const PrivacyPolicy = () => {
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
                   <span className="text-primary font-bold">a)</span>
-                  <span><strong className="text-foreground">Consenso</strong> (Art. 6.1.a GDPR): per l'iscrizione alla waitlist e l'invio di comunicazioni informative.</span>
+                  <span><strong className="text-foreground">Esecuzione di un contratto</strong> (Art. 6.1.b GDPR): per consentire l'accesso alla piattaforma SaaS e alle sue funzionalità (Account, Gestione Campi, Abbonamenti).</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-primary font-bold">b)</span>
-                  <span><strong className="text-foreground">Legittimo interesse</strong> (Art. 6.1.f GDPR): per l'analisi statistica anonima e il miglioramento del servizio.</span>
+                  <span><strong className="text-foreground">Consenso</strong> (Art. 6.1.a GDPR): per l'invio di comunicazioni informative e marketing (Waitlist).</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-primary font-bold">c)</span>
+                  <span><strong className="text-foreground">Legittimo interesse</strong> (Art. 6.1.f GDPR): per la sicurezza informatica e il monitoraggio delle performance dell'applicazione (PWA).</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-primary font-bold">d)</span>
                   <span><strong className="text-foreground">Obbligo legale</strong> (Art. 6.1.c GDPR): per adempiere a obblighi previsti dalla legge.</span>
                 </li>
               </ul>
@@ -266,25 +318,41 @@ const PrivacyPolicy = () => {
           <section id="condivisione" className="scroll-mt-24">
             <h2 className="text-2xl font-bold text-foreground mb-4 flex items-center gap-3">
               <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 text-primary text-sm font-bold">6</span>
-              Condivisione dei Dati
+              Condivisione dei Dati (Terze Parti Tecniche)
             </h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                I tuoi dati personali potranno essere condivisi con:
+                Per il corretto funzionamento dell'app, i dati sono condivisi con i seguenti fornitori (nominati Responsabili del Trattamento):
               </p>
               <div className="grid gap-3">
                 <div className="p-4 rounded-xl border border-border bg-card">
-                  <h3 className="font-semibold text-foreground mb-2">Fornitori di servizi</h3>
+                  <h3 className="font-semibold text-foreground mb-2">Supabase (Database & Auth)</h3>
                   <p className="text-sm">
-                    Utilizziamo Formspree per la gestione del form di contatto. Formspree agisce come 
-                    responsabile del trattamento e i dati sono trattati in conformità al GDPR.
+                    Archiviazione sicura dei dati utente e gestione dell'autenticazione.
                   </p>
                 </div>
                 <div className="p-4 rounded-xl border border-border bg-card">
-                  <h3 className="font-semibold text-foreground mb-2">Servizi di hosting</h3>
+                  <h3 className="font-semibold text-foreground mb-2">Stripe (Pagamenti)</h3>
                   <p className="text-sm">
-                    Il sito è ospitato su Cloudflare Pages. I server sono situati nell'Unione Europea 
-                    o in paesi che garantiscono un livello adeguato di protezione.
+                    Gestione transazioni finanziarie e fatturazione.
+                  </p>
+                </div>
+                <div className="p-4 rounded-xl border border-border bg-card">
+                  <h3 className="font-semibold text-foreground mb-2">Google Cloud / Gemini API</h3>
+                  <p className="text-sm">
+                    Per l'elaborazione dei servizi di Intelligenza Artificiale.
+                  </p>
+                </div>
+                <div className="p-4 rounded-xl border border-border bg-card">
+                  <h3 className="font-semibold text-foreground mb-2">Cloudflare Pages</h3>
+                  <p className="text-sm">
+                    Hosting dell'interfaccia web e gestione della sicurezza (SSL/WAF).
+                  </p>
+                </div>
+                <div className="p-4 rounded-xl border border-border bg-card">
+                  <h3 className="font-semibold text-foreground mb-2">Formspree</h3>
+                  <p className="text-sm">
+                    Gestione esclusiva dei contatti iniziali e della waitlist.
                   </p>
                 </div>
                 <div className="p-4 rounded-xl border border-border bg-card">
