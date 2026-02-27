@@ -85,21 +85,25 @@ const PrivacyPolicy = () => {
         {/* Content Sections */}
         <div className="space-y-12">
           {/* Section 1 */}
-          <section id="titolare" className="scroll-mt-24">
-            <h2 className="text-2xl font-bold text-foreground mb-4 flex items-center gap-3">
-              <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 text-primary text-sm font-bold">1</span>
-              Titolare del Trattamento
-            </h2>
-            <div className="prose prose-gray dark:prose-invert max-w-none">
-              <p className="text-muted-foreground leading-relaxed">
-                Il Titolare del trattamento dei dati personali raccolti attraverso questo sito web è:
-              </p>
-              <div className="mt-4 p-4 rounded-xl bg-muted/50 border border-border">
-                <p className="font-semibold text-foreground">MelaSmart</p>
-                <p className="text-muted-foreground">Startup innovativa nel settore AgriTech</p>
-                <p className="text-muted-foreground">Email: melasmart@proton.me</p>
-              </div>
+           <section id="titolare" className="scroll-mt-24">
+             <h2 className="text-2xl font-bold text-foreground mb-4 flex items-center gap-3">
+               <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 text-primary text-sm font-bold">1</span>
+                 Titolare del Trattamento
+              </h2>
+             <div className="prose prose-gray dark:prose-invert max-w-none">
+            <p className="text-muted-foreground leading-relaxed">
+                 Il Titolare del trattamento dei dati personali raccolti attraverso questo sito web e l'applicazione MelaSmart è:
+            </p>
+                 <div className="mt-4 p-4 rounded-xl bg-muted/50 border border-border">
+              <p className="font-semibold text-foreground">Emiliano Criscuoli / Azienda Agricola Magnoni</p>
+              <p className="text-muted-foreground">Partita IVA: 03662670367</p>
+              <p className="text-muted-foreground">Progetto: MelaSmart AgriTech</p>
+              <p className="text-muted-foreground">Email: melasmart@proton.me</p>
             </div>
+          <p className="text-xs text-muted-foreground mt-3 italic">
+          Nota: MelaSmart è un marchio e servizio di proprietà dell'Azienda Agricola Magnoni.
+        </p>
+        </div>
           </section>
 
           {/* Section 2 */}
