@@ -4,7 +4,7 @@ import iconMelasmart from "@/assets/icon-melasmart.png";
 import Footer from "@/components/Footer";
 
 const PrivacyPolicy = () => {
-  const lastUpdated = "14 Gennaio 2026";
+  const lastUpdated = "27 Febbraio 2026";
 
   return (
     <div className="min-h-screen bg-background">
