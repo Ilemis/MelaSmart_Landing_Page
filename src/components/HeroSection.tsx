@@ -48,31 +48,28 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Two-column: launch message + compact form */}
-        <div className="flex flex-col lg:flex-row items-center lg:items-end gap-8 lg:gap-12 animate-fade-up-delay-2">
-          {/* Left: Launch announcement */}
-          <div className="flex-1">
-            <div className="bg-background/80 backdrop-blur-sm border border-border rounded-2xl p-6 md:p-8 shadow-lg text-center lg:text-left">
-              <p className="text-2xl md:text-3xl font-bold text-foreground mb-2 drop-shadow-[0_1px_6px_hsl(var(--background))]">
-                🚀 Stiamo per partire!
-              </p>
-              <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                Il lancio ufficiale è alle porte. Preparati a gestire il tuo frutteto come mai prima d'ora con l'intelligenza artificiale al tuo fianco.
-              </p>
-            </div>
+        {/* Full-width launch announcement */}
+        <div className="animate-fade-up-delay-2 mb-8">
+          <div className="bg-background/80 backdrop-blur-sm border border-border rounded-2xl p-6 md:p-8 shadow-lg text-center">
+            <p className="text-2xl md:text-3xl font-bold text-foreground mb-2 drop-shadow-[0_1px_6px_hsl(var(--background))]">
+              🚀 Stiamo per partire!
+            </p>
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+              Il lancio ufficiale è alle porte. Preparati a gestire il tuo frutteto come mai prima d'ora con l'intelligenza artificiale al tuo fianco.
+            </p>
           </div>
+        </div>
 
-          {/* Right: Compact waitlist form */}
-          <div className="w-full lg:w-80 flex-shrink-0">
-            <div className="bg-background/80 backdrop-blur-sm border border-border rounded-2xl p-5 shadow-lg">
-              <p className="text-sm font-semibold text-foreground mb-1 text-center">
-                🎁 Unisciti alla waitlist
-              </p>
-              <p className="text-xs text-muted-foreground mb-4 text-center">
-                30 giorni di AI Premium gratis per i primi 20 iscritti.
-              </p>
-              <WaitlistForm />
-            </div>
+        {/* Full-width compact waitlist form */}
+        <div className="animate-fade-up-delay-2">
+          <div className="bg-background/80 backdrop-blur-sm border border-border rounded-2xl p-5 md:p-6 shadow-lg max-w-lg mx-auto">
+            <p className="text-sm font-semibold text-foreground mb-1 text-center">
+              🎁 Unisciti alla waitlist
+            </p>
+            <p className="text-xs text-muted-foreground mb-4 text-center">
+              30 giorni di AI Premium gratis per i primi 20 iscritti.
+            </p>
+            <WaitlistForm />
           </div>
         </div>
       </div>
