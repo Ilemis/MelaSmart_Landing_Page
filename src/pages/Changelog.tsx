@@ -40,6 +40,8 @@ const changelogData: ChangelogEntry[] = [
     date: "01/03/2026",
     changes: [
       { type: "nuovo", description: "feat: Aggiunti nuova serie di ugelli ALBUZ ATI 80, ALBUZ ATF 80, ALBUZ AVI 80 nella calibrazione atomizzatore, ora conta 12 serie diverse" },
+      { type: "fix", description: "Pannello carpocapsa, minifix vari" },
+      { type: "nuovo", description: "Aggiunta la cronologia delle domande fatte all'Agronomo AI, fino a 200 per premium" },
       ],
   }, 
   {
