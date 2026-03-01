@@ -36,6 +36,13 @@ interface ChangelogEntry {
 // Queste sono le novità dell'APP MelaSmart, non della landing page
 const changelogData: ChangelogEntry[] = [
    {
+    version: "v1.0.0",
+    date: "01/03/2026",
+    changes: [
+      { type: "nuovo", description: "feat: Aggiunti nuova serie di ugelli ALBUZ ATI 80, ALBUZ ATF 80, ALBUZ AVI 80 nella calibrazione atomizzatore, ora conta 12 serie diverse" },
+      ],
+  }, 
+  {
     version: "v0.6.2",
     date: "26/02/2026",
     changes: [
