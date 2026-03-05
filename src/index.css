@@ -29,6 +29,12 @@
     --accent: 73 62% 95%;
     --accent-foreground: 73 62% 35%;
 
+    /* Warm accent - Sunflower / Agrumi */
+    --warm: 38 92% 55%;
+    --warm-foreground: 0 0% 7%;
+    --warm-light: 38 92% 92%;
+    --warm-dark: 30 85% 42%;
+
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
@@ -80,6 +86,11 @@
     --accent: 73 62% 20%;
     --accent-foreground: 73 62% 80%;
 
+    --warm: 38 92% 50%;
+    --warm-foreground: 0 0% 7%;
+    --warm-light: 38 92% 20%;
+    --warm-dark: 30 85% 38%;
+
     --destructive: 0 62% 50%;
     --destructive-foreground: 0 0% 98%;
 
@@ -120,6 +131,21 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+  }
+
+  .text-gradient-warm {
+    background: linear-gradient(135deg, hsl(var(--warm)) 0%, hsl(var(--warm-dark)) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-gradient-warm {
+    background: linear-gradient(135deg, hsl(var(--warm)) 0%, hsl(var(--warm-dark)) 100%);
+  }
+
+  .bg-gradient-green {
+    background: linear-gradient(135deg, hsl(var(--melasmart-green)) 0%, hsl(var(--melasmart-green-dark)) 100%);
   }
 
   /* Hover animations */

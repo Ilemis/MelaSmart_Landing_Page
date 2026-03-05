@@ -25,12 +25,12 @@ const HeroSection = () => {
         {/* Full-width title area */}
         <div className="text-center mb-12">
           <div className="animate-fade-up">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-warm/10 border border-warm/20 mb-6">
               <span className="relative flex h-2.5 w-2.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-warm opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-warm"></span>
               </span>
-              <span className="text-sm font-semibold text-primary">Lancio imminente</span>
+              <span className="text-sm font-semibold text-warm-dark">Lancio imminente</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight drop-shadow-[0_2px_10px_hsl(var(--background))]">
               MelaSmart: Gestione
@@ -50,7 +50,7 @@ const HeroSection = () => {
 
         {/* Full-width launch announcement */}
         <div className="animate-fade-up-delay-2 mb-8">
-          <div className="bg-background/80 backdrop-blur-sm border border-border rounded-2xl p-6 md:p-8 shadow-lg text-center">
+          <div className="bg-background/80 backdrop-blur-sm border border-warm/20 rounded-2xl p-6 md:p-8 shadow-lg text-center">
             <p className="text-2xl md:text-3xl font-bold text-foreground mb-2 drop-shadow-[0_1px_6px_hsl(var(--background))]">
               🚀 Stiamo per partire!
             </p>
