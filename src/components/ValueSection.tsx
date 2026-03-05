@@ -114,7 +114,7 @@ const ValueSection = () => {
     <section className="py-20 px-4">
       <div className="container mx-auto max-w-5xl">
         <div className="text-center mb-16 animate-fade-up">
-          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
+          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-warm/10 text-warm-dark text-sm font-medium mb-6">
             <Star className="w-4 h-4" />
             Professional Crop Management
           </span>
