@@ -1,7 +1,13 @@
+import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, ExternalLink, Smartphone } from "lucide-react";
 
 const Welcome = () => {
+  useEffect(() => {
+    setTimeout(() => {
+      window.history.replaceState(null, '', window.location.pathname);
+    }, 500);
+  }, []);
   return (
     <div className="min-h-screen bg-background flex items-center justify-center p-6">
       <div className="max-w-2xl w-full text-center space-y-8">
