@@ -145,6 +145,10 @@ const AgronomoAISection = () => {
                 <div className="w-full flex-shrink-0">
                   <SlideTwo />
                 </div>
+                {/* SLIDE 3 — Gemini Vision */}
+                <div className="w-full flex-shrink-0">
+                  <SlideThree />
+                </div>
               </div>
             </div>
 
