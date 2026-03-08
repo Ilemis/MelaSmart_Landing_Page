@@ -1,4 +1,4 @@
-import { Check, Star, Brain, CloudSun, FlaskConical, Calculator, Shield, Leaf, Layers, Zap, ClipboardList, Crosshair, BarChart3, ChevronDown } from "lucide-react";
+import { Check, Star, Brain, CloudSun, FlaskConical, Calculator, Shield, Leaf, Layers, Zap, ClipboardList, Crosshair, BarChart3, ChevronDown, Eye } from "lucide-react";
 import { useState } from "react";
 
 const categories = [
