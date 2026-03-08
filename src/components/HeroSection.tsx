@@ -1,7 +1,32 @@
+import { useState, useEffect } from "react";
 import WaitlistForm from "@/components/WaitlistForm";
 import heroBanner from "@/assets/hero-banner.png";
 
+const LAUNCH_DATE = new Date("2026-05-10T00:00:00");
+
+const useCountdown = () => {
+  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+
+  useEffect(() => {
+    const tick = () => {
+      const diff = Math.max(0, LAUNCH_DATE.getTime() - Date.now());
+      setTimeLeft({
+        days: Math.floor(diff / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((diff / (1000 * 60)) % 60),
+        seconds: Math.floor((diff / 1000) % 60),
+      });
+    };
+    tick();
+    const id = setInterval(tick, 1000);
+    return () => clearInterval(id);
+  }, []);
+
+  return timeLeft;
+};
+
 const HeroSection = () => {
+  const { days, hours, minutes, seconds } = useCountdown();
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-28 pb-16 px-4 overflow-hidden">
       {/* Background Image */}
