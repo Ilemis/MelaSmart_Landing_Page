@@ -5,6 +5,8 @@ import screenshotMiscela from "@/assets/screenshot-miscela.jpg";
 import screenshotStrategia from "@/assets/screenshot-strategia.jpg";
 import screenshotCampi from "@/assets/screenshot-campi.jpg";
 import screenshotCarpocapsa from "@/assets/screenshot-carpocapsa.png";
+import screenshotMeteo from "@/assets/screenshot-meteo.jpg";
+import screenshotGarage from "@/assets/screenshot-garage.jpg";
 import {
   Carousel,
   CarouselContent,
@@ -24,6 +26,16 @@ const screenshots = [
     image: screenshotMagazzino,
     title: "Magazzino Predittivo",
     description: "Monitora scorte, costi, imposta soglie di allerta. In ogni card prodotto puoi attivare un popup che scarica le info ministeriali come data smaltimento scorte e stato amministrativo e ricevi suggerimenti intelligenti per gli acquisti.",
+  },
+  {
+    image: screenshotMeteo,
+    title: "Agri-Meteo Localizzato",
+    description: "Semafori intelligenti da oggi a 7 giorni con grafici controllo nebbie, gelate, fenomeni e nuvole. Dati meteo localizzati su campo con Delta T, umidità, vento e rischio bagnatura.",
+  },
+  {
+    image: screenshotGarage,
+    title: "Il tuo Garage",
+    description: "Salva i tuoi trattori e atomizzatori con foto, potenza e tipologia. Seleziona il mezzo per la calibrazione e sincronizza il parco macchine con i trattamenti.",
   },
   {
     image: screenshotCampi,
