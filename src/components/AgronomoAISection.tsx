@@ -102,6 +102,16 @@ const AgronomoAISection = () => {
             >
               Esempio 2 — Compatibilità miscela
             </button>
+            <button
+              onClick={() => setActiveSlide(2)}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                activeSlide === 2
+                  ? "bg-primary text-primary-foreground shadow-soft"
+                  : "bg-muted text-muted-foreground hover:bg-accent"
+              }`}
+            >
+              Esempio 3 — Gemini Vision
+            </button>
           </div>
           
           <div className="relative max-w-4xl mx-auto">
