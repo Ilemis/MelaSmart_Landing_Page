@@ -172,7 +172,7 @@ const AgronomoAISection = () => {
           <div className="inline-flex items-center gap-3 px-6 py-4 rounded-2xl bg-card border border-border">
             <div className="w-3 h-3 rounded-full bg-primary animate-pulse" />
             <span className="text-sm text-muted-foreground">
-              MelaSmart AI™ Copilot è incluso anche nella versione free con limiti giornalieri
+              MelaSmart AI™ Copilot è incluso anche nella versione free con limiti giornalieri — la funzione Vision è esclusiva del piano Premium
             </span>
           </div>
         </div>
