@@ -154,7 +154,7 @@ const AgronomoAISection = () => {
 
             {/* Dots */}
             <div className="flex justify-center gap-2 mt-6">
-              {[0, 1].map(i => (
+              {[0, 1, 2].map(i => (
                 <button
                   key={i}
                   onClick={() => setActiveSlide(i)}
