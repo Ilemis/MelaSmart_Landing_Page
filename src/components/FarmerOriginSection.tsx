@@ -17,7 +17,7 @@ const FarmerOriginSection = () => {
           <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
             MelaSmart nasce dall'esperienza diretta di chi ogni giorno è in campo.
             Niente fronzoli: solo ciò che serve per gestire i trattamenti in modo rapido ed efficace.
-            È una <strong>Progressive Web App</strong> — si installa in un tap, funziona anche con connessione debole e si aggiorna da sola. Nessun App Store, nessuno spazio occupato.
+            È una <strong>Progressive Web App</strong> — si installa in un tap, si aggiorna da sola e non occupa spazio. Le funzioni di calcolo miscela restano disponibili anche offline, mentre meteo, AI e altre funzionalità cloud richiedono connessione internet.
           </p>
         </div>
       </div>
