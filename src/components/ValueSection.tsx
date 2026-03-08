@@ -1,4 +1,4 @@
-import { Check, Star, Brain, CloudSun, FlaskConical, Calculator, Shield, Leaf, Layers, Zap, ClipboardList, Crosshair, BarChart3, ChevronDown } from "lucide-react";
+import { Check, Star, Brain, CloudSun, FlaskConical, Calculator, Shield, Leaf, Layers, Zap, ClipboardList, Crosshair, BarChart3, ChevronDown, Eye } from "lucide-react";
 import { useState } from "react";
 
 const categories = [
@@ -27,6 +27,12 @@ const categories = [
         name: "MelaSmart AI™ Copilot",
         subtitle: "Agronomo Virtuale",
         description: "Un agronomo senior sempre al tuo fianco. La nostra IA analizza contemporaneamente fenologia, meteo e prodotti per validare ogni tua decisione tecnica."
+      },
+      {
+        icon: Eye,
+        name: "Gemini Vision",
+        subtitle: "Diagnosi Visiva AI",
+        description: "Scatta una foto e ottieni una diagnosi. Carica un'immagine di foglie, frutti o parassiti e ricevi un'analisi dettagliata con identificazione della malattia e consigli pratici di intervento. Esclusiva Premium."
       },
     ]
   },
