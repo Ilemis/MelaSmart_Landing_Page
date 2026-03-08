@@ -409,4 +409,142 @@ const SlideTwo = () => (
   </div>
 );
 
+/* ─── SLIDE 3: Gemini Vision ─── */
+const SlideThree = () => (
+  <div className="bg-card border border-border overflow-hidden shadow-xl">
+    <div className="bg-gradient-to-r from-primary/10 to-primary/5 px-6 py-5 border-b border-border">
+      <div className="flex items-start gap-4">
+        <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+          <User className="w-5 h-5 text-primary" />
+        </div>
+        <div className="flex-1">
+          <p className="text-xs text-muted-foreground mb-1">La tua domanda</p>
+          <p className="font-medium text-foreground">
+            "Di che malattia si tratta? Come posso intervenire?"
+          </p>
+          <div className="mt-3 flex items-center gap-2">
+            <div className="relative rounded-lg overflow-hidden border border-border w-20 h-14">
+              <img src={visionImage} alt="Foglie di melo con macchie da ticchiolatura" className="w-full h-full object-cover" />
+            </div>
+            <span className="text-xs text-muted-foreground flex items-center gap-1">
+              <Camera className="w-3.5 h-3.5" />
+              Foto allegata
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div className="p-6 space-y-5">
+      <div className="flex items-center gap-3 mb-4">
+        <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+          <Eye className="w-5 h-5 text-primary" />
+        </div>
+        <div>
+          <p className="font-semibold text-sm">Agronomo AI · Gemini Vision</p>
+          <p className="text-xs text-muted-foreground">Analisi immagine + risposta personalizzata</p>
+        </div>
+      </div>
+
+      <p className="text-sm leading-relaxed">
+        L'immagine mostra delle foglie di melo con la presenza di <strong>macchie fogliari</strong>. Queste lesioni appaiono come macchie circolari o irregolari, di colore marrone-violaceo, talvolta con un margine più scuro o necrotico.
+      </p>
+
+      {/* Diagnosis */}
+      <div className="bg-destructive/10 border border-destructive/30 rounded-xl p-4 flex items-start gap-3">
+        <Search className="w-5 h-5 text-destructive flex-shrink-0 mt-0.5" />
+        <div>
+          <p className="font-semibold text-sm text-destructive">Diagnosi: Ticchiolatura del melo</p>
+          <p className="text-sm text-muted-foreground mt-1">Causata dal fungo <em>Venturia inaequalis</em>. Una delle malattie fungine più diffuse e dannose per il melo, che colpisce sia foglie che frutti.</p>
+        </div>
+      </div>
+
+      <p className="font-semibold text-sm">Come intervenire:</p>
+
+      {/* Pratiche Colturali */}
+      <div className="bg-primary/5 border border-primary/20 rounded-xl p-5">
+        <div className="flex items-center gap-2 mb-4">
+          <TreeDeciduous className="w-5 h-5 text-primary" />
+          <span className="font-semibold text-sm">1. Pratiche Colturali e Prevenzione</span>
+        </div>
+        <div className="space-y-3">
+          <div className="bg-background/60 rounded-xl p-4 border border-border">
+            <div className="flex items-center gap-2 mb-2">
+              <Leaf className="w-4 h-4 text-primary" />
+              <span className="font-semibold text-sm">Igiene del frutteto</span>
+            </div>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              Rimuovere e distruggere le foglie cadute in autunno — principale serbatoio del fungo per la stagione successiva.
+            </p>
+          </div>
+          <div className="bg-background/60 rounded-xl p-4 border border-border">
+            <div className="flex items-center gap-2 mb-2">
+              <Scissors className="w-4 h-4 text-primary" />
+              <span className="font-semibold text-sm">Potatura e Irrigazione</span>
+            </div>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              Migliorare aerazione e penetrazione della luce nella chioma. Evitare l'irrigazione per aspersione; preferire metodi che mantengano le foglie asciutte.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Monitoraggio */}
+      <div className="bg-background/50 rounded-xl p-4 border border-border">
+        <div className="flex items-center gap-2 mb-2">
+          <Eye className="w-4 h-4 text-primary" />
+          <span className="font-semibold text-sm">2. Monitoraggio</span>
+        </div>
+        <p className="text-sm text-muted-foreground leading-relaxed">
+          Iniziare a monitorare dall'inizio della primavera. Prestare particolare attenzione dopo periodi di pioggia — le condizioni umide e miti favoriscono le prime infezioni.
+        </p>
+      </div>
+
+      {/* Trattamenti */}
+      <div className="bg-primary/5 border border-primary/20 rounded-xl p-5">
+        <div className="flex items-center gap-2 mb-4">
+          <FlaskConical className="w-5 h-5 text-primary" />
+          <span className="font-semibold text-sm">3. Trattamenti</span>
+        </div>
+        <div className="space-y-3">
+          <div className="bg-background/60 rounded-xl p-4 border border-border">
+            <div className="flex items-center gap-2 mb-2">
+              <Sprout className="w-4 h-4 text-primary" />
+              <span className="font-semibold text-sm">Trattamenti a base di rame</span>
+            </div>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              Efficaci come trattamenti preventivi e protettivi dalla ripresa vegetativa. Il rame inibisce la germinazione delle spore fungine. Rispettare dosi e intervalli.
+            </p>
+          </div>
+          <div className="bg-background/60 rounded-xl p-4 border border-border">
+            <div className="flex items-center gap-2 mb-2">
+              <Beaker className="w-4 h-4 text-primary" />
+              <span className="font-semibold text-sm">Fungicidi specifici</span>
+            </div>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              Esistono fungicidi specifici per la ticchiolatura, preventivi e in alcuni casi curativi. Seguire scrupolosamente le indicazioni in etichetta per dosi e tempi di carenza.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Warning */}
+      <div className="bg-destructive/10 border border-destructive/30 rounded-xl p-4 flex items-start gap-3">
+        <AlertTriangle className="w-5 h-5 text-destructive flex-shrink-0 mt-0.5" />
+        <div>
+          <p className="text-sm text-muted-foreground leading-relaxed">
+            <strong className="text-destructive">Attenzione:</strong> Le macchie visibili sono già segno di infezione avvenuta. <strong>La tempestività è cruciale</strong> — agisci subito per bloccare la diffusione.
+          </p>
+        </div>
+      </div>
+
+      <div className="bg-muted/50 rounded-xl p-4 border-l-4 border-primary">
+        <p className="text-sm leading-relaxed">
+          <strong>In sintesi,</strong> la malattia è molto probabilmente la <strong>ticchiolatura del melo</strong>. Concentrati su pratiche preventive, igiene del frutteto e trattamenti fitosanitari mirati, nel rispetto delle normative e delle buone pratiche agronomiche. 🍎
+        </p>
+      </div>
+    </div>
+  </div>
+);
+
 export default AgronomoAISection;
