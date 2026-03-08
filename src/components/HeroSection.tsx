@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import WaitlistForm from "@/components/WaitlistForm";
+import CultivarSection from "@/components/CultivarSection";
 import heroBanner from "@/assets/hero-banner.png";
 
 const LAUNCH_DATE = new Date("2026-05-10T00:00:00");
@@ -116,6 +117,9 @@ const HeroSection = () => {
             <WaitlistForm />
           </div>
         </div>
+
+        {/* Cultivar Section */}
+        <CultivarSection />
       </div>
     </section>
   );
