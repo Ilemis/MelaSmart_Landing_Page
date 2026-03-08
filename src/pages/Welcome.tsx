@@ -41,7 +41,7 @@ const Welcome = () => {
             className="bg-foreground text-background hover:bg-foreground/90 font-semibold text-lg px-12 py-6 h-auto shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
           >
             <a
-              href="https://melasmart-frontend-979042610060.europe-west1.run.app/"
+              href="https://app.melasmart.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3"
