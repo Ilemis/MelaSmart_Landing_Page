@@ -76,12 +76,31 @@ const HeroSection = () => {
         {/* Full-width launch announcement */}
         <div className="animate-fade-up-delay-2 mb-8">
           <div className="bg-background/80 backdrop-blur-sm border border-warm/20 rounded-2xl p-6 md:p-8 shadow-lg text-center">
-            <p className="text-2xl md:text-3xl font-bold text-foreground mb-2 drop-shadow-[0_1px_6px_hsl(var(--background))]">
-              🚀 Stiamo per partire!
+            <p className="text-lg font-semibold text-foreground mb-5 drop-shadow-[0_1px_6px_hsl(var(--background))]">
+              🚀 Il lancio si avvicina
             </p>
-            <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-              Il lancio ufficiale è alle porte. Preparati a gestire il tuo frutteto come mai prima d'ora con l'intelligenza artificiale al tuo fianco.
-            </p>
+            <div className="flex items-center justify-center gap-3 md:gap-5">
+              {[
+                { value: days, label: "Giorni" },
+                { value: hours, label: "Ore" },
+                { value: minutes, label: "Minuti" },
+                { value: seconds, label: "Secondi" },
+              ].map((unit, i) => (
+                <div key={unit.label} className="flex items-center gap-3 md:gap-5">
+                  <div className="flex flex-col items-center">
+                    <span className="text-3xl md:text-5xl font-bold tabular-nums text-foreground leading-none tracking-tight">
+                      {String(unit.value).padStart(2, "0")}
+                    </span>
+                    <span className="text-[10px] md:text-xs font-medium text-muted-foreground mt-1.5 uppercase tracking-widest">
+                      {unit.label}
+                    </span>
+                  </div>
+                  {i < 3 && (
+                    <span className="text-2xl md:text-4xl font-light text-muted-foreground/40 -mt-4">:</span>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
