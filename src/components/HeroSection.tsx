@@ -117,6 +117,9 @@ const HeroSection = () => {
             <WaitlistForm />
           </div>
         </div>
+
+        {/* Cultivar Section */}
+        <CultivarSection />
       </div>
     </section>
   );
