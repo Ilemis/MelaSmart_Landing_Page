@@ -35,7 +35,15 @@ interface ChangelogEntry {
 // 👇 AGGIUNGI NUOVE VOCI QUI (le più recenti in alto)
 // Queste sono le novità dell'APP MelaSmart, non della landing page
 const changelogData: ChangelogEntry[] = [
-   {
+  {
+    version: "v1.0.2",
+    date: "08/03/2026",
+    changes: [
+      { type: "fix", description: "Adesso cliccando \"+ Nuovo Calcolo\" dal registro si apre il wizard invece di tornare in home" },
+      { type: "nuovo", description: "Aggiunta la nuova funzione Vision per Assistente Agronomo - MelaSmart AI™ Copilot: bottone dedicato che permette di caricare una foto del contesto agricolo (malattie, parassiti, ecc.) con una domanda per ricevere una risposta pertinente" },
+    ],
+  },
+  {
     version: "v1.0.0",
     date: "01/03/2026",
     changes: [
