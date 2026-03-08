@@ -117,14 +117,14 @@ const AgronomoAISection = () => {
           <div className="relative max-w-4xl mx-auto">
             {/* Arrows */}
             <button
-              onClick={() => setActiveSlide(prev => prev === 0 ? 1 : 0)}
+              onClick={() => setActiveSlide(prev => prev === 0 ? 2 : prev - 1)}
               className="absolute -left-4 md:-left-14 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-card border border-border shadow-card flex items-center justify-center hover:bg-accent transition-colors"
               aria-label="Slide precedente"
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
             <button
-              onClick={() => setActiveSlide(prev => prev === 0 ? 1 : 0)}
+              onClick={() => setActiveSlide(prev => prev === 2 ? 0 : prev + 1)}
               className="absolute -right-4 md:-right-14 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-card border border-border shadow-card flex items-center justify-center hover:bg-accent transition-colors"
               aria-label="Slide successiva"
             >
