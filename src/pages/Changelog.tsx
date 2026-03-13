@@ -36,6 +36,15 @@ interface ChangelogEntry {
 // Queste sono le novità dell'APP MelaSmart, non della landing page
 const changelogData: ChangelogEntry[] = [
   {
+    version: "v1.0.3",
+    date: "13/03/2026",
+    changes: [
+      { type: "nuovo", description: "Aggiunta la card \"Costo per Trattamento\" nella sezione Analisi Costi, con data, costo totale e €/ha" },
+      { type: "nuovo", description: "Aggiunta funzionalità di aggiornamento per i trattamenti già salvati, inclusa la modifica delle quantità dei prodotti, la data e le note" },
+      { type: "migliorato", description: "Migliorie varie nella visualizzazione dei grafici meteo" },
+    ],
+  },
+  {
     version: "v1.0.2",
     date: "08/03/2026",
     changes: [
