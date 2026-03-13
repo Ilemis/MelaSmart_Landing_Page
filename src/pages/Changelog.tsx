@@ -42,6 +42,7 @@ const changelogData: ChangelogEntry[] = [
       { type: "nuovo", description: "Aggiunta la card \"Costo per Trattamento\" nella sezione Analisi Costi, con data, costo totale e €/ha" },
       { type: "nuovo", description: "Aggiunta funzionalità di aggiornamento per i trattamenti già salvati, inclusa la modifica delle quantità dei prodotti, la data e le note" },
       { type: "migliorato", description: "Migliorie varie nella visualizzazione dei grafici meteo" },
+      { type: "nuovo", description: "Aggiunta del modulo Risorse Tecniche con informazioni su formulazioni, resistenze e consigli per la gestione con focus su melo e vite con selezione dinamica, migliorando l'accesso alle informazioni agronomiche" },
     ],
   },
   {
