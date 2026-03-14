@@ -70,13 +70,13 @@ const PrivacyPolicy = () => {
               { id: "modifiche", label: "Modifiche alla Policy" },
             ].map((item) => (
               <li key={item.id}>
-                <a
-                  href={`#${item.id}`}
-                  className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors py-1"
+                <button
+                  onClick={() => document.getElementById(item.id)?.scrollIntoView({ behavior: "smooth" })}
+                  className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors py-1 text-left"
                 >
                   <FileText className="h-3 w-3" />
                   {item.label}
-                </a>
+                </button>
               </li>
             ))}
           </ul>
