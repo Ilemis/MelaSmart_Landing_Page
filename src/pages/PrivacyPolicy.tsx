@@ -197,6 +197,16 @@ const PrivacyPolicy = () => {
                     </li>
                   </ul>
                 </div>
+
+                <div className="p-4 rounded-xl border border-border bg-card">
+                  <h3 className="font-semibold text-foreground mb-2">Dati NON conservati</h3>
+                  <ul className="space-y-1 text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">•</span>
+                      <span><strong className="text-foreground">Immagini per diagnosi visiva (Gemini Vision):</strong> Le immagini caricate per l'analisi AI esistono esclusivamente in memoria volatile (RAM) per il tempo necessario all'elaborazione e vengono immediatamente eliminate. Non vengono mai salvate su server, database o sistemi di archiviazione del Titolare.</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </section>
@@ -344,7 +354,11 @@ const PrivacyPolicy = () => {
                 <div className="p-4 rounded-xl border border-border bg-card">
                   <h3 className="font-semibold text-foreground mb-2">Google Cloud / Gemini API</h3>
                   <p className="text-sm">
-                    Per l'elaborazione dei servizi di Intelligenza Artificiale.
+                    Per l'elaborazione dei servizi di Intelligenza Artificiale, inclusa la funzionalità 
+                    di diagnosi visiva (Gemini Vision). Le immagini caricate per l'analisi visiva 
+                    <strong className="text-foreground"> non vengono memorizzate</strong> nei nostri server o database: 
+                    esistono esclusivamente in memoria volatile (RAM) per il tempo strettamente necessario 
+                    all'elaborazione e vengono immediatamente eliminate al completamento della richiesta.
                   </p>
                 </div>
                 <div className="p-4 rounded-xl border border-border bg-card">
