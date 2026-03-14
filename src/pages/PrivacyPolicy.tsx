@@ -344,7 +344,11 @@ const PrivacyPolicy = () => {
                 <div className="p-4 rounded-xl border border-border bg-card">
                   <h3 className="font-semibold text-foreground mb-2">Google Cloud / Gemini API</h3>
                   <p className="text-sm">
-                    Per l'elaborazione dei servizi di Intelligenza Artificiale.
+                    Per l'elaborazione dei servizi di Intelligenza Artificiale, inclusa la funzionalità 
+                    di diagnosi visiva (Gemini Vision). Le immagini caricate per l'analisi visiva 
+                    <strong className="text-foreground"> non vengono memorizzate</strong> nei nostri server o database: 
+                    esistono esclusivamente in memoria volatile (RAM) per il tempo strettamente necessario 
+                    all'elaborazione e vengono immediatamente eliminate al completamento della richiesta.
                   </p>
                 </div>
                 <div className="p-4 rounded-xl border border-border bg-card">
