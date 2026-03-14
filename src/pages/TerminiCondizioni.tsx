@@ -25,56 +25,27 @@ const TerminiCondizioni = () => {
             <nav className="bg-muted/50 rounded-lg p-6 mb-8">
               <h2 className="text-xl font-semibold mb-4">Indice</h2>
               <ul className="space-y-2 text-sm">
-                <li>
-                  <a href="#accettazione" className="text-primary hover:underline">
-                    1. Accettazione dei Termini
-                  </a>
-                </li>
-                <li>
-                  <a href="#descrizione" className="text-primary hover:underline">
-                    2. Descrizione del Servizio
-                  </a>
-                </li>
-                <li>
-                  <a href="#disclaimer-ai" className="text-primary hover:underline">
-                    3. Disclaimer sull'Intelligenza Artificiale e Prodotti Fitosanitari
-                  </a>
-                </li>
-                <li>
-                  <a href="#emergenze" className="text-primary hover:underline">
-                    4. Situazioni di Emergenza
-                  </a>
-                </li>
-                <li>
-                  <a href="#uso-consentito" className="text-primary hover:underline">
-                    5. Uso Consentito
-                  </a>
-                </li>
-                <li>
-                  <a href="#proprieta-intellettuale" className="text-primary hover:underline">
-                    6. Proprietà Intellettuale
-                  </a>
-                </li>
-                <li>
-                  <a href="#fonti-dati" className="text-primary hover:underline">
-                    7. Fonti dei Dati e Licenze
-                  </a>
-                </li>
-                <li>
-                  <a href="#modifiche" className="text-primary hover:underline">
-                    8. Modifiche ai Termini
-                  </a>
-                </li>
-                <li>
-                  <a href="#legge-applicabile" className="text-primary hover:underline">
-                    9. Legge Applicabile
-                  </a>
-                </li>
-                <li>
-                  <a href="#contatti" className="text-primary hover:underline">
-                    10. Contatti
-                  </a>
-                </li>
+                {[
+                  { id: "accettazione", label: "1. Accettazione dei Termini" },
+                  { id: "descrizione", label: "2. Descrizione del Servizio" },
+                  { id: "disclaimer-ai", label: "3. Disclaimer sull'Intelligenza Artificiale e Prodotti Fitosanitari" },
+                  { id: "emergenze", label: "4. Situazioni di Emergenza" },
+                  { id: "uso-consentito", label: "5. Uso Consentito" },
+                  { id: "proprieta-intellettuale", label: "6. Proprietà Intellettuale" },
+                  { id: "fonti-dati", label: "7. Fonti dei Dati e Licenze" },
+                  { id: "modifiche", label: "8. Modifiche ai Termini" },
+                  { id: "legge-applicabile", label: "9. Legge Applicabile" },
+                  { id: "contatti", label: "10. Contatti" },
+                ].map((item) => (
+                  <li key={item.id}>
+                    <button
+                      onClick={() => document.getElementById(item.id)?.scrollIntoView({ behavior: "smooth" })}
+                      className="text-primary hover:underline text-left"
+                    >
+                      {item.label}
+                    </button>
+                  </li>
+                ))}
               </ul>
             </nav>
 
