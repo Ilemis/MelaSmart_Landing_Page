@@ -4,7 +4,10 @@ import iconMelasmart from "@/assets/icon-melasmart.png";
 
 const Footer = () => {
   return (
-    <footer className="py-12 border-t border-border">
+    <footer className="relative py-12 border-t border-border">
+      {/* Gradient top accent line */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-green opacity-40" />
+
       <div className="container mx-auto">
         <div className="flex flex-col items-center gap-6">
           <img
@@ -18,7 +21,7 @@ const Footer = () => {
               href="https://www.linkedin.com/in/emiliano-criscuoli/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-foreground transition-colors duration-200"
+              className="text-muted-foreground hover:text-[hsl(var(--melasmart-green))] transition-all duration-300 hover:scale-110"
               aria-label="LinkedIn di Emiliano Criscuoli"
             >
               <Linkedin className="h-5 w-5" />
@@ -27,7 +30,7 @@ const Footer = () => {
               href="https://x.com/ilemis"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-foreground transition-colors duration-200"
+              className="text-muted-foreground hover:text-foreground transition-all duration-300 hover:scale-110"
               aria-label="X (Twitter) di Emiliano Criscuoli"
             >
               <Twitter className="h-5 w-5" />

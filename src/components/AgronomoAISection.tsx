@@ -1,9 +1,11 @@
 import { Bot, FileSearch, Beaker, MessageSquare, User, Sparkles, AlertTriangle, CheckCircle2, ThermometerSnowflake, Droplets, Leaf, ChevronLeft, ChevronRight, FlaskConical, ShieldAlert, XCircle, Camera, Eye, Scissors, Search, Sprout, TreeDeciduous } from "lucide-react";
 import visionImage from "@/assets/screenshot-vision-ticchiolatura.jpg";
 import { useState } from "react";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const AgronomoAISection = () => {
   const [activeSlide, setActiveSlide] = useState(0);
+  const { ref, isVisible } = useScrollReveal();
 
   const features = [
     {
@@ -32,7 +34,7 @@ const AgronomoAISection = () => {
   return (
     <section className="py-20 px-4 bg-gradient-to-b from-background to-accent/20">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-12 animate-fade-up">
+        <div ref={ref} className={`text-center mb-12 scroll-reveal ${isVisible ? "visible" : ""}`}>
           <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
             <Bot className="w-4 h-4" />
             Intelligenza Artificiale

@@ -15,6 +15,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Bug, Thermometer, Bell } from "lucide-react";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const screenshots = [
   {
@@ -62,12 +63,12 @@ const screenshots = [
 const ScreenshotCard = ({ screenshot }: { screenshot: typeof screenshots[0] }) => (
   <div className="group relative h-full">
     <div className="absolute inset-0 bg-gradient-to-br from-melasmart-green/10 to-transparent rounded-4xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-    <div className="relative glass rounded-4xl p-6 hover-lift h-full">
+    <div className="relative glass rounded-4xl p-6 tilt-card h-full">
       <div className="relative overflow-hidden rounded-3xl bg-secondary/30 flex justify-center">
         <img
           src={screenshot.image}
           alt={screenshot.title}
-          className="w-auto max-h-[500px] object-contain"
+          className="w-auto max-h-[500px] object-contain transition-transform duration-500 group-hover:scale-[1.03]"
         />
       </div>
       <div className="mt-6 text-center">
@@ -81,7 +82,7 @@ const ScreenshotCard = ({ screenshot }: { screenshot: typeof screenshots[0] }) =
 const CarpocapsaCard = () => (
   <div className="group relative h-full md:col-span-2">
     <div className="absolute inset-0 bg-gradient-to-br from-semaforo-verde/15 via-melasmart-green/10 to-semaforo-giallo/10 rounded-4xl blur-2xl opacity-60 group-hover:opacity-100 transition-opacity duration-500" />
-    <div className="relative overflow-hidden rounded-4xl border-2 border-melasmart-green/30 bg-gradient-to-br from-card via-card to-melasmart-green/5 p-8 hover-lift h-full">
+    <div className="relative overflow-hidden rounded-4xl border-2 border-melasmart-green/30 bg-gradient-to-br from-card via-card to-melasmart-green/5 p-8 tilt-card h-full">
       {/* NEW badge */}
       <div className="absolute top-4 right-4 z-10">
         <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-semaforo-verde text-background text-xs font-bold rounded-full uppercase tracking-wider animate-pulse">
@@ -138,10 +139,15 @@ const CarpocapsaCard = () => (
 );
 
 const AppPreviewSection = () => {
+  const { ref, isVisible } = useScrollReveal();
+
   return (
     <section className="py-24 bg-background">
       <div className="container mx-auto max-w-6xl px-4">
-        <div className="text-center mb-16 space-y-4">
+        <div
+          ref={ref}
+          className={`text-center mb-16 space-y-4 scroll-reveal ${isVisible ? "visible" : ""}`}
+        >
           <span className="inline-block px-4 py-2 bg-accent text-accent-foreground text-sm font-medium rounded-full">
             Anteprima App
           </span>

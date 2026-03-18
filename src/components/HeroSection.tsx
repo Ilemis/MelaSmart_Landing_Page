@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import WaitlistForm from "@/components/WaitlistForm";
 import heroBanner from "@/assets/hero-banner.png";
 
@@ -25,18 +25,43 @@ const useCountdown = () => {
   return timeLeft;
 };
 
+const CountdownDigit = ({ value }: { value: number }) => (
+  <span
+    key={value}
+    className="inline-block text-3xl md:text-5xl font-bold tabular-nums text-foreground leading-none tracking-tight transition-transform duration-300"
+    style={{ animation: "flipIn 0.4s cubic-bezier(0.16,1,0.3,1)" }}
+  >
+    {String(value).padStart(2, "0")}
+  </span>
+);
+
 const HeroSection = () => {
   const { days, hours, minutes, seconds } = useCountdown();
+  const bgRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const onScroll = () => {
+      if (bgRef.current) {
+        bgRef.current.style.transform = `translateY(${window.scrollY * 0.3}px)`;
+      }
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-28 pb-16 px-4 overflow-hidden">
-      {/* Background Image */}
+      {/* Parallax Background */}
       <div
-        className="absolute inset-0 z-0"
+        ref={bgRef}
+        className="absolute inset-0 z-0 will-change-transform"
         style={{
           backgroundImage: `url(${heroBanner})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
+          top: "-10%",
+          bottom: "-10%",
         }}
       />
       {/* Soft overlay for text readability */}
@@ -50,7 +75,7 @@ const HeroSection = () => {
         {/* Full-width title area */}
         <div className="text-center mb-12">
           <div className="animate-fade-up">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-warm/10 border border-warm/20 mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-warm/10 border border-warm/20 mb-6 animate-float">
               <span className="relative flex h-2.5 w-2.5">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-warm opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-warm"></span>
@@ -88,9 +113,7 @@ const HeroSection = () => {
               ].map((unit, i) => (
                 <div key={unit.label} className="flex items-center gap-3 md:gap-5">
                   <div className="flex flex-col items-center">
-                    <span className="text-3xl md:text-5xl font-bold tabular-nums text-foreground leading-none tracking-tight">
-                      {String(unit.value).padStart(2, "0")}
-                    </span>
+                    <CountdownDigit value={unit.value} />
                     <span className="text-[10px] md:text-xs font-medium text-muted-foreground mt-1.5 uppercase tracking-widest">
                       {unit.label}
                     </span>
@@ -117,6 +140,13 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
+
+      <style>{`
+        @keyframes flipIn {
+          from { transform: rotateX(-40deg) scale(0.9); opacity: 0.5; }
+          to { transform: rotateX(0) scale(1); opacity: 1; }
+        }
+      `}</style>
     </section>
   );
 };
