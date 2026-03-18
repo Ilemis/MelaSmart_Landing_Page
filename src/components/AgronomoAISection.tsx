@@ -5,6 +5,7 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const AgronomoAISection = () => {
   const [activeSlide, setActiveSlide] = useState(0);
+  const { ref, isVisible } = useScrollReveal();
 
   const features = [
     {
