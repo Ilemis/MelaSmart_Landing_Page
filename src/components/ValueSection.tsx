@@ -1,5 +1,6 @@
 import { Check, Star, Brain, CloudSun, FlaskConical, Calculator, Shield, Leaf, Layers, Zap, ClipboardList, Crosshair, BarChart3, ChevronDown, Eye } from "lucide-react";
 import { useState } from "react";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const categories = [
   {
@@ -97,7 +98,7 @@ const FeatureItem = ({ feature, categoryColor }: { feature: typeof categories[0]
       className="w-full text-left px-4 py-3 rounded-xl hover:bg-muted/50 transition-colors group"
     >
       <div className="flex items-center gap-3">
-        <feature.icon className={`w-5 h-5 ${categoryColor} flex-shrink-0`} />
+        <feature.icon className={`w-5 h-5 ${categoryColor} flex-shrink-0 transition-transform duration-300 group-hover:rotate-12`} />
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2">
             <span className="font-semibold text-sm text-foreground">{feature.name}</span>
@@ -116,10 +117,15 @@ const FeatureItem = ({ feature, categoryColor }: { feature: typeof categories[0]
 };
 
 const ValueSection = () => {
+  const { ref, isVisible } = useScrollReveal();
+
   return (
-    <section className="py-20 px-4">
+    <section className="py-20 px-4 mesh-bg-1">
       <div className="container mx-auto max-w-5xl">
-        <div className="text-center mb-16 animate-fade-up">
+        <div
+          ref={ref}
+          className={`text-center mb-16 scroll-reveal ${isVisible ? "visible" : ""}`}
+        >
           <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-warm/10 text-warm-dark text-sm font-medium mb-6">
             <Star className="w-4 h-4" />
             Professional Crop Management
@@ -139,11 +145,10 @@ const ValueSection = () => {
           {categories.map((cat, i) => (
             <div
               key={i}
-              className={`rounded-2xl border ${cat.borderColor} ${cat.accentColor} p-5 animate-fade-up`}
-              style={{ animationDelay: `${i * 0.1}s` }}
+              className={`rounded-2xl border ${cat.borderColor} ${cat.accentColor} p-5 glow-border stagger-child`}
             >
               <div className="flex items-center gap-3 mb-5">
-                <div className={`w-10 h-10 rounded-xl ${cat.bgColor} flex items-center justify-center`}>
+                <div className={`w-10 h-10 rounded-xl ${cat.bgColor} flex items-center justify-center transition-transform duration-300 hover:rotate-12`}>
                   <cat.icon className={`w-5 h-5 ${cat.color}`} />
                 </div>
                 <h3 className="font-bold text-lg text-foreground">{cat.name}</h3>
@@ -158,7 +163,7 @@ const ValueSection = () => {
           ))}
         </div>
 
-        <div className="mt-12 text-center animate-fade-up" style={{ animationDelay: "0.4s" }}>
+        <div className="mt-12 text-center">
           <div className="inline-flex items-center gap-3 bg-muted/50 rounded-2xl px-6 py-4 border border-border/50">
             <Check className="w-5 h-5 text-primary flex-shrink-0" />
             <p className="text-sm text-muted-foreground">

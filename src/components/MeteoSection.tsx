@@ -1,8 +1,15 @@
+import { useScrollReveal } from "@/hooks/useScrollReveal";
+
 const MeteoSection = () => {
+  const { ref, isVisible } = useScrollReveal();
+
   return (
-    <section className="py-24 bg-secondary/30">
+    <section className="py-24 mesh-bg-2">
       <div className="container mx-auto max-w-6xl px-4">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div
+          ref={ref}
+          className={`grid lg:grid-cols-2 gap-12 items-center scroll-reveal ${isVisible ? "visible" : ""}`}
+        >
           <div className="space-y-6">
             <span className="inline-block px-4 py-2 bg-accent text-accent-foreground text-sm font-medium rounded-full">
               Agri-Meteo Localizzato
@@ -43,12 +50,12 @@ const MeteoSection = () => {
                 <span className="text-xs text-muted-foreground">Oggi</span>
               </div>
 
-              {/* Chart mockup */}
+              {/* Chart mockup with animated bars */}
               <div className="h-40 flex items-end gap-2">
                 {[40, 65, 85, 90, 95, 88, 75, 60, 45, 35, 30, 25].map((height, i) => (
                   <div
                     key={i}
-                    className="flex-1 rounded-t-lg transition-all duration-300"
+                    className="flex-1 rounded-t-lg origin-bottom"
                     style={{
                       height: `${height}%`,
                       backgroundColor:
@@ -57,6 +64,8 @@ const MeteoSection = () => {
                           : height > 50
                           ? "hsl(var(--semaforo-giallo))"
                           : "hsl(var(--semaforo-rosso) / 0.5)",
+                      transform: isVisible ? "scaleY(1)" : "scaleY(0)",
+                      transition: `transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) ${i * 0.06}s`,
                     }}
                   />
                 ))}
@@ -72,7 +81,7 @@ const MeteoSection = () => {
               <div className="grid grid-cols-2 gap-4 pt-4">
                 <div className="p-4 rounded-2xl bg-background/50">
                   <div className="flex items-center gap-2 mb-1">
-                    <div className="semaforo semaforo-verde" />
+                    <div className="semaforo semaforo-verde pulse-glow" />
                     <span className="text-xs text-muted-foreground">Delta T</span>
                   </div>
                   <span className="text-xl font-semibold">4.2°C</span>
