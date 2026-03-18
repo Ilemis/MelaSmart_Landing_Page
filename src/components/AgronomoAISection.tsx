@@ -1,6 +1,7 @@
 import { Bot, FileSearch, Beaker, MessageSquare, User, Sparkles, AlertTriangle, CheckCircle2, ThermometerSnowflake, Droplets, Leaf, ChevronLeft, ChevronRight, FlaskConical, ShieldAlert, XCircle, Camera, Eye, Scissors, Search, Sprout, TreeDeciduous } from "lucide-react";
 import visionImage from "@/assets/screenshot-vision-ticchiolatura.jpg";
 import { useState } from "react";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const AgronomoAISection = () => {
   const [activeSlide, setActiveSlide] = useState(0);
