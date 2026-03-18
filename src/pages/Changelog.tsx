@@ -36,6 +36,18 @@ interface ChangelogEntry {
 // Queste sono le novità dell'APP MelaSmart, non della landing page
 const changelogData: ChangelogEntry[] = [
   {
+    version: "v1.0.4",
+    date: "18/03/2026",
+    changes: [
+      { type: "nuovo", description: "Possibilità di cancellare la cronologia delle domande all'Agronomo AI" },
+      { type: "nuovo", description: "Aggiunta gestione della data di ultima taratura per gli atomizzatori" },
+      { type: "nuovo", description: "Aggiunta sezione Patentino Fitosanitario sia nel Profilo che nei Dati Aziendali, con badge colorato in base alla data di scadenza" },
+      { type: "nuovo", description: "Nello Step 4 del wizard, aggiunto il costo stimato per trattamento in base ai prezzi salvati in magazzino per riscontro live" },
+      { type: "migliorato", description: "Scheda trattore: aggiornata la grafica della targa italiana" },
+      { type: "migliorato", description: "Agronomo AI, parsing prodotti e ricerca dosaggio aggiornati a Gemini 3.1 Flash Lite Preview per maggiori performance" },
+    ],
+  },
+  {
     version: "v1.0.3",
     date: "13/03/2026",
     changes: [
