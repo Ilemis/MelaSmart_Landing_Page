@@ -118,6 +118,7 @@ const FeatureItem = ({ feature, categoryColor }: { feature: typeof categories[0]
 
 const ValueSection = () => {
   const { ref, isVisible } = useScrollReveal();
+  const { ref: gridRef, isVisible: gridVisible } = useScrollReveal();
 
   return (
     <section className="py-20 px-4 mesh-bg-1">
