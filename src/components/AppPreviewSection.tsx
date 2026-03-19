@@ -80,19 +80,70 @@ const ScreenshotCard = ({ screenshot }: { screenshot: typeof screenshots[0] }) =
   </div>
 );
 
-const CarpocapsaCard = () => (
-  <div className="group relative h-full md:col-span-2">
-    <div className="absolute inset-0 bg-gradient-to-br from-semaforo-verde/15 via-melasmart-green/10 to-semaforo-giallo/10 rounded-4xl blur-2xl opacity-60 group-hover:opacity-100 transition-opacity duration-500" />
-    <div className="relative overflow-hidden rounded-4xl border-2 border-melasmart-green/30 bg-gradient-to-br from-card via-card to-melasmart-green/5 p-8 tilt-card h-full">
-      {/* NEW badge */}
+const CopilotCard = () => (
+  <div className="group relative h-full">
+    <div className="absolute inset-0 bg-gradient-to-br from-primary/15 via-melasmart-green/10 to-accent/10 rounded-4xl blur-2xl opacity-60 group-hover:opacity-100 transition-opacity duration-500" />
+    <div className="relative overflow-hidden rounded-4xl border-2 border-primary/30 bg-gradient-to-br from-card via-card to-primary/5 p-8 tilt-card h-full">
       <div className="absolute top-4 right-4 z-10">
-        <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-semaforo-verde text-background text-xs font-bold rounded-full uppercase tracking-wider animate-pulse">
+        <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-primary text-primary-foreground text-xs font-bold rounded-full uppercase tracking-wider animate-pulse">
           🆕 Novità
         </span>
       </div>
 
       <div className="flex flex-col lg:flex-row gap-8 items-center">
-        {/* Screenshot */}
+        <div className="relative overflow-hidden rounded-3xl bg-secondary/20 flex justify-center lg:w-1/2 border border-primary/10">
+          <img
+            src={screenshotCopilot}
+            alt="Assistente Agronomo - MelaSmart AI™ Copilot"
+            className="w-full max-h-[420px] object-contain"
+          />
+        </div>
+
+        <div className="lg:w-1/2 space-y-5">
+          <div className="flex items-center gap-3">
+            <div className="p-3 rounded-2xl bg-primary/10">
+              <Bot className="h-7 w-7 text-primary" />
+            </div>
+            <h3 className="text-2xl font-bold">MelaSmart AI™ Copilot</h3>
+          </div>
+
+          <p className="text-muted-foreground text-base leading-relaxed">
+            Ora con <strong>3 modalità di ragionamento</strong>: Standard per risposte rapide, e due livelli di Ragionamento avanzato per analisi approfondite. Salva e ricarica le tue domande dalla cronologia.
+          </p>
+
+          <div className="flex flex-wrap gap-3">
+            <div className="inline-flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-melasmart-green/10 border border-melasmart-green/20">
+              <Zap className="h-4 w-4 text-melasmart-green" />
+              <span className="text-sm font-medium">Standard · Flash Lite</span>
+            </div>
+            <div className="inline-flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-accent border border-accent-foreground/10">
+              <Brain className="h-4 w-4 text-accent-foreground" />
+              <span className="text-sm font-medium">Ragionamento LOW</span>
+            </div>
+            <div className="inline-flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-primary/10 border border-primary/30">
+              <Brain className="h-4 w-4 text-primary" />
+              <span className="text-sm font-medium">Ragionamento HIGH</span>
+            </div>
+            <div className="inline-flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-secondary border border-border">
+              <MessageSquare className="h-4 w-4 text-muted-foreground" />
+              <span className="text-sm font-medium">Cronologia domande</span>
+            </div>
+          </div>
+
+          <p className="text-xs text-muted-foreground italic">
+            Gemini 3.1 Flash Lite · Gemini 3 Flash · Upgrade da Gemini 2.5 Flash
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
+const CarpocapsaCard = () => (
+  <div className="group relative h-full">
+    <div className="absolute inset-0 bg-gradient-to-br from-semaforo-verde/15 via-melasmart-green/10 to-semaforo-giallo/10 rounded-4xl blur-2xl opacity-60 group-hover:opacity-100 transition-opacity duration-500" />
+    <div className="relative overflow-hidden rounded-4xl border-2 border-melasmart-green/30 bg-gradient-to-br from-card via-card to-melasmart-green/5 p-8 tilt-card h-full">
+      <div className="flex flex-col lg:flex-row gap-8 items-center">
         <div className="relative overflow-hidden rounded-3xl bg-secondary/20 flex justify-center lg:w-1/2 border border-melasmart-green/10">
           <img
             src={screenshotCarpocapsa}
@@ -101,7 +152,6 @@ const CarpocapsaCard = () => (
           />
         </div>
 
-        {/* Content */}
         <div className="lg:w-1/2 space-y-5">
           <div className="flex items-center gap-3">
             <div className="p-3 rounded-2xl bg-melasmart-green/10">
@@ -114,7 +164,6 @@ const CarpocapsaCard = () => (
             Registra le catture nelle trappole e il conteggio dei <strong>Gradi Giorno (GDD)</strong> parte automaticamente. Ricevi alert intelligenti al raggiungimento delle soglie critiche.
           </p>
 
-          {/* Feature pills */}
           <div className="flex flex-wrap gap-3">
             <div className="inline-flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-melasmart-green/10 border border-melasmart-green/20">
               <Thermometer className="h-4 w-4 text-melasmart-green" />
