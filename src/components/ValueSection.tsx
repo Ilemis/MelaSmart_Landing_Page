@@ -141,7 +141,10 @@ const ValueSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div
+          ref={gridRef}
+          className={`grid md:grid-cols-3 gap-6 scroll-reveal ${gridVisible ? "visible" : ""}`}
+        >
           {categories.map((cat, i) => (
             <div
               key={i}
