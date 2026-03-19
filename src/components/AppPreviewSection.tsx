@@ -7,6 +7,7 @@ import screenshotCampi from "@/assets/screenshot-campi.jpg";
 import screenshotCarpocapsa from "@/assets/screenshot-carpocapsa.png";
 import screenshotMeteo from "@/assets/screenshot-meteo.jpg";
 import screenshotGarage from "@/assets/screenshot-garage.jpg";
+import screenshotCopilot from "@/assets/screenshot-agronomo-copilot.png";
 import {
   Carousel,
   CarouselContent,
@@ -14,7 +15,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Bug, Thermometer, Bell } from "lucide-react";
+import { Bug, Thermometer, Bell, Bot, Brain, Zap, MessageSquare } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const screenshots = [
