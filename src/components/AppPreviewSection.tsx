@@ -209,9 +209,22 @@ const AppPreviewSection = () => {
           </p>
         </div>
 
-        {/* Carpocapsa highlight */}
-        <div className="hidden md:grid md:grid-cols-2 gap-8 lg:gap-12 mb-8 lg:mb-12">
-          <CarpocapsaCard />
+        {/* Highlight carousel: Copilot + Carpocapsa */}
+        <div className="mb-8 lg:mb-12">
+          <Carousel className="w-full" opts={{ align: "start" }}>
+            <CarouselContent>
+              <CarouselItem>
+                <CopilotCard />
+              </CarouselItem>
+              <CarouselItem>
+                <CarpocapsaCard />
+              </CarouselItem>
+            </CarouselContent>
+            <div className="flex justify-center gap-4 mt-6">
+              <CarouselPrevious className="relative static translate-y-0" />
+              <CarouselNext className="relative static translate-y-0" />
+            </div>
+          </Carousel>
         </div>
 
         {/* Desktop: Grid */}
@@ -223,10 +236,6 @@ const AppPreviewSection = () => {
 
         {/* Mobile: Carousel */}
         <div className="md:hidden">
-          {/* Carpocapsa highlight mobile */}
-          <div className="mb-6">
-            <CarpocapsaCard />
-          </div>
           <Carousel className="w-full">
             <CarouselContent>
               {screenshots.map((screenshot, index) => (

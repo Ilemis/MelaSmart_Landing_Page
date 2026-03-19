@@ -36,6 +36,15 @@ interface ChangelogEntry {
 // Queste sono le novità dell'APP MelaSmart, non della landing page
 const changelogData: ChangelogEntry[] = [
   {
+    version: "v1.0.5",
+    date: "19/03/2026",
+    changes: [
+      { type: "nuovo", description: "Assistente Agronomo - MelaSmart AI™ Copilot: aggiunte 3 modalità di ragionamento — Standard (Gemini 3.1 Flash Lite), Ragionamento LOW e Ragionamento HIGH (Gemini 3 Flash) per risposte più precise e approfondite" },
+      { type: "migliorato", description: "Upgrade motore AI da Gemini 2.5 Flash a Gemini 3 Flash per i livelli di ragionamento, con grande salto di qualità nelle risposte agronomiche" },
+      { type: "nuovo", description: "Salvataggio e ricaricamento delle domande dalla cronologia nell'Assistente Agronomo" },
+    ],
+  },
+  {
     version: "v1.0.4",
     date: "18/03/2026",
     changes: [
