@@ -118,6 +118,7 @@ const FeatureItem = ({ feature, categoryColor }: { feature: typeof categories[0]
 
 const ValueSection = () => {
   const { ref, isVisible } = useScrollReveal();
+  const { ref: gridRef, isVisible: gridVisible } = useScrollReveal();
 
   return (
     <section className="py-20 px-4 mesh-bg-1">
@@ -141,7 +142,10 @@ const ValueSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div
+          ref={gridRef}
+          className={`grid md:grid-cols-3 gap-6 scroll-reveal ${gridVisible ? "visible" : ""}`}
+        >
           {categories.map((cat, i) => (
             <div
               key={i}
