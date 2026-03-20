@@ -36,6 +36,13 @@ interface ChangelogEntry {
 // Queste sono le novità dell'APP MelaSmart, non della landing page
 const changelogData: ChangelogEntry[] = [
   {
+    version: "v1.1.0.2",
+    date: "20/03/2026",
+    changes: [
+      { type: "nuovo", description: "Aggiunta la possibilità di accedere con Google per un login più rapido e semplice" },
+    ],
+  },
+  {
     version: "v1.0.5",
     date: "19/03/2026",
     changes: [
