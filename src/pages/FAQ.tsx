@@ -23,7 +23,7 @@ const faqData = [
     id: "faq-1",
     question: "Cos'è MelaSmart?",
     answer:
-      "MelaSmart è un'app di precisione agricola progettata specificamente per la melicoltura (in futuro saranno integrate altre cultivar). Utilizza intelligenza artificiale per ottimizzare la gestione del tuo meleto, facilitando il calcolo preciso delle dosi per l'atomizzatore e la consultazione rapida dei prodotti fitosanitari.",
+      "MelaSmart è un'app di precisione agricola progettata specificamente per la melicoltura e la viticoltura(in futuro saranno implementate altre cultivar). Utilizza intelligenza artificiale per ottimizzare la gestione del tuo frutteto, facilitando il calcolo preciso delle dosi per l'atomizzatore e la consultazione rapida dei prodotti fitosanitari.",
   },
   {
     id: "faq-2",
@@ -35,7 +35,7 @@ const faqData = [
     id: "faq-3",
     question: "L'app sarà gratuita?",
     answer:
-      "Offriremo un piano gratuito con funzionalità base. Per funzionalità avanzate e supporto professionale, saranno disponibili piani a pagamento molto accessibili.",
+      "Offriremo un piano gratuito con funzionalità base. Per sbloccare tutte le funzionalità sarà disponibile un abbonamento premium.",
   },
   {
     id: "faq-4",
@@ -74,9 +74,9 @@ const faqData = [
   },
   {
     id: "faq-10",
-    question: "Cosa succede se cerco un prodotto non registrato per il melo?",
+    question: "Quale AI viene usata nella app?",
     answer: 
-      "Il nostro agronomo digitale è istruito per darti informazioni specifiche sulla melicoltura oppure sulla viticoltura. Se un prodotto non è autorizzato per l'uso su melo o su vite o non è presente nei database ministeriali aggiornati, l'app ti avviserà della mancata corrispondenza per proteggere la tua coltura.",
+      "Al momento la app si concentra sui modelli Gemini di google, seguiamo l'evoluzione del mercato per trovare la soluzione migliore per risposte sempre più approfondite.",
   },
   {
     id: "faq-11",
