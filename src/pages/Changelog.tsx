@@ -36,6 +36,15 @@ interface ChangelogEntry {
 // Queste sono le novità dell'APP MelaSmart, non della landing page
 const changelogData: ChangelogEntry[] = [
   {
+    version: "v1.1.1",
+    date: "25/03/2026",
+    changes: [
+      { type: "fix", description: "Aggiunta sincronizzazione dello scroll tra i grafici meteo e migliorata la scala verticale della temperatura per una lettura più chiara" },
+      { type: "nuovo", description: "Possibilità di trascinare i punti (POI) quando si traccia un campo sulla mappa, con aggiornamento dell'area in tempo reale" },
+      { type: "migliorato", description: "Aggiunto livello di zoom extra per le zone rurali, che solitamente hanno meno risoluzione, per segnare i punti precisi del campo da salvare" },
+    ],
+  },
+  {
     version: "v1.1.0.2",
     date: "20/03/2026",
     changes: [
