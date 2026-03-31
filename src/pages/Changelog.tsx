@@ -36,6 +36,16 @@ interface ChangelogEntry {
 // Queste sono le novità dell'APP MelaSmart, non della landing page
 const changelogData: ChangelogEntry[] = [
   {
+    version: "v1.6.0.4",
+    date: "31/03/2026",
+    changes: [
+      { type: "fix", description: "Migliorato il tooltip del grafico finestra di trattamento con informazioni più utili e leggibili" },
+      { type: "nuovo", description: "Aggiunta della funzionalità OCR per le fatture con riconoscimento automatico di quantità e prodotti e aggiornamento automatico del magazzino per utenti Premium" },
+      { type: "migliorato", description: "Aggiunta di nuove proprietà per il vento e miglioramenti nei calcoli meteo. Aggiornati i componenti per visualizzare i dati del vento, inclusi minimi, massimi e raffiche" },
+      { type: "nuovo", description: "Aggiunta gestione della percentuale di pendenza/fallanze per singolo campo per eliminare le possibili rimanenze in botte" },
+    ],
+  },
+  {
     version: "v1.1.1",
     date: "25/03/2026",
     changes: [
