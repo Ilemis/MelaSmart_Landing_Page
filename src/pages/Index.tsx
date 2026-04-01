@@ -19,7 +19,7 @@ const Index = () => {
         <ValueSection />
         <AgronomoAISection />
         <MeteoSection />
-        
+        <PremiumSection />
       </main>
       <Footer />
     </div>
