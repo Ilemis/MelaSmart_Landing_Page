@@ -5,7 +5,7 @@ import ValueSection from "@/components/ValueSection";
 import AgronomoAISection from "@/components/AgronomoAISection";
 import AppPreviewSection from "@/components/AppPreviewSection";
 import MeteoSection from "@/components/MeteoSection";
-
+import PremiumSection from "@/components/PremiumSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
