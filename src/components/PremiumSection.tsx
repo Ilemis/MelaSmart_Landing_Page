@@ -46,10 +46,10 @@ const features = [
 ];
 
 const PremiumSection = () => {
-  const { ref, isVisible } = useScrollReveal();
+  const { ref, isVisible } = useScrollReveal({ threshold: 0.05, rootMargin: "0px 0px -20px 0px" });
 
   return (
-    <section className="py-20 px-4 mesh-bg-2">
+    <section id="premium" className="py-20 px-4 mesh-bg-2">
       <div
         ref={ref}
         className={`container mx-auto max-w-6xl scroll-reveal ${isVisible ? "visible" : ""}`}
