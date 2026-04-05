@@ -60,7 +60,7 @@ const PremiumSection = () => {
             PREMIUM
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-3">
-            MelaSmart <span className="text-gradient-warm">PREMIUM</span>
+            MelaSmart <span className="text-gradient-green">PREMIUM</span>
           </h2>
           <p className="text-lg font-semibold text-foreground/80 mb-2">
             Più operatività, più storico, più controllo
