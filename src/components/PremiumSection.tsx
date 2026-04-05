@@ -77,8 +77,8 @@ const PremiumSection = () => {
               key={f.title}
               className="stagger-child group rounded-2xl border border-border bg-card/80 backdrop-blur-sm p-5 hover-lift glow-border"
             >
-              <div className="w-10 h-10 rounded-xl bg-warm/10 flex items-center justify-center mb-3 group-hover:bg-warm/20 transition-colors">
-                <f.icon className="w-5 h-5 text-warm-dark" />
+              <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-3 group-hover:bg-primary/20 transition-colors">
+                <f.icon className="w-5 h-5 text-primary" />
               </div>
               <h3 className="font-semibold text-foreground mb-1.5 text-sm">{f.title}</h3>
               <p className="text-xs text-muted-foreground leading-relaxed">{f.desc}</p>
