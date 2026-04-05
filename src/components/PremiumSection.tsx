@@ -56,11 +56,11 @@ const PremiumSection = () => {
       >
         {/* Header */}
         <div className="text-center mb-12">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-warm/10 border border-warm/20 text-sm font-semibold text-warm-dark mb-4">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-sm font-semibold text-primary mb-4">
             PREMIUM
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-3">
-            MelaSmart <span className="text-gradient-warm">PREMIUM</span>
+            MelaSmart <span className="text-gradient-green">PREMIUM</span>
           </h2>
           <p className="text-lg font-semibold text-foreground/80 mb-2">
             Più operatività, più storico, più controllo
@@ -77,8 +77,8 @@ const PremiumSection = () => {
               key={f.title}
               className="stagger-child group rounded-2xl border border-border bg-card/80 backdrop-blur-sm p-5 hover-lift glow-border"
             >
-              <div className="w-10 h-10 rounded-xl bg-warm/10 flex items-center justify-center mb-3 group-hover:bg-warm/20 transition-colors">
-                <f.icon className="w-5 h-5 text-warm-dark" />
+              <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-3 group-hover:bg-primary/20 transition-colors">
+                <f.icon className="w-5 h-5 text-primary" />
               </div>
               <h3 className="font-semibold text-foreground mb-1.5 text-sm">{f.title}</h3>
               <p className="text-xs text-muted-foreground leading-relaxed">{f.desc}</p>
@@ -87,7 +87,7 @@ const PremiumSection = () => {
         </div>
 
         {/* Pricing Box */}
-        <div className="max-w-md mx-auto text-center bg-card/80 backdrop-blur-sm border border-warm/20 rounded-2xl p-8 shadow-lg">
+        <div className="max-w-md mx-auto text-center bg-card/80 backdrop-blur-sm border border-primary/20 rounded-2xl p-8 shadow-lg">
           <p className="text-muted-foreground text-sm mb-1">
             Pensato per chi usa davvero l'app in stagione
           </p>
