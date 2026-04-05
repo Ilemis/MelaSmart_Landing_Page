@@ -87,7 +87,7 @@ const PremiumSection = () => {
         </div>
 
         {/* Pricing Box */}
-        <div className="max-w-md mx-auto text-center bg-card/80 backdrop-blur-sm border border-warm/20 rounded-2xl p-8 shadow-lg">
+        <div className="max-w-md mx-auto text-center bg-card/80 backdrop-blur-sm border border-primary/20 rounded-2xl p-8 shadow-lg">
           <p className="text-muted-foreground text-sm mb-1">
             Pensato per chi usa davvero l'app in stagione
           </p>
