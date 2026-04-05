@@ -149,7 +149,7 @@ const ValueSection = () => {
           {categories.map((cat, i) => (
             <div
               key={i}
-              className={`rounded-2xl border ${cat.borderColor} ${cat.accentColor} p-5 glow-border stagger-child`}
+              className={`rounded-2xl border ${cat.borderColor} ${cat.accentColor} p-5 stagger-child`}
             >
               <div className="flex items-center gap-3 mb-5">
                 <div className={`w-10 h-10 rounded-xl ${cat.bgColor} flex items-center justify-center transition-transform duration-300 hover:rotate-12`}>
