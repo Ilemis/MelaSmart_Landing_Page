@@ -56,7 +56,7 @@ const PremiumSection = () => {
       >
         {/* Header */}
         <div className="text-center mb-12">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-warm/10 border border-warm/20 text-sm font-semibold text-warm-dark mb-4">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-sm font-semibold text-primary mb-4">
             PREMIUM
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-3">
