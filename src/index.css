@@ -229,7 +229,7 @@
   }
 
   /* Stagger children */
-  .scroll-reveal.visible > .stagger-child {
+  .scroll-reveal.visible .stagger-child {
     opacity: 1;
     transform: translateY(0);
   }
