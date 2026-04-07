@@ -36,6 +36,15 @@ interface ChangelogEntry {
 // Queste sono le novità dell'APP MelaSmart, non della landing page
 const changelogData: ChangelogEntry[] = [
   {
+    version: "v1.6.1",
+    date: "07/04/2026",
+    changes: [
+      { type: "nuovo", description: "Aggiunto al contesto inviato a MelaSmart AI™ Copilot il meteo dei prossimi 3 giorni e gli ultimi 2 trattamenti eseguiti per risposte ancora più mirate e coerenti col contesto" },
+      { type: "nuovo", description: "Nuova gestione delle dosi con switch per singolo prodotto tra dose a ettaro e dose a percentuale pura per gestire prodotti come concimi fogliari che non seguono la regola dei 1500lt/Ha standard" },
+      { type: "migliorato", description: "Varie migliorie UX/UI" },
+    ],
+  },
+  {
     version: "v1.6.0.4",
     date: "31/03/2026",
     changes: [
