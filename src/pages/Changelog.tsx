@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft, FileText } from "lucide-react";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import iconMelasmart from "@/assets/icon-melasmart.png";
 import Footer from "@/components/Footer";
 
@@ -287,11 +287,11 @@ const Changelog = () => {
         </div>
 
         {/* Timeline */}
-        <div className="space-y-6">
+        <Accordion type="single" collapsible className="space-y-3">
           {changelogData.map((entry, index) => (
-            <Card key={index} className="bg-card/50 border-border/50 backdrop-blur-sm">
-              <CardHeader className="pb-2">
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+            <AccordionItem key={index} value={`item-${index}`} className="border border-border/50 rounded-xl bg-card/50 backdrop-blur-sm px-5">
+              <AccordionTrigger className="hover:no-underline">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 w-full pr-4">
                   <h2 className="text-xl font-semibold text-foreground">
                     {entry.version}
                   </h2>
@@ -299,9 +299,9 @@ const Changelog = () => {
                     {entry.date}
                   </span>
                 </div>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-3">
+              </AccordionTrigger>
+              <AccordionContent>
+                <ul className="space-y-3 pt-2">
                   {entry.changes.map((change, changeIndex) => {
                     const config = badgeConfig[change.type];
                     return (
@@ -319,10 +319,10 @@ const Changelog = () => {
                     );
                   })}
                 </ul>
-              </CardContent>
-            </Card>
+              </AccordionContent>
+            </AccordionItem>
           ))}
-        </div>
+        </Accordion>
       </main>
 
       <Footer />
