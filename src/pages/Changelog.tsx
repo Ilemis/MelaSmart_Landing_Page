@@ -287,7 +287,7 @@ const Changelog = () => {
         </div>
 
         {/* Timeline */}
-        <Accordion type="single" collapsible className="space-y-3">
+        <Accordion type="single" collapsible defaultValue="item-0" className="space-y-3">
           {changelogData.map((entry, index) => (
             <AccordionItem key={index} value={`item-${index}`} className="border border-border/50 rounded-xl bg-card/50 backdrop-blur-sm px-5">
               <AccordionTrigger className="hover:no-underline">
