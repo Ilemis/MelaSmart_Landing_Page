@@ -36,6 +36,15 @@ interface ChangelogEntry {
 // Queste sono le novità dell'APP MelaSmart, non della landing page
 const changelogData: ChangelogEntry[] = [
   {
+    version: "v1.7.0",
+    date: "15/04/2026",
+    changes: [
+      { type: "nuovo", description: "Nel Wizard Step 2 (Crea Miscela), nuova gestione avanzata delle dosi con tre modalità: Dose per Ettaro (standard, ricalcola la concentrazione in base al volume d'acqua), Percentuale Pura (dose legata alla concentrazione, indipendente dalla superficie), e Volume di Riferimento Etichetta (correzione per prodotti con volumi non standard come 500, 1000 o personalizzati). Inclusa l'opzione globale Riduzione Dinamica TRV con Fattore K per ottimizzare il dosaggio in base alla copertura reale degli ugelli" },
+      { type: "nuovo", description: "Aggiunto il calcolatore Mills Jones semiautomatico per la gestione dell'infezione di ticchiolatura con persistenza dei dati" },
+      { type: "nuovo", description: "Aggiunti nella mappa dei campi i layer Sentinel-2 / CDSE: Agricoltura, Vigoria (NDVI), Umidità (NDWI), Falsi Colori, SWIR e Colori Reali" },
+    ],
+  },
+  {
     version: "v1.6.1",
     date: "07/04/2026",
     changes: [
