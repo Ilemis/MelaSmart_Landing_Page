@@ -61,10 +61,10 @@ const HeroSection = () => {
 
         <div className="animate-fade-up-delay-2 text-center">
           <Button
-            variant="hero"
+            variant="cta"
             size="xl"
             asChild
-            className="group"
+            className="group glow-border"
           >
             <a href="https://app.melasmart.com" target="_blank" rel="noopener noreferrer">
               Prova la Web App
