@@ -98,7 +98,7 @@ const PremiumSection = () => {
             <span className="text-5xl font-bold text-foreground">4,99€</span>
             <span className="text-muted-foreground">/mese</span>
           </div>
-          <Button variant="hero" size="lg" asChild className="w-full group">
+          <Button variant="cta" size="lg" asChild className="w-full group glow-border">
             <a href="https://app.melasmart.com" target="_blank" rel="noopener noreferrer">
               Passa a Premium
               <ArrowRight className="ml-1 transition-transform group-hover:translate-x-1" />
