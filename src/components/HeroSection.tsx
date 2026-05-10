@@ -80,6 +80,7 @@ const HeroSection = () => {
           <p className="text-sm text-muted-foreground mt-4">
             Gratis · Nessuna carta richiesta
           </p>
+          <LiveStatsRow />
         </div>
       </div>
     </section>
