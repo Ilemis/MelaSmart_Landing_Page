@@ -2,6 +2,8 @@ import { useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import heroBanner from "@/assets/hero-banner.png";
+import LiveTicker from "./LiveTicker";
+import LiveStatsRow from "./LiveStatsRow";
 
 const HeroSection = () => {
   const bgRef = useRef<HTMLDivElement>(null);
