@@ -7,8 +7,9 @@ interface Stat {
 }
 
 const stats: Stat[] = [
-  { value: 48, suffix: "+", label: "Prodotti nel DB" },
-  { value: 12, label: "Serie ugelli" },
+  { value: 64, label: "Prodotti nel DB" },
+  { value: 17621, label: "DB Ministeriale" },
+  { value: 26, label: "Ettari gestiti" },
   { value: 23, label: "Aggiornamenti" },
 ];
 
@@ -45,7 +46,7 @@ const Counter = ({ target, suffix }: { target: number; suffix?: string }) => {
 
   return (
     <span ref={ref} className="text-2xl md:text-3xl font-bold text-gradient-green tabular-nums">
-      {val}
+      {val.toLocaleString("it-IT")}
       {suffix ?? ""}
     </span>
   );
