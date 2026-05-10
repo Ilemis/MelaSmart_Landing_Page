@@ -7,8 +7,9 @@ interface Stat {
 }
 
 const stats: Stat[] = [
-  { value: 48, suffix: "+", label: "Prodotti nel DB" },
-  { value: 12, label: "Serie ugelli" },
+  { value: 64, label: "Prodotti nel DB" },
+  { value: 17621, label: "DB Ministeriale" },
+  { value: 26, label: "Ettari gestiti" },
   { value: 23, label: "Aggiornamenti" },
 ];
 
