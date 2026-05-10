@@ -36,6 +36,19 @@ interface ChangelogEntry {
 // Queste sono le novità dell'APP MelaSmart, non della landing page
 const changelogData: ChangelogEntry[] = [
   {
+    version: "v1.8.0",
+    date: "10/05/2026",
+    changes: [
+      { type: "migliorato", description: "Migliorato lo Zoom e aggiunta la Lente Touch nelle mappe per catturare con precisione gli angoli esatti degli appezzamenti" },
+      { type: "nuovo", description: "Aggiunta la possibilità di salvare la data di installazione della trappola carpocapsa in modo persistente, con visualizzazione anche nello storico tramite grafica dedicata" },
+      { type: "nuovo", description: "Aggiunte le notifiche push per il monitoraggio carpocapsa e per il meteo giornaliero relativo alla finestra di trattamento" },
+      { type: "nuovo", description: "Aggiunto il layer del Catasto Nazionale nelle mappe con slider di opacità regolabile" },
+      { type: "migliorato", description: "Miglioramenti vari nel calcolatore decisionale Mills-Jones" },
+      { type: "nuovo", description: "Aggiunto il dato dell'altitudine calcolato automaticamente in base alle coordinate" },
+      { type: "migliorato", description: "Migliorie varie UX/UI e performance" },
+    ],
+  },
+  {
     version: "v1.7.0",
     date: "15/04/2026",
     changes: [
