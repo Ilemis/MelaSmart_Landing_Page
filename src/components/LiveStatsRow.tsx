@@ -7,10 +7,10 @@ interface Stat {
 }
 
 const stats: Stat[] = [
-  { value: 64, label: "Database MelaSmart" },
+  { value: 64, suffix: "+", label: "Database MelaSmart" },
   { value: 17621, label: "DB Ministeriale" },
   { value: 26, label: "Ettari gestiti" },
-  { value: 23, label: "Aggiornamenti" },
+  { value: 37, label: "Campi gestiti" },
 ];
 
 const Counter = ({ target, suffix }: { target: number; suffix?: string }) => {
