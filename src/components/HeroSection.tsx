@@ -1,4 +1,5 @@
 import { useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import heroBanner from "@/assets/hero-banner.png";
@@ -39,7 +40,11 @@ const HeroSection = () => {
       <div className="container mx-auto max-w-5xl relative z-10">
         <div className="text-center mb-12">
           <div className="animate-fade-up">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6 backdrop-blur-sm">
+            <Link
+              to="/changelog"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6 backdrop-blur-sm hover:bg-primary/20 hover:border-primary/40 transition-colors"
+              aria-label="Vai al changelog"
+            >
               <span className="relative flex h-2.5 w-2.5">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span>
@@ -47,7 +52,7 @@ const HeroSection = () => {
               <span className="text-sm font-semibold text-primary">App Live</span>
               <span className="text-xs text-muted-foreground hidden sm:inline">·</span>
               <span className="text-xs text-muted-foreground hidden sm:inline">v1.8.0 · 10/05/2026</span>
-            </div>
+            </Link>
             <LiveTicker />
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight drop-shadow-[0_2px_10px_hsl(var(--background))]">
               MelaSmart: Gestione
