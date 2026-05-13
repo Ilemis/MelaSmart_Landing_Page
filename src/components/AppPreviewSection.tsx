@@ -128,6 +128,10 @@ const CopilotCard = () => (
               <MessageSquare className="h-4 w-4 text-muted-foreground" />
               <span className="text-sm font-medium">Cronologia domande</span>
             </div>
+            <div className="inline-flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-melasmart-green/10 border border-melasmart-green/20">
+              <Eye className="h-4 w-4 text-melasmart-green" />
+              <span className="text-sm font-medium">Vision AI</span>
+            </div>
           </div>
 
           <p className="text-xs text-muted-foreground italic">
