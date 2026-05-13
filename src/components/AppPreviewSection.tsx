@@ -15,7 +15,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Bug, Thermometer, Bell, Bot, Brain, Zap, MessageSquare } from "lucide-react";
+import { Bug, Thermometer, Bell, Bot, Brain, Zap, MessageSquare, Eye } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const screenshots = [
