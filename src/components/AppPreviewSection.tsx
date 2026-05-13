@@ -108,7 +108,7 @@ const CopilotCard = () => (
           </div>
 
           <p className="text-muted-foreground text-base leading-relaxed">
-            Ora con <strong>3 modalità di ragionamento</strong>: Standard per risposte rapide, e due livelli di Ragionamento avanzato per analisi approfondite. Salva e ricarica le tue domande dalla cronologia.
+            Ora con <strong>3 modalità di ragionamento</strong>: Standard per risposte rapide, e due livelli di Ragionamento avanzato per analisi approfondite. Salva e ricarica le tue domande dalla cronologia. <strong>Nuova funzione Vision</strong>: scatta una foto e ottieni una diagnosi visiva AI su foglie, frutti e parassiti.
           </p>
 
           <div className="flex flex-wrap gap-3">
