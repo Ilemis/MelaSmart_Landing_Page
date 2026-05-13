@@ -6,7 +6,7 @@ const features = [
   {
     icon: Brain,
     title: "AI™ Copilot",
-    desc: "20 rich./gg con MelaSmart AI™ Copilot per analisi, consigli specialistici e miscele. Ragionamento a due livelli con Gemini 3 Flash.",
+    desc: "20 rich./gg con MelaSmart AI™ Copilot per analisi testuali, consigli specialistici e miscele. Inclusa funzione Vision con Gemini 3.1 Flash Lite per diagnosi visiva su foto di foglie, frutti e parassiti.",
   },
   {
     icon: Map,
