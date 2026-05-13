@@ -15,7 +15,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Bug, Thermometer, Bell, Bot, Brain, Zap, MessageSquare } from "lucide-react";
+import { Bug, Thermometer, Bell, Bot, Brain, Zap, MessageSquare, Eye } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const screenshots = [
@@ -108,7 +108,7 @@ const CopilotCard = () => (
           </div>
 
           <p className="text-muted-foreground text-base leading-relaxed">
-            Ora con <strong>3 modalità di ragionamento</strong>: Standard per risposte rapide, e due livelli di Ragionamento avanzato per analisi approfondite. Salva e ricarica le tue domande dalla cronologia.
+            Ora con <strong>3 modalità di ragionamento</strong>: Standard per risposte rapide, e due livelli di Ragionamento avanzato per analisi approfondite. Salva e ricarica le tue domande dalla cronologia. <strong>Nuova funzione Vision</strong>: scatta una foto e ottieni una diagnosi visiva AI su foglie, frutti e parassiti.
           </p>
 
           <div className="flex flex-wrap gap-3">
@@ -128,10 +128,14 @@ const CopilotCard = () => (
               <MessageSquare className="h-4 w-4 text-muted-foreground" />
               <span className="text-sm font-medium">Cronologia domande</span>
             </div>
+            <div className="inline-flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-melasmart-green/10 border border-melasmart-green/20">
+              <Eye className="h-4 w-4 text-melasmart-green" />
+              <span className="text-sm font-medium">Vision AI</span>
+            </div>
           </div>
 
           <p className="text-xs text-muted-foreground italic">
-            Gemini 3.1 Flash Lite · Gemini 3 Flash · Upgrade da Gemini 2.5 Flash
+            Gemini 3.1 Flash Lite · Gemini 3 Flash · Vision AI · Upgrade da Gemini 2.5 Flash
           </p>
         </div>
       </div>
