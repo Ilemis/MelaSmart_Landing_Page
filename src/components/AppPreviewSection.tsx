@@ -135,7 +135,7 @@ const CopilotCard = () => (
           </div>
 
           <p className="text-xs text-muted-foreground italic">
-            Gemini 3.1 Flash Lite · Gemini 3 Flash · Upgrade da Gemini 2.5 Flash
+            Gemini 3.1 Flash Lite · Gemini 3 Flash · Vision AI · Upgrade da Gemini 2.5 Flash
           </p>
         </div>
       </div>
