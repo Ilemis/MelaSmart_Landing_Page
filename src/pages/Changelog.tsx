@@ -36,6 +36,14 @@ interface ChangelogEntry {
 // Queste sono le novità dell'APP MelaSmart, non della landing page
 const changelogData: ChangelogEntry[] = [
   {
+    version: "v1.8.1",
+    date: "27/05/2026",
+    changes: [
+      { type: "nuovo", description: "Integrazione input vocale (Web Speech API) con microfono in-box per MelaSmart AI™ Copilot Agronomo" },
+      { type: "nuovo", description: "Aggiunto bottone per invertire la selezione dei campi" },
+    ],
+  },
+  {
     version: "v1.8.0",
     date: "10/05/2026",
     changes: [
