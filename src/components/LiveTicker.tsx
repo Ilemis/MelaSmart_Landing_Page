@@ -1,13 +1,8 @@
 import { Link } from "react-router-dom";
 
 const items = [
-  "v1.8.0 · Zoom migliorato e Lente Touch per catturare con precisione gli angoli degli appezzamenti",
-  "v1.8.0 · Salvataggio persistente della data di installazione della trappola carpocapsa con storico dedicato",
-  "v1.8.0 · Notifiche push per monitoraggio carpocapsa e meteo giornaliero nella finestra di trattamento",
-  "v1.8.0 · Layer Catasto Nazionale nelle mappe con slider di opacità regolabile",
-  "v1.8.0 · Miglioramenti nel calcolatore decisionale Mills-Jones",
-  "v1.8.0 · Altitudine calcolata automaticamente in base alle coordinate",
-  "v1.8.0 · Migliorie UX/UI e performance",
+  "v1.8.1 · Input vocale (Web Speech API) con microfono in-box per MelaSmart AI™ Copilot Agronomo",
+  "v1.8.1 · Nuovo bottone per invertire la selezione dei campi",
 ];
 
 const LiveTicker = () => {
