@@ -7,7 +7,7 @@ interface Stat {
 }
 
 const stats: Stat[] = [
-  { value: 64, suffix: "+", label: "Database MelaSmart" },
+  { value: 66, suffix: "+", label: "Database MelaSmart" },
   { value: 17643, label: "DB Ministeriale" },
   { value: 26, label: "Ettari gestiti" },
   { value: 37, label: "Campi gestiti" },
