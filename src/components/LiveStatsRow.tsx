@@ -8,7 +8,7 @@ interface Stat {
 
 const stats: Stat[] = [
   { value: 66, suffix: "+", label: "Database MelaSmart" },
-  { value: 17643, label: "DB Ministeriale" },
+  { value: 17695, label: "DB Ministeriale" },
   { value: 26, label: "Ettari gestiti" },
   { value: 37, label: "Campi gestiti" },
 ];
@@ -54,15 +54,20 @@ const Counter = ({ target, suffix }: { target: number; suffix?: string }) => {
 
 const LiveStatsRow = () => {
   return (
-    <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 mt-8">
-      {stats.map((s, i) => (
-        <div key={i} className="flex flex-col items-center min-w-[90px]">
-          <Counter target={s.value} suffix={s.suffix} />
-          <span className="text-xs md:text-sm text-muted-foreground font-medium uppercase tracking-wide">
-            {s.label}
-          </span>
-        </div>
-      ))}
+    <div className="flex flex-col items-center mt-8">
+      <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
+        {stats.map((s, i) => (
+          <div key={i} className="flex flex-col items-center min-w-[90px]">
+            <Counter target={s.value} suffix={s.suffix} />
+            <span className="text-xs md:text-sm text-muted-foreground font-medium uppercase tracking-wide">
+              {s.label}
+            </span>
+          </div>
+        ))}
+      </div>
+      <p className="text-[10px] md:text-xs text-muted-foreground/70 mt-3 font-medium tracking-wide">
+        Ultimo aggiornamento: oggi, 14/09/2026
+      </p>
     </div>
   );
 };
