@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useMemo } from "react";
 
 interface Stat {
   value: number;
@@ -53,6 +53,21 @@ const Counter = ({ target, suffix }: { target: number; suffix?: string }) => {
 };
 
 const LiveStatsRow = () => {
+  const lastUpdate = useMemo(() => {
+    const updateDate = new Date(2026, 8, 14); // 14/09/2026
+    const today = new Date();
+    const isToday =
+      today.getDate() === updateDate.getDate() &&
+      today.getMonth() === updateDate.getMonth() &&
+      today.getFullYear() === updateDate.getFullYear();
+    const formatted = updateDate.toLocaleDateString("it-IT", {
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric",
+    });
+    return isToday ? `oggi, ${formatted}` : `aggiornato al ${formatted}`;
+  }, []);
+
   return (
     <div className="flex flex-col items-center mt-8">
       <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
@@ -66,7 +81,7 @@ const LiveStatsRow = () => {
         ))}
       </div>
       <p className="text-[10px] md:text-xs text-muted-foreground/70 mt-3 font-medium tracking-wide">
-        Ultimo aggiornamento: oggi, 14/09/2026
+        Ultimo aggiornamento: {lastUpdate}
       </p>
     </div>
   );
