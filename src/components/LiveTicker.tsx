@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 
 const items = [
-  "v1.8.1 · Input vocale (Web Speech API) con microfono in-box per MelaSmart AI™ Copilot Agronomo",
-  "v1.8.1 · Nuovo bottone per invertire la selezione dei campi",
+  "v1.9.0 · MelaSmart AI™ Copilot passa alla nuova generazione Google Gemini 3.x",
+  "Gemini 3.8 Flash · Ragionamento High per diagnosi e piani di trattamento complessi",
+  "Gemini 3.5 Flash · OCR Premium di etichette, fatture e DDT ancora più preciso",
+  "Gemini 3.1 Flash-Lite · Risposte Standard ultrarapide accessibili a tutti",
 ];
 
 const LiveTicker = () => {

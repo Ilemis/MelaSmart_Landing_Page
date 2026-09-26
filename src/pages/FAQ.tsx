@@ -76,7 +76,7 @@ const faqData = [
     id: "faq-10",
     question: "Quale AI viene usata nella app?",
     answer: 
-      "Al momento la app si concentra sui modelli Gemini di google, seguiamo l'evoluzione del mercato per trovare la soluzione migliore per risposte sempre più approfondite.",
+      "MelaSmart utilizza la nuova generazione Google Gemini 3.x. Il livello Standard, accessibile a tutti, usa Gemini 3.1 Flash-Lite per risposte quotidiane rapide. Il piano Premium aggiunge Gemini 3.5 Flash per OCR di etichette, fatture e DDT e per il primo livello di ragionamento avanzato; la modalità Ragionamento High usa Gemini 3.8 Flash per piani complessi, diagnosi fitosanitarie avanzate e consulenza agronomica di precisione.",
   },
   {
     id: "faq-11",

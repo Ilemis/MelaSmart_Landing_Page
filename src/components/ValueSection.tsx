@@ -26,14 +26,14 @@ const categories = [
       {
         icon: Brain,
         name: "MelaSmart AI™ Copilot",
-        subtitle: "Agronomo Virtuale",
-        description: "Un agronomo senior sempre al tuo fianco. La nostra IA analizza contemporaneamente fenologia, meteo e prodotti per validare ogni tua decisione tecnica."
+        subtitle: "Google Gemini 3.x",
+        description: "Un agronomo virtuale sempre al tuo fianco. Gemini 3.1 Flash-Lite offre risposte quotidiane immediate a tutti; i livelli Premium 3.5 e 3.8 aggiungono ragionamento dedicato per le decisioni tecniche più complesse."
       },
       {
         icon: Eye,
-        name: "Gemini Vision",
-        subtitle: "Diagnosi Visiva AI",
-        description: "Scatta una foto e ottieni una diagnosi. Carica un'immagine di foglie, frutti o parassiti e ricevi un'analisi dettagliata con identificazione della malattia e consigli pratici di intervento. Esclusiva Premium."
+        name: "Gemini 3.8 Vision",
+        subtitle: "Diagnosi Avanzata Premium",
+        description: "Scatta una foto e ottieni una diagnosi fitosanitaria avanzata. Gemini 3.8 Flash analizza foglie, frutti o parassiti e restituisce identificazione, contesto e consigli pratici di intervento. Esclusiva Premium."
       },
     ]
   },

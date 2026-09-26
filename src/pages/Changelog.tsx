@@ -36,6 +36,17 @@ interface ChangelogEntry {
 // Queste sono le novità dell'APP MelaSmart, non della landing page
 const changelogData: ChangelogEntry[] = [
   {
+    version: "v1.9.0",
+    date: "26/09/2026",
+    changes: [
+      { type: "nuovo", description: "Nuova architettura MelaSmart AI™ Copilot basata interamente sull'ecosistema di nuova generazione Google Gemini 3.x" },
+      { type: "migliorato", description: "Livello Standard aggiornato a Gemini 3.1 Flash-Lite, accessibile a tutti per risposte quotidiane ancora più rapide ed efficienti" },
+      { type: "nuovo", description: "Gemini 3.5 Flash per utenti Premium: maggiore precisione nella lettura automatica di etichette, fatture e DDT tramite OCR e nuovo primo livello di ragionamento logico" },
+      { type: "nuovo", description: "Gemini 3.8 Flash esclusivo per la modalità Ragionamento High: piani di trattamento complessi, diagnosi fitosanitarie avanzate e consulenza agronomica di precisione ad alta affidabilità" },
+      { type: "migliorato", description: "Risposte più veloci, analisi agronomiche più approfondite e comprensione nettamente superiore del contesto agricolo" },
+    ],
+  },
+  {
     version: "v1.8.1",
     date: "27/05/2026",
     changes: [

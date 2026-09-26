@@ -108,21 +108,21 @@ const CopilotCard = () => (
           </div>
 
           <p className="text-muted-foreground text-base leading-relaxed">
-            Ora con <strong>3 modalità di ragionamento</strong>: Standard per risposte rapide, e due livelli di Ragionamento avanzato per analisi approfondite. Salva e ricarica le tue domande dalla cronologia. <strong>Nuova funzione Vision</strong>: scatta una foto e ottieni una diagnosi visiva AI su foglie, frutti e parassiti.
+            Una nuova architettura Google Gemini 3.x con <strong>3 livelli di intelligenza</strong>: Standard per risposte immediate, Premium per analisi approfondite e Ragionamento High con l'esclusivo <strong>Gemini 3.8 Flash</strong>. Salva e ricarica le tue domande dalla cronologia. Con Vision avanzata puoi scattare una foto e ottenere una diagnosi fitosanitaria su foglie, frutti e parassiti.
           </p>
 
           <div className="flex flex-wrap gap-3">
             <div className="inline-flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-melasmart-green/10 border border-melasmart-green/20">
               <Zap className="h-4 w-4 text-melasmart-green" />
-              <span className="text-sm font-medium">Standard · Flash Lite</span>
+              <span className="text-sm font-medium">Standard · Gemini 3.1 Flash-Lite</span>
             </div>
             <div className="inline-flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-accent border border-accent-foreground/10">
               <Brain className="h-4 w-4 text-accent-foreground" />
-              <span className="text-sm font-medium">Ragionamento LOW</span>
+              <span className="text-sm font-medium">Premium · Gemini 3.5 Flash</span>
             </div>
             <div className="inline-flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-primary/10 border border-primary/30">
               <Brain className="h-4 w-4 text-primary" />
-              <span className="text-sm font-medium">Ragionamento HIGH</span>
+              <span className="text-sm font-bold">High · Gemini 3.8 Flash</span>
             </div>
             <div className="inline-flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-secondary border border-border">
               <MessageSquare className="h-4 w-4 text-muted-foreground" />
@@ -130,12 +130,12 @@ const CopilotCard = () => (
             </div>
             <div className="inline-flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-melasmart-green/10 border border-melasmart-green/20">
               <Eye className="h-4 w-4 text-melasmart-green" />
-              <span className="text-sm font-medium">Vision AI</span>
+              <span className="text-sm font-medium">Vision avanzata Premium</span>
             </div>
           </div>
 
           <p className="text-xs text-muted-foreground italic">
-            Gemini 3.1 Flash Lite · Gemini 3 Flash · Vision AI · Upgrade da Gemini 2.5 Flash
+            Ecosistema Google Gemini 3.x · Più veloce · Più preciso · Più consapevole del contesto agricolo
           </p>
         </div>
       </div>
