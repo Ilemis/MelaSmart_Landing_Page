@@ -1,31 +1,41 @@
+# Upgrade AI Google Gemini 3.x
 
+## Obiettivo
+Comunicare in modo chiaro e autorevole la nuova architettura AI di MelaSmart, distinguendo ciò che è disponibile per tutti dai vantaggi esclusivi Premium e dando massimo risalto a Gemini 3.8 Flash già nella prima schermata.
 
-# Lancio Web App — Rimozione Waitlist/Countdown + Sezione Premium
+## Interventi
 
-## Cosa cambia
+### 1. Prima schermata della home
+- Aggiornare il badge “App Live” alla nuova versione **v1.9.0 · 26/09/2026**.
+- Sostituire le notizie scorrevoli con l’annuncio dell’ecosistema Gemini 3.x e dell’arrivo di Gemini 3.8 Flash.
+- Inserire vicino al messaggio principale un richiamo compatto e molto visibile a **Gemini 3.8 Flash**, senza compromettere leggibilità o pulsante principale.
 
-### 1. HeroSection — Sostituzione completa della parte bassa
-- **Rimuovo**: countdown timer, waitlist form, WaitlistForm import, useCountdown hook, CountdownDigit
-- **Badge** "Lancio imminente" → **"Disponibile ora"** (pallino verde, no ping animation)
-- **Aggiungo**: un bottone grande "Prova la Web App" che punta a `https://app.melasmart.com` (target _blank), stile `hero` variant, con icona freccia
-- Sotto il bottone: testo piccolo "Gratis · Nessuna carta richiesta" come nello screenshot di riferimento
-- Mantengo titolo h1 e sottotitolo invariati
+### 2. Sezioni dedicate all’Intelligenza Artificiale
+- Presentare la nuova architettura Gemini 3.x e i benefici concreti: maggiore velocità, comprensione del contesto agricolo e analisi più approfondite.
+- Rendere espliciti i tre livelli:
+  - **Standard — Gemini 3.1 Flash-Lite**, accessibile a tutti per risposte quotidiane rapide.
+  - **Premium — Gemini 3.5 Flash**, per OCR di etichette, fatture/DDT e ragionamento avanzato di primo livello.
+  - **Premium High — Gemini 3.8 Flash**, per piani complessi, diagnosi fitosanitarie avanzate e consulenza agronomica di precisione.
+- Aggiornare testi, badge, note e riferimenti tecnici nelle sezioni Copilot, Vision, anteprima app, vantaggi e piano Premium.
+- Conservare i contenuti esistenti e aggiungere o sostituire soltanto le informazioni sui modelli ormai superate.
 
-### 2. Nuova sezione PremiumSection
-Nuova componente `src/components/PremiumSection.tsx` inserita in Index.tsx prima del Footer.
+### 3. FAQ e comunicazione trasversale
+- Aggiornare la risposta su quale AI usa MelaSmart con la distinzione Standard/Premium.
+- Controllare le altre pagine informative e legali, correggendo solo eventuali riferimenti attuali incompatibili; le vecchie voci del changelog resteranno come storico.
 
-Layout ispirato allo screenshot fornito:
-- Titolo "MelaSmart PREMIUM" con sottotitolo "Più operatività, più storico, più controllo"
-- Paragrafo introduttivo
-- Griglia di 8 feature cards (AI™ Copilot, Campi Multipli, Meteo Operativo, Garage Completo, OCR Fatture, Registro Completo, Setup Più Precisi, Storico AI)
-- Box prezzo in evidenza: **4,99€/mese** con bottone "Passa a Premium" → link a `https://app.melasmart.com`
-- Scroll reveal animation come le altre sezioni
+### 4. Nuovo changelog
+- Aggiungere in cima **v1.9.0 — 26/09/2026** con:
+  - migrazione completa all’ecosistema Google Gemini 3.x;
+  - Gemini 3.1 Flash-Lite per il livello Standard;
+  - Gemini 3.5 Flash per OCR, lettura documenti e ragionamento Premium;
+  - Gemini 3.8 Flash per Ragionamento High, diagnosi e consulenza avanzata;
+  - miglioramenti a velocità, profondità e comprensione del contesto agricolo.
+- Aggiornare badge “App Live” e ticker con la stessa versione e data.
 
-### 3. File modificati
-| File | Modifica |
-|------|----------|
-| `src/components/HeroSection.tsx` | Rimozione countdown/waitlist, aggiunta CTA bottone webapp |
-| `src/components/PremiumSection.tsx` | Nuovo file — sezione premium |
-| `src/pages/Index.tsx` | Import PremiumSection, inserita prima del Footer |
-| `src/components/WaitlistForm.tsx` | Può essere rimosso (non più usato) |
+## Verifica
+- Controllare la home su desktop e mobile, con particolare attenzione alla visibilità di Gemini 3.8 e all’assenza di sovrapposizioni.
+- Verificare collegamenti al changelog, testi dei badge e corretto caricamento di tutte le sezioni.
+- Confermare che il progetto compili senza errori.
 
+## Nota
+In assenza di un numero versione indicato, il nuovo changelog userà **v1.9.0**, coerente con l’importanza dell’upgrade e successivo alla v1.8.1.
