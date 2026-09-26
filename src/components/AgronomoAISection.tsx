@@ -12,7 +12,7 @@ const AgronomoAISection = () => {
       icon: <FileSearch className="w-6 h-6" />,
       title: "Parsing e Importazione Prodotti",
       description:
-        "Cerca prodotti fitosanitari e importa automaticamente tutti i dati strutturati: Nome, Principio Attivo, Tipo, Dosaggio standard, Numero di Registrazione e Avversità. I dati vengono recuperati direttamente dal dataset ministeriale ed elaborati da Gemini AI. Pronti per il tuo database in un click.",
+        "Cerca prodotti fitosanitari e importa automaticamente tutti i dati strutturati: Nome, Principio Attivo, Tipo, Dosaggio standard, Numero di Registrazione e Avversità. I dati vengono recuperati direttamente dal dataset ministeriale ed elaborati dalla nuova architettura Gemini 3.x. Pronti per il tuo database in un click.",
       note: "Se il prodotto è già presente nel database MelaSmart, non verranno consumati crediti AI.",
     },
     {
@@ -26,7 +26,7 @@ const AgronomoAISection = () => {
       icon: <MessageSquare className="w-6 h-6" />,
       title: "AI Agronomo Esperto",
       description:
-        "Un agronomo virtuale specializzato nella coltivazione del melo o della cultivar che selezioni. Risponde alle tue domande considerando fase fenologica, dati meteo e contesto. Con la nuova funzione Vision puoi caricare una foto del contesto agricolo — malattie, parassiti, carenze — e ricevere una diagnosi mirata con consigli pratici e immediati.",
+        "Un agronomo virtuale specializzato nella coltivazione del melo o della cultivar che selezioni. Risponde considerando fase fenologica, meteo e contesto. Con Vision avanzata Premium e Gemini 3.8 Flash puoi analizzare foto di malattie, parassiti e carenze per ricevere diagnosi mirate e consigli pratici.",
       note: "Costa 1 credito AI.",
     },
   ];
@@ -45,9 +45,27 @@ const AgronomoAISection = () => {
             <span className="text-gradient-green">il tuo agronomo virtuale.</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Tre strumenti AI che lavorano insieme per velocizzare il tuo lavoro quotidiano 
-            e darti risposte precise quando ti servono.
+            La nuova generazione Google Gemini 3.x offre risposte più veloci, analisi agronomiche più profonde
+            e una comprensione nettamente superiore del contesto agricolo.
           </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-4 mb-12">
+          <div className="rounded-2xl border border-primary/20 bg-card/80 p-5 text-left">
+            <span className="text-xs font-bold uppercase text-primary">Accessibile a tutti</span>
+            <h3 className="mt-2 font-bold">Gemini 3.1 Flash-Lite</h3>
+            <p className="mt-2 text-sm text-muted-foreground">Livello Standard ultrarapido ed efficiente per le risposte quotidiane immediate.</p>
+          </div>
+          <div className="rounded-2xl border border-warm/30 bg-card/80 p-5 text-left">
+            <span className="text-xs font-bold uppercase text-warm-dark">Premium</span>
+            <h3 className="mt-2 font-bold">Gemini 3.5 Flash</h3>
+            <p className="mt-2 text-sm text-muted-foreground">OCR più preciso per etichette, fatture e DDT, con il primo livello di ragionamento avanzato.</p>
+          </div>
+          <div className="rounded-2xl border-2 border-primary/40 bg-primary/5 p-5 text-left shadow-card">
+            <span className="text-xs font-bold uppercase text-primary">Premium · Ragionamento High</span>
+            <h3 className="mt-2 font-bold">Gemini 3.8 Flash</h3>
+            <p className="mt-2 text-sm text-muted-foreground">Il motore più evoluto per piani complessi, diagnosi avanzate e consulenza agronomica di precisione.</p>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 animate-fade-up-delay-1 mb-16">
@@ -112,7 +130,7 @@ const AgronomoAISection = () => {
                   : "bg-muted text-muted-foreground hover:bg-accent"
               }`}
             >
-              Esempio 3 — Gemini Vision
+              Esempio 3 — Gemini 3.8 Vision
             </button>
           </div>
           
@@ -174,7 +192,7 @@ const AgronomoAISection = () => {
           <div className="inline-flex items-center gap-3 px-6 py-4 rounded-2xl bg-card border border-border">
             <div className="w-3 h-3 rounded-full bg-primary animate-pulse" />
             <span className="text-sm text-muted-foreground">
-              MelaSmart AI™ Copilot è incluso anche nella versione free con limiti giornalieri — la funzione Vision è esclusiva del piano Premium
+              Gemini 3.1 Flash-Lite è incluso anche nella versione Free con limiti giornalieri — Gemini 3.5, Gemini 3.8 e Vision avanzata sono esclusivi Premium
             </span>
           </div>
         </div>
@@ -443,7 +461,7 @@ const SlideThree = () => (
           <Eye className="w-5 h-5 text-primary" />
         </div>
         <div>
-          <p className="font-semibold text-sm">Agronomo AI · Gemini Vision</p>
+          <p className="font-semibold text-sm">Agronomo AI · Gemini 3.8 Flash Vision</p>
           <p className="text-xs text-muted-foreground">Analisi immagine + risposta personalizzata</p>
         </div>
       </div>

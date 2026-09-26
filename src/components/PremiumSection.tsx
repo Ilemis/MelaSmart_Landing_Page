@@ -5,8 +5,8 @@ import { ArrowRight, Brain, Map, CloudSun, Truck, ScanLine, FileText, Settings, 
 const features = [
   {
     icon: Brain,
-    title: "AI™ Copilot",
-    desc: "20 rich./gg con MelaSmart AI™ Copilot per analisi testuali, consigli specialistici e miscele. Inclusa funzione Vision con Gemini 3.1 Flash Lite per diagnosi visiva su foto di foglie, frutti e parassiti.",
+    title: "AI™ Copilot Gemini 3.x",
+    desc: "20 rich./gg con MelaSmart AI™ Copilot. Accedi a Gemini 3.5 Flash per il ragionamento avanzato e all'esclusivo Gemini 3.8 Flash in modalità High per piani complessi, diagnosi fitosanitarie e consulenza agronomica di precisione.",
   },
   {
     icon: Map,
@@ -25,8 +25,8 @@ const features = [
   },
   {
     icon: ScanLine,
-    title: "OCR Fatture Premium",
-    desc: "Carichi la fattura, MelaSmart legge le righe e salva i prodotti in magazzino con revisione guidata.",
+    title: "OCR Premium · Gemini 3.5",
+    desc: "Gemini 3.5 Flash legge etichette, fatture e DDT, riconosce le righe e salva i prodotti in magazzino con revisione guidata.",
   },
   {
     icon: FileText,
@@ -63,10 +63,10 @@ const PremiumSection = () => {
             MelaSmart <span className="text-gradient-green">PREMIUM</span>
           </h2>
           <p className="text-lg font-semibold text-foreground/80 mb-2">
-            Più operatività, più storico, più controllo
+            Più operatività, più controllo, più intelligenza
           </p>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Premium sblocca la parte operativa completa di MelaSmart. Se usi l'app su più appezzamenti, con più macchine o vuoi sfruttare davvero AI, meteo e registro trattamenti, qui trovi tutte le funzioni senza i limiti del piano Free.
+            Premium sblocca la parte operativa completa di MelaSmart e i motori Google Gemini 3.5 e 3.8 Flash. Se usi l'app su più appezzamenti, con più macchine o vuoi sfruttare davvero AI, Vision, OCR, meteo e registro trattamenti, qui trovi tutte le funzioni senza i limiti del piano Free.
           </p>
         </div>
 

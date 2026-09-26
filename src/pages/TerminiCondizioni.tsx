@@ -160,7 +160,7 @@ const TerminiCondizioni = () => {
                 </div>
 
                 <div>
-                  <h3 className="text-lg font-medium mb-2">3.6 Trattamento delle Immagini (Gemini Vision)</h3>
+                  <h3 className="text-lg font-medium mb-2">3.6 Trattamento delle Immagini (Gemini 3.x Vision)</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     La funzionalità di diagnosi visiva consente all'utente di caricare immagini (ad esempio 
                     di foglie, frutti o parassiti) per ottenere un'analisi tramite intelligenza artificiale 
@@ -168,7 +168,7 @@ const TerminiCondizioni = () => {
                     memorizzate, archiviate o conservate</strong> nei server o nei database 
                     dell'applicazione. Le immagini esistono esclusivamente nella memoria volatile (RAM) 
                     del servizio per il tempo strettamente necessario all'elaborazione della richiesta 
-                    da parte dell'API di Google Gemini e vengono immediatamente eliminate al termine 
+                    da parte dell'API di Google Gemini 3.x e vengono immediatamente eliminate al termine 
                     del processo. Nessuna copia, backup o versione cache dell'immagine viene creata 
                     o conservata dal Titolare del trattamento.
                   </p>

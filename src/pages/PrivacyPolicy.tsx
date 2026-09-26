@@ -203,7 +203,7 @@ const PrivacyPolicy = () => {
                   <ul className="space-y-1 text-muted-foreground">
                     <li className="flex items-start gap-2">
                       <span className="text-primary mt-1">•</span>
-                      <span><strong className="text-foreground">Immagini per diagnosi visiva (Gemini Vision):</strong> Le immagini caricate per l'analisi AI esistono esclusivamente in memoria volatile (RAM) per il tempo necessario all'elaborazione e vengono immediatamente eliminate. Non vengono mai salvate su server, database o sistemi di archiviazione del Titolare.</span>
+                      <span><strong className="text-foreground">Immagini per diagnosi visiva (Gemini 3.x Vision):</strong> Le immagini caricate per l'analisi AI esistono esclusivamente in memoria volatile (RAM) per il tempo necessario all'elaborazione e vengono immediatamente eliminate. Non vengono mai salvate su server, database o sistemi di archiviazione del Titolare.</span>
                     </li>
                   </ul>
                 </div>
