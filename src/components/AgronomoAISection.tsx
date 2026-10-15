@@ -1,6 +1,6 @@
 import { Bot, FileSearch, Beaker, MessageSquare, User, Sparkles, AlertTriangle, CheckCircle2, ThermometerSnowflake, Droplets, Leaf, ChevronLeft, ChevronRight, ChevronDown, FlaskConical, ShieldAlert, XCircle, Camera, Eye, Scissors, Search, Sprout, TreeDeciduous } from "lucide-react";
 import visionImage from "@/assets/screenshot-vision-ticchiolatura.jpg";
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const AgronomoAISection = () => {
@@ -233,7 +233,7 @@ const ExampleCard = ({
   title: string;
   open: boolean;
   onToggle: () => void;
-  children: React.ReactNode;
+  children: ReactNode;
 }) => (
   <div className="bg-card border border-border overflow-hidden shadow-xl rounded-2xl">
     <button
