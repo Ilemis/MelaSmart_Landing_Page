@@ -31,9 +31,9 @@ const categories = [
       },
       {
         icon: Eye,
-        name: "Gemini 3.8 Vision",
+        name: "Gemini 3.5 Vision",
         subtitle: "Diagnosi Avanzata Premium",
-        description: "Scatta una foto e ottieni una diagnosi fitosanitaria avanzata. Gemini 3.8 Flash analizza foglie, frutti o parassiti e restituisce identificazione, contesto e consigli pratici di intervento. Esclusiva Premium."
+        description: "Scatta una foto e ottieni una diagnosi fitosanitaria avanzata. Gemini 3.5 Flash-Lite analizza foglie, frutti o parassiti e restituisce identificazione, contesto e consigli pratici di intervento. Esclusiva Premium."
       },
     ]
   },

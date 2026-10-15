@@ -30,7 +30,7 @@ const AgronomoAISection = () => {
       icon: <MessageSquare className="w-6 h-6" />,
       title: "AI Agronomo Esperto",
       description:
-        "Un agronomo virtuale specializzato nella coltivazione del melo o della cultivar che selezioni. Risponde considerando fase fenologica, meteo e contesto. Con Vision avanzata Premium e Gemini 3.8 Flash puoi analizzare foto di malattie, parassiti e carenze per ricevere diagnosi mirate e consigli pratici.",
+        "Un agronomo virtuale specializzato nella coltivazione del melo o della cultivar che selezioni. Risponde considerando fase fenologica, meteo e contesto. Con Vision avanzata Premium, basata su Gemini 3.5 Flash-Lite, puoi analizzare foto di malattie, parassiti e carenze per ricevere diagnosi mirate e consigli pratici.",
       note: "Costa 1 credito AI.",
     },
   ];
@@ -138,7 +138,7 @@ const AgronomoAISection = () => {
                   : "bg-muted text-muted-foreground hover:bg-accent"
               }`}
             >
-              Gemini 3.8 Vision
+              Gemini 3.5 Vision
             </button>
           </div>
           
@@ -188,7 +188,7 @@ const AgronomoAISection = () => {
                 {/* SLIDE 3 — Gemini Vision */}
                 <div className="w-full flex-shrink-0">
                   <ExampleCard
-                    title="Diagnosi da foto con Gemini 3.8 Vision"
+                    title="Diagnosi da foto con Gemini 3.5 Flash-Lite"
                     open={openSlides[2]}
                     onToggle={() => toggleSlide(2)}
                   >
@@ -515,7 +515,7 @@ const SlideThree = () => (
           <Eye className="w-5 h-5 text-primary" />
         </div>
         <div>
-          <p className="font-semibold text-sm">Agronomo AI · Gemini 3.8 Flash Vision</p>
+          <p className="font-semibold text-sm">Agronomo AI · Gemini 3.5 Flash-Lite Vision</p>
           <p className="text-xs text-muted-foreground">Analisi immagine + risposta personalizzata</p>
         </div>
       </div>
