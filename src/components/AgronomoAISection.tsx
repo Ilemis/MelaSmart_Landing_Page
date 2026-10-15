@@ -163,15 +163,33 @@ const AgronomoAISection = () => {
               >
                 {/* SLIDE 1 — Finestra di trattamento */}
                 <div className="w-full flex-shrink-0">
-                  <SlideOne />
+                  <ExampleCard
+                    title="Esempio 1 — Finestra di trattamento"
+                    open={openSlides[0]}
+                    onToggle={() => toggleSlide(0)}
+                  >
+                    <SlideOne />
+                  </ExampleCard>
                 </div>
                 {/* SLIDE 2 — Compatibilità miscela */}
                 <div className="w-full flex-shrink-0">
-                  <SlideTwo />
+                  <ExampleCard
+                    title="Esempio 2 — Compatibilità miscela"
+                    open={openSlides[1]}
+                    onToggle={() => toggleSlide(1)}
+                  >
+                    <SlideTwo />
+                  </ExampleCard>
                 </div>
                 {/* SLIDE 3 — Gemini Vision */}
                 <div className="w-full flex-shrink-0">
-                  <SlideThree />
+                  <ExampleCard
+                    title="Esempio 3 — Gemini 3.8 Vision"
+                    open={openSlides[2]}
+                    onToggle={() => toggleSlide(2)}
+                  >
+                    <SlideThree />
+                  </ExampleCard>
                 </div>
               </div>
             </div>
