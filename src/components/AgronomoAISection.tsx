@@ -1,11 +1,15 @@
-import { Bot, FileSearch, Beaker, MessageSquare, User, Sparkles, AlertTriangle, CheckCircle2, ThermometerSnowflake, Droplets, Leaf, ChevronLeft, ChevronRight, FlaskConical, ShieldAlert, XCircle, Camera, Eye, Scissors, Search, Sprout, TreeDeciduous } from "lucide-react";
+import { Bot, FileSearch, Beaker, MessageSquare, User, Sparkles, AlertTriangle, CheckCircle2, ThermometerSnowflake, Droplets, Leaf, ChevronLeft, ChevronRight, ChevronDown, FlaskConical, ShieldAlert, XCircle, Camera, Eye, Scissors, Search, Sprout, TreeDeciduous } from "lucide-react";
 import visionImage from "@/assets/screenshot-vision-ticchiolatura.jpg";
 import { useState } from "react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const AgronomoAISection = () => {
   const [activeSlide, setActiveSlide] = useState(0);
+  const [openSlides, setOpenSlides] = useState<boolean[]>([false, false, false]);
   const { ref, isVisible } = useScrollReveal();
+
+  const toggleSlide = (i: number) =>
+    setOpenSlides(prev => prev.map((v, idx) => (idx === i ? !v : v)));
 
   const features = [
     {
