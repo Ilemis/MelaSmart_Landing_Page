@@ -118,7 +118,7 @@ const AgronomoAISection = () => {
                   : "bg-muted text-muted-foreground hover:bg-accent"
               }`}
             >
-              Esempio 1 — Finestra di trattamento
+              Finestra di trattamento
             </button>
             <button
               onClick={() => setActiveSlide(1)}
@@ -128,7 +128,7 @@ const AgronomoAISection = () => {
                   : "bg-muted text-muted-foreground hover:bg-accent"
               }`}
             >
-              Esempio 2 — Compatibilità miscela
+              Compatibilità miscela
             </button>
             <button
               onClick={() => setActiveSlide(2)}
@@ -138,7 +138,7 @@ const AgronomoAISection = () => {
                   : "bg-muted text-muted-foreground hover:bg-accent"
               }`}
             >
-              Esempio 3 — Gemini 3.8 Vision
+              Gemini 3.8 Vision
             </button>
           </div>
           
