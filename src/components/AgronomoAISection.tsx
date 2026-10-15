@@ -100,8 +100,12 @@ const AgronomoAISection = () => {
           <div className="text-center mb-8">
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent text-accent-foreground text-sm font-medium">
               <Sparkles className="w-4 h-4" />
-              Esempi di risposte reali
+              Guarda l'AI in azione
             </span>
+            <h3 className="mt-4 text-2xl md:text-3xl font-bold">Esempi di risposte reali</h3>
+            <p className="mt-2 text-muted-foreground text-sm md:text-base max-w-xl mx-auto">
+              Tre casi concreti dall'uso quotidiano: scegli un esempio e apri la risposta completa.
+            </p>
           </div>
 
           {/* Slider Navigation */}
