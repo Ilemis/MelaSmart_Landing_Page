@@ -100,8 +100,12 @@ const AgronomoAISection = () => {
           <div className="text-center mb-8">
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent text-accent-foreground text-sm font-medium">
               <Sparkles className="w-4 h-4" />
-              Esempi di risposte reali
+              Guarda l'AI in azione
             </span>
+            <h3 className="mt-4 text-2xl md:text-3xl font-bold">Esempi di risposte reali</h3>
+            <p className="mt-2 text-muted-foreground text-sm md:text-base max-w-xl mx-auto">
+              Tre casi concreti dall'uso quotidiano: scegli un esempio e apri la risposta completa.
+            </p>
           </div>
 
           {/* Slider Navigation */}
@@ -114,7 +118,7 @@ const AgronomoAISection = () => {
                   : "bg-muted text-muted-foreground hover:bg-accent"
               }`}
             >
-              Esempio 1 — Finestra di trattamento
+              Finestra di trattamento
             </button>
             <button
               onClick={() => setActiveSlide(1)}
@@ -124,7 +128,7 @@ const AgronomoAISection = () => {
                   : "bg-muted text-muted-foreground hover:bg-accent"
               }`}
             >
-              Esempio 2 — Compatibilità miscela
+              Compatibilità miscela
             </button>
             <button
               onClick={() => setActiveSlide(2)}
@@ -134,7 +138,7 @@ const AgronomoAISection = () => {
                   : "bg-muted text-muted-foreground hover:bg-accent"
               }`}
             >
-              Esempio 3 — Gemini 3.8 Vision
+              Gemini 3.8 Vision
             </button>
           </div>
           
@@ -164,7 +168,7 @@ const AgronomoAISection = () => {
                 {/* SLIDE 1 — Finestra di trattamento */}
                 <div className="w-full flex-shrink-0">
                   <ExampleCard
-                    title="Esempio 1 — Finestra di trattamento"
+                    title="Quando trattare? La finestra perfetta"
                     open={openSlides[0]}
                     onToggle={() => toggleSlide(0)}
                   >
@@ -174,7 +178,7 @@ const AgronomoAISection = () => {
                 {/* SLIDE 2 — Compatibilità miscela */}
                 <div className="w-full flex-shrink-0">
                   <ExampleCard
-                    title="Esempio 2 — Compatibilità miscela"
+                    title="Posso miscelare questi prodotti?"
                     open={openSlides[1]}
                     onToggle={() => toggleSlide(1)}
                   >
@@ -184,7 +188,7 @@ const AgronomoAISection = () => {
                 {/* SLIDE 3 — Gemini Vision */}
                 <div className="w-full flex-shrink-0">
                   <ExampleCard
-                    title="Esempio 3 — Gemini 3.8 Vision"
+                    title="Diagnosi da foto con Gemini 3.8 Vision"
                     open={openSlides[2]}
                     onToggle={() => toggleSlide(2)}
                   >
