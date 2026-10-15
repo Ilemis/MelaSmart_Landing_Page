@@ -223,6 +223,34 @@ const AgronomoAISection = () => {
   );
 };
 
+/* ─── Card esempio collassabile ─── */
+const ExampleCard = ({
+  title,
+  open,
+  onToggle,
+  children,
+}: {
+  title: string;
+  open: boolean;
+  onToggle: () => void;
+  children: React.ReactNode;
+}) => (
+  <div className="bg-card border border-border overflow-hidden shadow-xl rounded-2xl">
+    <button
+      onClick={onToggle}
+      className="w-full flex items-center justify-between gap-4 px-6 py-4 text-left hover:bg-accent/50 transition-colors"
+      aria-expanded={open}
+    >
+      <span className="font-semibold text-sm text-foreground">{title}</span>
+      <span className="flex items-center gap-2 text-muted-foreground flex-shrink-0">
+        <span className="text-xs hidden sm:inline">{open ? "Nascondi risposta" : "Mostra risposta"}</span>
+        <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
+      </span>
+    </button>
+    {open && <div className="animate-fade-up">{children}</div>}
+  </div>
+);
+
 /* ─── SLIDE 1: Finestra di trattamento (existing) ─── */
 const SlideOne = () => (
   <div className="bg-card border border-border overflow-hidden shadow-xl">
