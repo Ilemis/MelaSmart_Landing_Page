@@ -1,11 +1,15 @@
-import { Bot, FileSearch, Beaker, MessageSquare, User, Sparkles, AlertTriangle, CheckCircle2, ThermometerSnowflake, Droplets, Leaf, ChevronLeft, ChevronRight, FlaskConical, ShieldAlert, XCircle, Camera, Eye, Scissors, Search, Sprout, TreeDeciduous } from "lucide-react";
+import { Bot, FileSearch, Beaker, MessageSquare, User, Sparkles, AlertTriangle, CheckCircle2, ThermometerSnowflake, Droplets, Leaf, ChevronLeft, ChevronRight, ChevronDown, FlaskConical, ShieldAlert, XCircle, Camera, Eye, Scissors, Search, Sprout, TreeDeciduous } from "lucide-react";
 import visionImage from "@/assets/screenshot-vision-ticchiolatura.jpg";
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const AgronomoAISection = () => {
   const [activeSlide, setActiveSlide] = useState(0);
+  const [openSlides, setOpenSlides] = useState<boolean[]>([false, false, false]);
   const { ref, isVisible } = useScrollReveal();
+
+  const toggleSlide = (i: number) =>
+    setOpenSlides(prev => prev.map((v, idx) => (idx === i ? !v : v)));
 
   const features = [
     {
@@ -159,15 +163,33 @@ const AgronomoAISection = () => {
               >
                 {/* SLIDE 1 — Finestra di trattamento */}
                 <div className="w-full flex-shrink-0">
-                  <SlideOne />
+                  <ExampleCard
+                    title="Esempio 1 — Finestra di trattamento"
+                    open={openSlides[0]}
+                    onToggle={() => toggleSlide(0)}
+                  >
+                    <SlideOne />
+                  </ExampleCard>
                 </div>
                 {/* SLIDE 2 — Compatibilità miscela */}
                 <div className="w-full flex-shrink-0">
-                  <SlideTwo />
+                  <ExampleCard
+                    title="Esempio 2 — Compatibilità miscela"
+                    open={openSlides[1]}
+                    onToggle={() => toggleSlide(1)}
+                  >
+                    <SlideTwo />
+                  </ExampleCard>
                 </div>
                 {/* SLIDE 3 — Gemini Vision */}
                 <div className="w-full flex-shrink-0">
-                  <SlideThree />
+                  <ExampleCard
+                    title="Esempio 3 — Gemini 3.8 Vision"
+                    open={openSlides[2]}
+                    onToggle={() => toggleSlide(2)}
+                  >
+                    <SlideThree />
+                  </ExampleCard>
                 </div>
               </div>
             </div>
@@ -200,6 +222,34 @@ const AgronomoAISection = () => {
     </section>
   );
 };
+
+/* ─── Card esempio collassabile ─── */
+const ExampleCard = ({
+  title,
+  open,
+  onToggle,
+  children,
+}: {
+  title: string;
+  open: boolean;
+  onToggle: () => void;
+  children: ReactNode;
+}) => (
+  <div className="bg-card border border-border overflow-hidden shadow-xl rounded-2xl">
+    <button
+      onClick={onToggle}
+      className="w-full flex items-center justify-between gap-4 px-6 py-4 text-left hover:bg-accent/50 transition-colors"
+      aria-expanded={open}
+    >
+      <span className="font-semibold text-sm text-foreground">{title}</span>
+      <span className="flex items-center gap-2 text-muted-foreground flex-shrink-0">
+        <span className="text-xs hidden sm:inline">{open ? "Nascondi risposta" : "Mostra risposta"}</span>
+        <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
+      </span>
+    </button>
+    {open && <div className="animate-fade-up">{children}</div>}
+  </div>
+);
 
 /* ─── SLIDE 1: Finestra di trattamento (existing) ─── */
 const SlideOne = () => (
