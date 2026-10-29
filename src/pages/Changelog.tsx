@@ -36,6 +36,16 @@ interface ChangelogEntry {
 // Queste sono le novità dell'APP MelaSmart, non della landing page
 const changelogData: ChangelogEntry[] = [
   {
+    version: "v1.9.1",
+    date: "29/10/2026",
+    changes: [
+      { type: "migliorato", description: "Migliorata la pianificazione della Spesa Intelligente" },
+      { type: "nuovo", description: "Stima il fabbisogno dai consumi storici validi per prodotto, coltura e unità" },
+      { type: "nuovo", description: "Usa gli ettari dei campi salvati e distingue il prossimo utilizzo dal piano campagna" },
+      { type: "nuovo", description: "Aggiunge le viste rapida e dettagliata, con quantità orientative e dati completi" },
+    ],
+  },
+  {
     version: "v1.9.0",
     date: "26/09/2026",
     changes: [

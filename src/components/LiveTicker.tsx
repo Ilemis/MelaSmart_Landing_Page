@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 
 const items = [
+  "v1.9.1 · Spesa Intelligente rivista: fabbisogno stimato dai consumi storici",
+  "Magazzino · Scorte e suggerimenti di acquisto per prossima applicazione e piano campagna",
   "v1.9.0 · MelaSmart AI™ Copilot passa alla nuova generazione Google Gemini 3.x",
   "Gemini 3.8 Flash · Ragionamento High per diagnosi e piani di trattamento complessi",
   "Gemini 3.5 Flash · OCR Premium di etichette, fatture e DDT ancora più preciso",
