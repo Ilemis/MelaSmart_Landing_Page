@@ -7,6 +7,7 @@ import screenshotCampi from "@/assets/screenshot-campi.jpg";
 import screenshotCarpocapsa from "@/assets/screenshot-carpocapsa.png";
 import screenshotMeteo from "@/assets/screenshot-meteo.jpg";
 import screenshotGarage from "@/assets/screenshot-garage.jpg";
+import screenshotSpesa from "@/assets/screenshot-spesa-intelligente.png";
 import screenshotCopilot from "@/assets/screenshot-agronomo-copilot.png";
 import {
   Carousel,
@@ -28,6 +29,11 @@ const screenshots = [
     image: screenshotMagazzino,
     title: "Magazzino Predittivo",
     description: "Monitora scorte, costi, imposta soglie di allerta. In ogni card prodotto puoi attivare un popup che scarica le info ministeriali come data smaltimento scorte e stato amministrativo e ricevi suggerimenti intelligenti per gli acquisti.",
+  },
+  {
+    image: screenshotSpesa,
+    title: "Spesa Intelligente · Nuova",
+    description: "Gestione scorte del magazzino rivista e migliorata: suggerimenti di acquisto intelligenti che stimano il fabbisogno dai consumi storici per prodotto, coltura e unità, usando gli ettari dei campi salvati. Scegli tra prossima applicazione e piano campagna, vista rapida o dettagliata.",
   },
   {
     image: screenshotMeteo,

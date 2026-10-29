@@ -55,7 +55,7 @@ const HeroSection = () => {
                 <Sparkles className="h-3.5 w-3.5" />
                 Gemini 3.8 Flash
               </span>
-              <span className="text-xs text-muted-foreground hidden sm:inline">· v1.9.0 · 26/09/2026</span>
+              <span className="text-xs text-muted-foreground hidden sm:inline">· v1.9.1 · 29/10/2026</span>
             </Link>
             <LiveTicker />
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight drop-shadow-[0_2px_10px_hsl(var(--background))]">
