@@ -18,6 +18,7 @@ import {
 } from "@/components/ui/carousel";
 import { Bug, Thermometer, Bell, Bot, Brain, Zap, MessageSquare, Eye } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { useLightbox, ZoomableImage, type LightboxItem } from "@/components/ImageLightbox";
 
 const screenshots = [
   {
@@ -67,15 +68,47 @@ const screenshots = [
   },
 ];
 
-const ScreenshotCard = ({ screenshot }: { screenshot: typeof screenshots[0] }) => (
+/* Copertine in evidenza: indice 0 = Copilot, indice 1 = Carpocapsa,
+   poi gli screenshot a partire dall'indice 2. */
+const lightboxItems: LightboxItem[] = [
+  {
+    src: screenshotCopilot,
+    alt: "Assistente Agronomo - MelaSmart AI™ Copilot",
+    title: "MelaSmart AI™ Copilot",
+    description:
+      "Una nuova architettura Google Gemini 3.x con 3 livelli di intelligenza: Standard per risposte immediate, Premium per analisi approfondite e Ragionamento High con l'esclusivo Gemini 3.8 Flash.",
+  },
+  {
+    src: screenshotCarpocapsa,
+    alt: "Monitoraggio Carpocapsa",
+    title: "Monitoraggio Carpocapsa",
+    description:
+      "Registra le catture nelle trappole e il conteggio dei Gradi Giorno (GDD) parte automaticamente. Ricevi alert intelligenti al raggiungimento delle soglie critiche.",
+  },
+  ...screenshots.map((s) => ({
+    src: s.image,
+    alt: s.title,
+    title: s.title,
+    description: s.description,
+  })),
+];
+
+const ScreenshotCard = ({
+  screenshot,
+  onZoom,
+}: {
+  screenshot: typeof screenshots[0];
+  onZoom: () => void;
+}) => (
   <div className="group relative h-full">
     <div className="absolute inset-0 bg-gradient-to-br from-melasmart-green/10 to-transparent rounded-4xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
     <div className="relative glass rounded-4xl p-6 tilt-card h-full">
       <div className="relative overflow-hidden rounded-3xl bg-secondary/30 flex justify-center">
-        <img
+        <ZoomableImage
           src={screenshot.image}
           alt={screenshot.title}
-          className="w-auto max-h-[500px] object-contain transition-transform duration-500 group-hover:scale-[1.03]"
+          onZoom={onZoom}
+          imgClassName="w-auto max-h-[500px] object-contain transition-transform duration-500 group-hover:scale-[1.03]"
         />
       </div>
       <div className="mt-6 text-center">
@@ -86,7 +119,7 @@ const ScreenshotCard = ({ screenshot }: { screenshot: typeof screenshots[0] }) =
   </div>
 );
 
-const CopilotCard = () => (
+const CopilotCard = ({ onZoom }: { onZoom: () => void }) => (
   <div className="group relative h-full">
     <div className="absolute inset-0 bg-gradient-to-br from-primary/15 via-melasmart-green/10 to-accent/10 rounded-4xl blur-2xl opacity-60 group-hover:opacity-100 transition-opacity duration-500" />
     <div className="relative overflow-hidden rounded-4xl border-2 border-primary/30 bg-gradient-to-br from-card via-card to-primary/5 p-8 tilt-card h-full">
@@ -98,10 +131,11 @@ const CopilotCard = () => (
 
       <div className="flex flex-col lg:flex-row gap-8 items-center">
         <div className="relative overflow-hidden rounded-3xl bg-secondary/20 flex justify-center lg:w-1/2 border border-primary/10">
-          <img
+          <ZoomableImage
             src={screenshotCopilot}
             alt="Assistente Agronomo - MelaSmart AI™ Copilot"
-            className="w-full max-h-[420px] object-contain"
+            onZoom={onZoom}
+            imgClassName="w-full max-h-[420px] object-contain"
           />
         </div>
 
@@ -149,16 +183,17 @@ const CopilotCard = () => (
   </div>
 );
 
-const CarpocapsaCard = () => (
+const CarpocapsaCard = ({ onZoom }: { onZoom: () => void }) => (
   <div className="group relative h-full">
     <div className="absolute inset-0 bg-gradient-to-br from-semaforo-verde/15 via-melasmart-green/10 to-semaforo-giallo/10 rounded-4xl blur-2xl opacity-60 group-hover:opacity-100 transition-opacity duration-500" />
     <div className="relative overflow-hidden rounded-4xl border-2 border-melasmart-green/30 bg-gradient-to-br from-card via-card to-melasmart-green/5 p-8 tilt-card h-full">
       <div className="flex flex-col lg:flex-row gap-8 items-center">
         <div className="relative overflow-hidden rounded-3xl bg-secondary/20 flex justify-center lg:w-1/2 border border-melasmart-green/10">
-          <img
+          <ZoomableImage
             src={screenshotCarpocapsa}
             alt="Monitoraggio Carpocapsa"
-            className="w-full max-h-[420px] object-contain"
+            onZoom={onZoom}
+            imgClassName="w-full max-h-[420px] object-contain"
           />
         </div>
 
@@ -200,6 +235,7 @@ const CarpocapsaCard = () => (
 
 const AppPreviewSection = () => {
   const { ref, isVisible } = useScrollReveal();
+  const { open, lightbox } = useLightbox(lightboxItems);
 
   return (
     <section className="py-24 bg-background">
@@ -224,10 +260,10 @@ const AppPreviewSection = () => {
           <Carousel className="w-full" opts={{ align: "start" }}>
             <CarouselContent>
               <CarouselItem>
-                <CopilotCard />
+                <CopilotCard onZoom={() => open(0)} />
               </CarouselItem>
               <CarouselItem>
-                <CarpocapsaCard />
+                <CarpocapsaCard onZoom={() => open(1)} />
               </CarouselItem>
             </CarouselContent>
             <div className="flex justify-center gap-4 mt-6">
@@ -240,7 +276,11 @@ const AppPreviewSection = () => {
         {/* Desktop: Grid */}
         <div className="hidden md:grid md:grid-cols-2 gap-8 lg:gap-12">
           {screenshots.map((screenshot, index) => (
-            <ScreenshotCard key={index} screenshot={screenshot} />
+            <ScreenshotCard
+              key={index}
+              screenshot={screenshot}
+              onZoom={() => open(index + 2)}
+            />
           ))}
         </div>
 
@@ -250,7 +290,10 @@ const AppPreviewSection = () => {
             <CarouselContent>
               {screenshots.map((screenshot, index) => (
                 <CarouselItem key={index}>
-                  <ScreenshotCard screenshot={screenshot} />
+                  <ScreenshotCard
+                    screenshot={screenshot}
+                    onZoom={() => open(index + 2)}
+                  />
                 </CarouselItem>
               ))}
             </CarouselContent>
@@ -261,6 +304,7 @@ const AppPreviewSection = () => {
           </Carousel>
         </div>
       </div>
+      {lightbox}
     </section>
   );
 };
