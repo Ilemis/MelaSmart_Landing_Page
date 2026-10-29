@@ -18,6 +18,7 @@ import {
 } from "@/components/ui/carousel";
 import { Bug, Thermometer, Bell, Bot, Brain, Zap, MessageSquare, Eye } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { useLightbox, ZoomableImage, type LightboxItem } from "@/components/ImageLightbox";
 
 const screenshots = [
   {
