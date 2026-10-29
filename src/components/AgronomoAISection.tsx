@@ -2,6 +2,7 @@ import { Bot, FileSearch, Beaker, MessageSquare, User, Sparkles, AlertTriangle, 
 import visionImage from "@/assets/screenshot-vision-ticchiolatura.jpg";
 import { useState, type ReactNode } from "react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { useLightbox } from "@/components/ImageLightbox";
 
 const AgronomoAISection = () => {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -484,7 +485,18 @@ const SlideTwo = () => (
 );
 
 /* ─── SLIDE 3: Gemini Vision ─── */
-const SlideThree = () => (
+const SlideThree = () => {
+  const { open, lightbox } = useLightbox([
+    {
+      src: visionImage,
+      alt: "Foglie di melo con macchie da ticchiolatura",
+      title: "Foto analizzata · Gemini 3.5 Flash-Lite Vision",
+      description:
+        "Foglie di melo con macchie da ticchiolatura: la Vision avanzata Premium riconosce i sintomi dalla foto e propone il piano d'intervento.",
+    },
+  ]);
+
+  return (
   <div className="bg-card border border-border overflow-hidden shadow-xl">
     <div className="bg-gradient-to-r from-primary/10 to-primary/5 px-6 py-5 border-b border-border">
       <div className="flex items-start gap-4">
@@ -497,9 +509,14 @@ const SlideThree = () => (
             "Di che malattia si tratta? Come posso intervenire?"
           </p>
           <div className="mt-3 flex items-center gap-2">
-            <div className="relative rounded-lg overflow-hidden border border-border w-20 h-14">
-              <img src={visionImage} alt="Foglie di melo con macchie da ticchiolatura" className="w-full h-full object-cover" />
-            </div>
+            <button
+              type="button"
+              onClick={() => open(0)}
+              aria-label="Ingrandisci la foto allegata"
+              className="relative block h-14 w-20 cursor-zoom-in overflow-hidden rounded-lg border border-border transition hover:ring-2 hover:ring-primary/40"
+            >
+              <img src={visionImage} alt="Foglie di melo con macchie da ticchiolatura" className="h-full w-full object-cover" />
+            </button>
             <span className="text-xs text-muted-foreground flex items-center gap-1">
               <Camera className="w-3.5 h-3.5" />
               Foto allegata
@@ -618,7 +635,9 @@ const SlideThree = () => (
         </p>
       </div>
     </div>
-  </div>
-);
+      {lightbox}
+    </div>
+  );
+};
 
 export default AgronomoAISection;
