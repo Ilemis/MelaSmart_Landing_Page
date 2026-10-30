@@ -33,8 +33,12 @@ const screenshots = [
   },
   {
     image: screenshotSpesa,
-    title: "Spesa Intelligente · Nuova",
-    description: "Gestione scorte del magazzino rivista e migliorata: suggerimenti di acquisto intelligenti che stimano il fabbisogno dai consumi storici per prodotto, coltura e unità, usando gli ettari dei campi salvati. Scegli tra prossima applicazione e piano campagna, vista rapida o dettagliata.",
+    title: "Spesa Intelligente Premium",
+    description:
+      "Pianifica gli acquisti partendo dalle esigenze dei trattamenti e dalle scorte già presenti in magazzino. MelaSmart calcola quanto prodotto manca e, quando sono disponibili confezioni verificate, ti mostra quante confezioni acquistare.\n\n" +
+      "Nella vista rapida trovi la confezione consigliata. In quella dettagliata puoi confrontare i formati disponibili, vedere la quantità totale da acquistare e l’eventuale eccedenza. Il costo è stimato usando il prezzo medio del prodotto registrato in magazzino.\n\n" +
+      "Puoi aggiornare le scorte indicando confezioni e formato oppure acquisire una fattura con una foto, rivedendo quantità e prezzi prima di confermare il carico. Le confezioni proposte entrano nei suggerimenti dopo la verifica.\n\n" +
+      "I suggerimenti per confezione sono disponibili per i prodotti con formati verificati nel catalogo.",
   },
   {
     image: screenshotMeteo,
@@ -113,7 +117,7 @@ const ScreenshotCard = ({
       </div>
       <div className="mt-6 text-center">
         <h3 className="text-xl font-semibold mb-2">{screenshot.title}</h3>
-        <p className="text-muted-foreground">{screenshot.description}</p>
+        <p className="text-muted-foreground whitespace-pre-line">{screenshot.description}</p>
       </div>
     </div>
   </div>

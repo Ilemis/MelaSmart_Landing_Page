@@ -304,7 +304,7 @@ export function ImageLightbox({ items, index, onIndexChange, onClose }: Lightbox
             <div className="shrink-0 border-t border-border/60 px-4 py-3 sm:px-6">
               {item.description && (
                 <DialogDescription className="line-clamp-2 text-sm text-muted-foreground">
-                  {item.description}
+                  {item.description.split("\n\n")[0]}
                 </DialogDescription>
               )}
               <p className="mt-1 text-xs text-muted-foreground/70">
