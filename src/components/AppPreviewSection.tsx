@@ -16,7 +16,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Bug, Thermometer, Bell, Bot, Brain, Zap, MessageSquare, Eye } from "lucide-react";
+import { Bug, Thermometer, Bell, Bot, Brain, Zap, MessageSquare, Eye, ShoppingCart, Package, Camera, ListChecks } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { useLightbox, ZoomableImage, type LightboxItem } from "@/components/ImageLightbox";
 
@@ -240,6 +240,62 @@ const CarpocapsaCard = ({ onZoom }: { onZoom: () => void }) => (
   </div>
 );
 
+const SpesaCard = ({ onZoom }: { onZoom: () => void }) => (
+  <div className="group relative h-full">
+    <div className="absolute inset-0 bg-gradient-to-br from-warm/15 via-melasmart-green/10 to-accent/10 rounded-4xl blur-2xl opacity-60 group-hover:opacity-100 transition-opacity duration-500" />
+    <div className="relative overflow-hidden rounded-4xl border-2 border-warm/30 bg-gradient-to-br from-card via-card to-warm/5 p-8 tilt-card h-full">
+      <div className="absolute top-4 right-4 z-10">
+        <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-warm text-warm-foreground text-xs font-bold rounded-full uppercase tracking-wider animate-pulse">
+          🆕 Novità
+        </span>
+      </div>
+
+      <div className="flex flex-col lg:flex-row gap-8 items-center">
+        <div className="relative overflow-hidden rounded-3xl bg-secondary/20 flex justify-center lg:w-1/2 border border-warm/10">
+          <ZoomableImage
+            src={screenshotSpesa}
+            alt="Spesa Intelligente Premium"
+            onZoom={onZoom}
+            imgClassName="w-full max-h-[420px] object-contain"
+          />
+        </div>
+
+        <div className="lg:w-1/2 space-y-5">
+          <div className="flex items-center gap-3">
+            <div className="p-3 rounded-2xl bg-warm/10">
+              <ShoppingCart className="h-7 w-7 text-warm-dark" />
+            </div>
+            <h3 className="text-2xl font-bold">Spesa Intelligente Premium</h3>
+          </div>
+
+          <p className="text-muted-foreground text-base leading-relaxed whitespace-pre-line">
+            {spesaDescription}
+          </p>
+
+          <div className="flex flex-wrap gap-3">
+            <div className="inline-flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-warm/10 border border-warm/20">
+              <ShoppingCart className="h-4 w-4 text-warm-dark" />
+              <span className="text-sm font-medium">Confezione consigliata</span>
+            </div>
+            <div className="inline-flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-melasmart-green/10 border border-melasmart-green/20">
+              <ListChecks className="h-4 w-4 text-melasmart-green" />
+              <span className="text-sm font-medium">Vista rapida e dettagliata</span>
+            </div>
+            <div className="inline-flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-warm/10 border border-warm/20">
+              <Camera className="h-4 w-4 text-warm-dark" />
+              <span className="text-sm font-medium">Fattura con una foto</span>
+            </div>
+            <div className="inline-flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-secondary border border-border">
+              <Package className="h-4 w-4 text-muted-foreground" />
+              <span className="text-sm font-medium">Formati verificati in catalogo</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
 const AppPreviewSection = () => {
   const { ref, isVisible } = useScrollReveal();
   const { open, lightbox } = useLightbox(lightboxItems);
@@ -262,7 +318,7 @@ const AppPreviewSection = () => {
           </p>
         </div>
 
-        {/* Highlight carousel: Copilot + Carpocapsa */}
+        {/* Highlight carousel: Copilot + Carpocapsa + Spesa */}
         <div className="mb-8 lg:mb-12">
           <Carousel className="w-full" opts={{ align: "start" }}>
             <CarouselContent>
@@ -271,6 +327,9 @@ const AppPreviewSection = () => {
               </CarouselItem>
               <CarouselItem>
                 <CarpocapsaCard onZoom={() => open(1)} />
+              </CarouselItem>
+              <CarouselItem>
+                <SpesaCard onZoom={() => open(2)} />
               </CarouselItem>
             </CarouselContent>
             <div className="flex justify-center gap-4 mt-6">
@@ -286,7 +345,7 @@ const AppPreviewSection = () => {
             <ScreenshotCard
               key={index}
               screenshot={screenshot}
-              onZoom={() => open(index + 2)}
+              onZoom={() => open(index + 3)}
             />
           ))}
         </div>
@@ -299,7 +358,7 @@ const AppPreviewSection = () => {
                 <CarouselItem key={index}>
                   <ScreenshotCard
                     screenshot={screenshot}
-                    onZoom={() => open(index + 2)}
+                    onZoom={() => open(index + 3)}
                   />
                 </CarouselItem>
               ))}
