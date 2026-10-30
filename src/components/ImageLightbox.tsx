@@ -259,13 +259,12 @@ export function ImageLightbox({ items, index, onIndexChange, onClose }: Lightbox
             <div
               ref={viewportRef}
               onClick={toggleZoom}
-              onDoubleClick={toggleZoom}
               onPointerDown={onPointerDown}
               onPointerMove={onPointerMove}
               onPointerUp={endPointer}
               onPointerCancel={endPointer}
               className={cn(
-                "relative flex flex-1 touch-none select-none items-center justify-center overflow-hidden bg-secondary/20",
+                "relative flex min-h-0 flex-1 touch-none select-none items-center justify-center overflow-hidden bg-secondary/20",
                 t.scale > 1 ? "cursor-grab active:cursor-grabbing" : "cursor-zoom-out",
               )}
             >
@@ -275,7 +274,7 @@ export function ImageLightbox({ items, index, onIndexChange, onClose }: Lightbox
                 draggable={false}
                 style={{ transform: `translate3d(${t.x}px, ${t.y}px, 0) scale(${t.scale})` }}
                 className={cn(
-                  "max-h-full max-w-full object-contain will-change-transform",
+                  "absolute inset-0 h-full w-full object-contain will-change-transform",
                   smooth && "transition-transform duration-200 ease-out",
                 )}
               />
