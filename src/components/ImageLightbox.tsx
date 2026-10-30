@@ -126,6 +126,7 @@ export function ImageLightbox({ items, index, onIndexChange, onClose }: Lightbox
   }, [open]);
 
   const onPointerDown = (e: React.PointerEvent) => {
+    if ((e.target as HTMLElement).closest("button")) return;
     (e.currentTarget as HTMLElement).setPointerCapture?.(e.pointerId);
     pointers.current.set(e.pointerId, { x: e.clientX, y: e.clientY });
     moved.current = false;
@@ -174,13 +175,13 @@ export function ImageLightbox({ items, index, onIndexChange, onClose }: Lightbox
   /** Tap / click toggles between fit and 2.5x at the touched point. */
   const toggleZoom = (e: React.MouseEvent) => {
     if (moved.current) return;
-    const { w, h, cx, cy } = centre();
-    setSmooth(true);
-    setT((prev) =>
-      prev.scale > 1
-        ? IDENTITY
-        : clampPan(zoomAt(prev, 2.5, e.clientX - cx, e.clientY - cy), w, h),
-    );
+    if ((e.target as HTMLElement).closest("button")) return;
+    if (tRef.current.scale > 1) {
+      setSmooth(true);
+      setT(IDENTITY);
+    } else {
+      onClose();
+    }
   };
 
   const step = (dir: number) => {
@@ -265,7 +266,7 @@ export function ImageLightbox({ items, index, onIndexChange, onClose }: Lightbox
               onPointerCancel={endPointer}
               className={cn(
                 "relative flex flex-1 touch-none select-none items-center justify-center overflow-hidden bg-secondary/20",
-                t.scale > 1 ? "cursor-grab active:cursor-grabbing" : "cursor-zoom-in",
+                t.scale > 1 ? "cursor-grab active:cursor-grabbing" : "cursor-zoom-out",
               )}
             >
               <img
