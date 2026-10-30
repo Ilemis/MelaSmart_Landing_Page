@@ -32,15 +32,6 @@ const screenshots = [
     description: "Monitora scorte, costi, imposta soglie di allerta. In ogni card prodotto puoi attivare un popup che scarica le info ministeriali come data smaltimento scorte e stato amministrativo e ricevi suggerimenti intelligenti per gli acquisti.",
   },
   {
-    image: screenshotSpesa,
-    title: "Spesa Intelligente Premium",
-    description:
-      "Pianifica gli acquisti partendo dalle esigenze dei trattamenti e dalle scorte già presenti in magazzino. MelaSmart calcola quanto prodotto manca e, quando sono disponibili confezioni verificate, ti mostra quante confezioni acquistare.\n\n" +
-      "Nella vista rapida trovi la confezione consigliata. In quella dettagliata puoi confrontare i formati disponibili, vedere la quantità totale da acquistare e l’eventuale eccedenza. Il costo è stimato usando il prezzo medio del prodotto registrato in magazzino.\n\n" +
-      "Puoi aggiornare le scorte indicando confezioni e formato oppure acquisire una fattura con una foto, rivedendo quantità e prezzi prima di confermare il carico. Le confezioni proposte entrano nei suggerimenti dopo la verifica.\n\n" +
-      "I suggerimenti per confezione sono disponibili per i prodotti con formati verificati nel catalogo.",
-  },
-  {
     image: screenshotMeteo,
     title: "Agri-Meteo Localizzato",
     description: "Semafori intelligenti da oggi a 7 giorni con grafici controllo nebbie, gelate, fenomeni e nuvole. Dati meteo localizzati su campo con Delta T, umidità, vento e rischio bagnatura.",
