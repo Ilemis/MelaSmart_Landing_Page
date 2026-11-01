@@ -69,9 +69,15 @@ const screenshots = [
   },
 ];
 
-/* Copertine in evidenza: indice 0 = Copilot, indice 1 = Carpocapsa, indice 2 = Spesa,
+/* Copertine in evidenza: indice 0 = Spesa, indice 1 = Copilot, indice 2 = Carpocapsa,
    poi gli screenshot a partire dall'indice 3. */
 const lightboxItems: LightboxItem[] = [
+  {
+    src: screenshotSpesa,
+    alt: "Spesa Intelligente Premium",
+    title: "Spesa Intelligente Premium",
+    description: spesaDescription,
+  },
   {
     src: screenshotCopilot,
     alt: "Assistente Agronomo - MelaSmart AI™ Copilot",
@@ -85,12 +91,6 @@ const lightboxItems: LightboxItem[] = [
     title: "Monitoraggio Carpocapsa",
     description:
       "Registra le catture nelle trappole e il conteggio dei Gradi Giorno (GDD) parte automaticamente. Ricevi alert intelligenti al raggiungimento delle soglie critiche.",
-  },
-  {
-    src: screenshotSpesa,
-    alt: "Spesa Intelligente Premium",
-    title: "Spesa Intelligente Premium",
-    description: spesaDescription,
   },
   ...screenshots.map((s) => ({
     src: s.image,
@@ -318,18 +318,18 @@ const AppPreviewSection = () => {
           </p>
         </div>
 
-        {/* Highlight carousel: Copilot + Carpocapsa + Spesa */}
+        {/* Highlight carousel: Spesa + Copilot + Carpocapsa */}
         <div className="mb-8 lg:mb-12">
           <Carousel className="w-full" opts={{ align: "start" }}>
             <CarouselContent>
               <CarouselItem>
-                <CopilotCard onZoom={() => open(0)} />
+                <SpesaCard onZoom={() => open(0)} />
               </CarouselItem>
               <CarouselItem>
-                <CarpocapsaCard onZoom={() => open(1)} />
+                <CopilotCard onZoom={() => open(1)} />
               </CarouselItem>
               <CarouselItem>
-                <SpesaCard onZoom={() => open(2)} />
+                <CarpocapsaCard onZoom={() => open(2)} />
               </CarouselItem>
             </CarouselContent>
             <div className="flex justify-center gap-4 mt-6">
