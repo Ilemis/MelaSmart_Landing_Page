@@ -127,7 +127,7 @@
   }
 
   .text-gradient-green {
-    background: linear-gradient(135deg, hsl(var(--melasmart-green)) 0%, hsl(var(--melasmart-green-dark)) 100%);
+    background: linear-gradient(135deg, hsl(73 62% 39%) 0%, hsl(73 62% 26%) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
