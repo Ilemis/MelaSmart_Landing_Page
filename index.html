@@ -96,36 +96,188 @@
 
     <!-- Structured Data - FAQPage -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Come calcolare le dosi dei prodotti fitosanitari?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "MelaSmart calcola automaticamente le dosi dei prodotti fitosanitari in base al volume di chioma (TRV - Tree Row Volume), alla fase fenologica BBCH e alle caratteristiche del tuo frutteto o vigneto. Basta inserire i parametri del campo e dell'atomizzatore per ottenere il dosaggio ottimale."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Come gestire i trattamenti fitosanitari su frutteto e vigneto?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "MelaSmart offre un registro trattamenti digitale completo, gestione miscele, magazzino prodotti fitosanitari e generazione automatica del quaderno di campagna. L'agronomo AI integrato fornisce supporto decisionale per difesa integrata e lotta integrata."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Cos'è il calcolo TRV per i trattamenti?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Il TRV (Tree Row Volume) è il volume della chioma degli alberi calcolato in base ad altezza, larghezza della chioma e distanza tra le file. MelaSmart usa il TRV per calcolare il volume d'acqua e le dosi di agrofarmaci ottimali, riducendo sprechi e impatto ambientale."
-          }
-        }
-      ]
+      "@type": "Question",
+      "name": "Cos’è MelaSmart?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "MelaSmart è un’app per la gestione di frutteto e vigneto, attualmente dedicata a melo e vite. Riunisce strumenti per preparare e registrare i trattamenti, consultare i prodotti, gestire il magazzino e ricevere supporto dall’assistente AI. La modalità Raccolta permette inoltre di organizzare varietà e zone, registrare le quantità raccolte e seguirne le destinazioni."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "MelaSmart è già disponibile? Come posso iniziare?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sì, MelaSmart è già disponibile. Apri app.melasmart.com dal browser e crea il tuo account per iniziare. Puoi utilizzarla da smartphone, tablet o computer e, sui dispositivi compatibili, installarla come app dalla schermata del browser."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "MelaSmart è gratuita?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "MelaSmart offre un piano gratuito con funzionalità e limiti dedicati e un abbonamento Premium per gli strumenti avanzati. La gestione della raccolta è disponibile anche con il piano gratuito. Funzioni come il riconoscimento di fatture e DDT per il magazzino richiedono Premium. Consulta la sezione dedicata ai piani per confrontare le condizioni aggiornate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Su quali dispositivi posso usare MelaSmart?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Puoi usare MelaSmart su smartphone, tablet e computer con un browser moderno. È una Progressive Web App: si apre direttamente dal browser e può essere installata sui dispositivi compatibili, senza doverla cercare negli store."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Come posso contattarvi per assistenza, partnership o collaborazioni?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Puoi scrivere a melasmart@proton.me oppure utilizzare il modulo nella pagina Contatti. Per segnalare un problema, descrivi cosa stavi facendo e indica il dispositivo e il browser utilizzati. Per partnership e collaborazioni, raccontaci la tua proposta."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Come posso installare MelaSmart sul telefono o sul computer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Apri app.melasmart.com. Su Android, cerca nel menu del browser la voce “Installa app” o “Aggiungi alla schermata Home”. Su iPhone e iPad, apri l’app in Safari e usa Condividi → Aggiungi alla schermata Home. Su computer, nei browser compatibili, puoi trovare l’opzione di installazione nella barra degli indirizzi o nel menu. Le voci possono variare in base al dispositivo; puoi comunque utilizzare MelaSmart dal browser."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Come vengono gestiti i pagamenti e l’abbonamento Premium?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "I pagamenti dell’abbonamento Premium sono gestiti tramite Stripe. I dati completi della carta non vengono memorizzati da MelaSmart. Puoi accedere alla gestione dell’abbonamento dall’app; importo, periodicità e condizioni applicabili sono indicati prima della conferma dell’acquisto."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Come devo usare i dosaggi e i suggerimenti dell’AI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Usa MelaSmart come supporto ai calcoli e alla consultazione, verificando sempre i dati inseriti e i risultati. L’AI può commettere errori e non sostituisce l’etichetta ufficiale aggiornata del prodotto né la valutazione di un tecnico qualificato. Prima di un trattamento controlla coltura, impieghi consentiti, dosi, intervalli e prescrizioni riportati sull’etichetta."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Come funziona il calcolo della miscela per l’atomizzatore?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "MelaSmart utilizza i campi selezionati, il volume d’acqua impostato, la capacità dell’atomizzatore e le dosi dei prodotti per calcolare le quantità necessarie e la suddivisione delle cariche. Puoi configurare i parametri del tuo impianto e utilizzare gli strumenti di calibrazione e TRV disponibili. Il risultato dipende dai dati e dalla modalità di dosaggio scelti: verifica le impostazioni prima di preparare la miscela."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quale intelligenza artificiale utilizza MelaSmart?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "MelaSmart AI Copilot utilizza modelli della famiglia Google Gemini. Nell’app sono disponibili un livello Standard e modalità Premium con capacità di ragionamento più avanzate. Gli strumenti di analisi delle immagini e dei documenti supportano funzioni come il riconoscimento di prodotti e quantità. Modelli disponibili e limiti di utilizzo possono essere aggiornati: fai riferimento alle opzioni mostrate nell’app."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Come vengono gestiti i miei dati?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "I dati aziendali salvati, come campi, trattamenti e raccolte, sono associati al tuo account e protetti da controlli di accesso. Alcune funzioni utilizzano servizi esterni: ad esempio, le richieste AI e i documenti da analizzare richiedono l’elaborazione dei contenuti necessari al servizio. Trovi informazioni su trattamento, fornitori e diritti nella Privacy Policy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Come mi aiuta MelaSmart a scegliere quando effettuare un trattamento?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gli strumenti Agri-Meteo e l’assistente AI aiutano a valutare le condizioni previste, considerando dati come temperatura, umidità, vento e precipitazioni. Quando disponibili, l’assistente utilizza anche il contesto della coltura e le informazioni aziendali pertinenti. Le indicazioni aiutano a pianificare il lavoro, ma vanno confrontate con le condizioni reali in campo e le prescrizioni del prodotto."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Cosa devo fare se trovo un errore in un calcolo o nei dati di un prodotto?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Controlla prima le impostazioni inserite e confronta i dati del prodotto con la sua etichetta ufficiale aggiornata. Se il problema rimane, segnalalo tramite il supporto dell’app oppure scrivi a melasmart@proton.me, indicando prodotto, operazione effettuata e risultato ottenuto. Le segnalazioni aiutano a individuare e correggere problemi nei dati o nel software."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Posso usare MelaSmart senza connessione?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "MelaSmart dispone di un supporto offline parziale. Dopo un precedente utilizzo online, l’interfaccia può rimanere accessibile e alcune funzioni locali possono continuare a funzionare. Accesso all’account, caricamento e salvataggio dei dati sul server, AI, meteo e altri servizi online richiedono una connessione. Non considerare l’app un gestionale completamente offline e verifica sempre che i salvataggi siano riusciti."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Posso caricare fatture e DDT in PDF per aggiornare il magazzino?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sì. Con la funzione OCR Premium puoi caricare una foto JPEG oppure un PDF di una fattura o di un DDT. MelaSmart riconosce prodotti e quantità e ti permette di controllare e correggere i dati prima di confermare l’inserimento nel magazzino. I PDF devono essere leggibili, non protetti da password, di massimo 4 pagine e 8 MB."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "La gestione della raccolta è disponibile per mele e uva?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sì. La modalità Raccolta è disponibile per tutti gli account, anche gratuiti, sia per Melo sia per Vite. Registrazioni e riepiloghi sono separati per coltura e anno di raccolta. Puoi passare da Trattamenti a Raccolta attraverso il selettore dell’app."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ho già iniziato a raccogliere: devo inserire tutte le giornate precedenti?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Puoi inserire un “Totale già raccolto”, indicando la data fino alla quale hai raccolto e la quantità complessiva, per una varietà oppure per tutta la coltura. Da quel momento puoi continuare con registrazioni giornaliere o riferite a una data. Il totale iniziale non viene distribuito sulle giornate precedenti e l’app impedisce di aggiungere registrazioni già comprese nello stesso totale."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Posso registrare casse e bins invece dei chilogrammi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sì. Puoi registrare direttamente i kg oppure il numero di contenitori, creando i tuoi formati di casse e bins. Per ogni formato puoi indicare capacità nominale e riempimento medio. Ad esempio, una cassa da 15 kg può avere un riempimento medio di 13 kg. I conteggi di formati diversi rimangono distinti."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Come vengono calcolati i pesi stimati? Posso correggerli successivamente?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Se registri contenitori senza una pesata, MelaSmart può stimare i kg usando il riempimento medio del formato scelto. Se inserisci il peso effettivo, viene utilizzato quello, mantenendo anche il conteggio dei contenitori. Quando cambi il riempimento medio puoi aggiornare esplicitamente le stime delle raccolte già registrate, scegliendo coltura e stagione e verificando l’anteprima. I pesi effettivamente misurati non vengono modificati. Senza pesata né riempimento medio, i contenitori restano registrati e il totale in kg viene segnalato come incompleto."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Devo disegnare i campi per registrare una raccolta? Posso dividerli per varietà?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Puoi registrare raccolte per una varietà anche senza disegnare zone sulla mappa. Se vuoi organizzare gli appezzamenti, puoi associare più zone alla stessa varietà, disegnarle oppure copiarle dai campi già salvati per i trattamenti. Le copie sono indipendenti dai campi originali. La mappa è accessibile nella sezione Varietà, che mostra anche il numero di zone e la loro superficie complessiva."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Posso tenere traccia della frutta venduta, conferita, trasformata o scartata?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sì. Nella sezione Destinazioni puoi registrare quantità aggregate per vendita diretta, conferimento a cooperativa, altre cessioni, trasformazioni, scarti o altri utilizzi. Puoi indicare una varietà oppure una quantità mista e riferire l’utilizzo a una data, a un periodo o a un totale fino a una certa data. Il riepilogo mostra le quantità utilizzate e residue. Per le trasformazioni puoi annotare anche il prodotto ottenuto in litri o kg. La funzione riguarda i flussi della raccolta e non comprende clienti, incassi o contabilità."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Posso prenotare una parte della raccolta per un utilizzo futuro?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sì. Con “Programma destinazione” puoi riservare una quantità, ad esempio per un conferimento o una trasformazione, e completarla anche in più passaggi. Se programmi 100 kg per il succo e ne trasformi 30, risultano 30 kg utilizzati e 70 kg ancora impegnati. Puoi liberare il residuo quando non serve più. Le quantità senza peso o basate su stime vengono segnalate, così da rendere chiara la precisione della disponibilità mostrata."
+      }
     }
+  ]
+}
     </script>
 
     <!-- Structured Data - WebSite with SearchAction -->
