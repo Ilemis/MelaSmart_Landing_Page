@@ -36,6 +36,15 @@ interface ChangelogEntry {
 // Queste sono le novità dell'APP MelaSmart, non della landing page
 const changelogData: ChangelogEntry[] = [
   {
+    version: "v1.9.2",
+    date: "04/11/2026",
+    changes: [
+      { type: "migliorato", description: "Aggiornate tutte le FAQ con risposte riviste e più chiare su prova gratuita, abbonamento Premium, dispositivi supportati e installazione sul telefono o sul computer" },
+      { type: "migliorato", description: "Risposte aggiornate anche su gestione dei dati, pagamenti, uso dei dosaggi e dei suggerimenti dell'AI, fatture e DDT in PDF" },
+      { type: "nuovo", description: "Aggiunti collegamenti diretti dalle domande frequenti alle pagine e alle sezioni di approfondimento" },
+    ],
+  },
+  {
     version: "v1.9.1",
     date: "29/10/2026",
     changes: [
