@@ -54,7 +54,7 @@ const Counter = ({ target, suffix }: { target: number; suffix?: string }) => {
 
 const LiveStatsRow = () => {
   const lastUpdate = useMemo(() => {
-    const updateDate = new Date(2026, 8, 14); // 14/09/2026
+    const updateDate = new Date(2026, 10, 4); // 04/11/2026
     const today = new Date();
     const isToday =
       today.getDate() === updateDate.getDate() &&
