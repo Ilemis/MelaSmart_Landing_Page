@@ -45,7 +45,7 @@ const Counter = ({ target, suffix }: { target: number; suffix?: string }) => {
   }, [target]);
 
   return (
-    <span ref={ref} className="text-2xl md:text-3xl font-bold text-gradient-green tabular-nums">
+    <span ref={ref} className="text-2xl md:text-3xl font-bold text-stats-green tabular-nums">
       {val.toLocaleString("it-IT").replace(/\./g, "\u202F")}
       {suffix ?? ""}
     </span>
