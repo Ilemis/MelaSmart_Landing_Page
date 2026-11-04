@@ -311,10 +311,10 @@ const AppPreviewSection = () => {
             Anteprima App
           </span>
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
-            Un'esperienza <span className="text-gradient-green">intuitiva e potente</span>
+            Dai trattamenti alla raccolta, <span className="text-gradient-green">tutto prende forma.</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Interfaccia pensata per il campo: veloce, chiara e sempre a portata di mano.
+            Organizza trattamenti, magazzino, varietà e raccolta con strumenti dedicati, da smartphone, tablet o computer.
           </p>
         </div>
 
