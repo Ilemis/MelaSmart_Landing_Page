@@ -131,6 +131,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    filter: drop-shadow(0 0 1.5px hsl(var(--background) / 0.85)) drop-shadow(0 1px 1px hsl(var(--background) / 0.5));
   }
 
   .text-gradient-warm {
