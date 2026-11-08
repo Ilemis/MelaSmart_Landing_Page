@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-import { useHomeMotion } from './useHomeMotion';
+import { useHomeMotion, usePhoneTilt } from './useHomeMotion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ArrowUpRight, Check, ChevronDown, FlaskConical, Sprout, CloudSun, Package, Bot, BookOpen, Map, Boxes, ArrowRightLeft, Smartphone, Leaf, Bug, Menu, X, Maximize2, Plus } from 'lucide-react';
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from '@/components/ui/dialog';
@@ -52,13 +52,17 @@ function TreatmentDemo() {
 
 export default function PreviewHome() {
   const rootRef = useRef<HTMLDivElement>(null);
+  const phoneSceneRef = useRef<HTMLDivElement>(null);
   const zoomTrigger = useRef<HTMLButtonElement | null>(null);
   useHomeMotion(rootRef);
+  usePhoneTilt(phoneSceneRef);
   const [mode, setModeState] = useState<Mode>('treatments');
   const [active, setActive] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
   const [zoom, setZoom] = useState<Feature | null>(null);
   const feature = features[mode][active];
+  const harvestMode = mode === 'harvest';
+  const phoneFeature = harvestMode ? 'Destinazioni' : 'Meteo';
   const changeMode = (next: Mode) => {
     if (next === mode) return;
     setModeState(next);
@@ -101,23 +105,48 @@ export default function PreviewHome() {
               <span><Smartphone size={16} aria-hidden="true" /> Smartphone, tablet e PC</span>
             </div>
           </div>
-          <div className="ms-hero-stage">
-            <div className="ms-stage-caption">
-              <span><i aria-hidden="true" /> Demo interattiva</span>
-              <span>Melo</span>
-            </div>
-            <div className="ms-app-window">
-              <div className="ms-app-top">
-                <img src={icon} alt="" width="24" height="24" />
-                <b>MelaSmart</b>
-              </div>
-              <ModeSwitch mode={mode} setMode={changeMode} label="Scegli la modalità nell’anteprima" />
-              <div className="ms-hero-demo" data-workspace={mode} aria-live="polite">
-                <div key={mode} className="ms-hero-demo-content">
-                  {mode === 'harvest' ? <HarvestDemo /> : <TreatmentDemo />}
+          <div className="ms-phone-stage">
+            <div className="ms-phone-scene" ref={phoneSceneRef}>
+              <div className="ms-phone-frame">
+                <div className="ms-app-window">
+                  <div className="ms-phone-camera" aria-hidden="true" />
+                  <div className="ms-app-top">
+                    <img src={icon} alt="" width="24" height="24" />
+                    <b>MelaSmart</b>
+                    <span className="ms-phone-demo-tag">Demo</span>
+                  </div>
+                  <ModeSwitch mode={mode} setMode={changeMode} label="Scegli la modalità nell’anteprima" />
+                  <div className="ms-hero-demo" data-workspace={mode}>
+                    <div className="ms-hero-demo-layer" data-active={!harvestMode} aria-hidden={harvestMode}>
+                      <TreatmentDemo />
+                    </div>
+                    <div className="ms-hero-demo-layer" data-active={harvestMode} aria-hidden={!harvestMode}>
+                      <HarvestDemo />
+                    </div>
+                  </div>
+                  <div className="ms-phone-home-indicator" aria-hidden="true" />
                 </div>
               </div>
             </div>
+
+            <button
+              className="ms-phone-note"
+              onClick={() => {
+                setActive(Math.max(0, features[mode].findIndex(item => item.label === phoneFeature)));
+                jump('ms-functions');
+              }}
+            >
+              <span className="ms-phone-note-icon">
+                {harvestMode ? <Boxes size={22} aria-hidden="true" /> : <CloudSun size={22} aria-hidden="true" />}
+              </span>
+              <span className="ms-phone-note-copy" key={mode}>
+                <b>{harvestMode ? 'Segui ogni cassa' : 'Scegli quando entrare in campo'}</b>
+                <span>
+                  {harvestMode ? 'Esplora le destinazioni' : 'Esplora il meteo'}
+                  <ArrowUpRight size={14} aria-hidden="true" />
+                </span>
+              </span>
+            </button>
           </div>
         </section>
       </div>

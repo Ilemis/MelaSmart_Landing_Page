@@ -166,48 +166,81 @@
   outline-color: #e5f4ad;
 }
 
-.ms-home.ms-experience .ms-hero-backdrop .ms-hero-stage {
-  padding: 15px;
-  border: 1px solid #e7f2dd46;
-  border-radius: 26px;
-  background: #192e27df;
-  color: #f1f6eb;
-  box-shadow: 0 24px 55px #10282055;
-  backdrop-filter: none;
-  animation: ms-stage-arrive 520ms var(--ms-ease) both;
+.ms-experience .ms-phone-stage {
+  display: grid;
+  grid-template-columns: minmax(0, 1.85fr) minmax(132px, 1fr);
+  gap: 16px;
+  align-items: center;
+  min-width: 0;
+  animation: ms-stage-arrive 680ms var(--ms-ease) both;
 }
 
-.ms-experience .ms-stage-caption {
-  margin: 2px 5px 12px;
-  color: #e2ecdf;
-  font-size: 11px;
-  font-weight: 550;
-  letter-spacing: .01em;
+.ms-experience .ms-phone-scene {
+  min-width: 0;
+  padding: 8px;
+  perspective: 1100px;
 }
 
-.ms-experience .ms-stage-caption > span:last-child {
-  display: inline;
-  color: #c1d7bd;
+.ms-experience .ms-phone-frame {
+  position: relative;
+  width: min(100%, 355px);
+  margin-inline: auto;
+  padding: 8px;
+  border: 1px solid #aabdb0;
+  border-radius: 39px;
+  background: #192622;
+  box-shadow: inset 0 0 0 2px #42554d, 0 24px 55px #0b1a1766;
 }
 
-.ms-experience .ms-stage-caption i {
-  width: 7px;
-  height: 7px;
-  background: var(--ms-leaf);
+.ms-experience .ms-phone-frame::before,
+.ms-experience .ms-phone-frame::after {
+  position: absolute;
+  width: 3px;
+  border-radius: 3px;
+  background: #899e91;
+  content: '';
 }
 
-.ms-experience .ms-app-window {
-  padding: 18px 18px 0;
+.ms-experience .ms-phone-frame::before {
+  top: 100px;
+  right: -3px;
+  height: 48px;
+}
+
+.ms-experience .ms-phone-frame::after {
+  top: 74px;
+  left: -3px;
+  height: 36px;
+}
+
+.ms-experience .ms-phone-frame .ms-app-window {
+  padding: 11px 13px 9px;
   border: 0;
-  border-radius: 16px;
+  border-radius: 30px;
   background: #fff;
   color: var(--ms-ink);
   box-shadow: none;
 }
 
+.ms-experience .ms-phone-camera {
+  width: 53px;
+  height: 13px;
+  margin: 0 auto 15px;
+  border-radius: 999px;
+  background: #192622;
+}
+
+.ms-experience .ms-phone-home-indicator {
+  width: 79px;
+  height: 4px;
+  margin: 5px auto 0;
+  border-radius: 999px;
+  background: #718077;
+}
+
 .ms-experience .ms-app-top {
   gap: 8px;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
   font-size: 13px;
 }
 
@@ -216,22 +249,154 @@
   height: 24px;
 }
 
-.ms-experience .ms-hero-demo {
-  min-height: 337px;
+.ms-experience .ms-app-top > .ms-phone-demo-tag {
+  display: inline;
+  margin-left: auto;
+  padding: 3px 7px;
+  border: 1px solid var(--ms-line);
+  border-radius: 6px;
+  color: var(--ms-muted);
+  font-size: 10px;
+  font-weight: 550;
 }
 
-.ms-experience .ms-hero-demo-content {
-  animation: ms-panel-arrive 240ms ease both;
+.ms-experience .ms-hero-demo {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  overflow: hidden;
+}
+
+.ms-experience .ms-hero-demo-layer {
+  grid-area: 1 / 1;
+  min-width: 0;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(-14px);
+  transition: opacity 200ms ease, transform 360ms var(--ms-ease), visibility 0s linear 360ms;
+}
+
+.ms-experience .ms-hero-demo-layer + .ms-hero-demo-layer {
+  transform: translateX(14px);
+}
+
+.ms-experience .ms-hero-demo-layer[data-active=true] {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0s;
 }
 
 .ms-experience .ms-hero-demo .ms-demo-heading h3 {
-  font-size: 22px;
+  font-size: 20px;
   letter-spacing: -.025em;
 }
 
 .ms-experience .ms-hero-demo .ms-demo-label {
   color: var(--ms-muted);
   font-size: 10px;
+}
+
+.ms-experience .ms-hero-demo-layer .ms-weather-bars > i {
+  transform: scaleY(.55);
+  transform-origin: bottom;
+  transition: transform 480ms var(--ms-ease);
+}
+
+.ms-experience .ms-hero-demo-layer .ms-bar-track > i {
+  transform: scaleX(.2);
+  transform-origin: left;
+  transition: transform 480ms var(--ms-ease);
+}
+
+.ms-experience .ms-hero-demo-layer[data-active=true] :is(.ms-weather-bars, .ms-bar-track) > i {
+  transform: none;
+}
+
+.ms-experience .ms-phone-note {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 12px;
+  min-width: 0;
+  padding: 17px;
+  border: 1px solid #e1eddb85;
+  border-radius: 17px;
+  background: #17392ded;
+  color: #f2f6ee;
+  text-align: left;
+  box-shadow: 0 16px 35px #0d22194d;
+  transition: background 180ms ease, transform 260ms var(--ms-ease);
+}
+
+.ms-experience .ms-phone-note:hover {
+  transform: translateY(-3px);
+  background: #23503f;
+}
+
+.ms-experience .ms-phone-note-icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  flex: none;
+  border-radius: 13px;
+  background: var(--ms-leaf);
+  color: var(--ms-forest);
+}
+
+.ms-experience[data-mode=harvest] .ms-phone-note-icon {
+  background: #f2dfce;
+  color: #773529;
+}
+
+.ms-experience .ms-phone-note-copy {
+  min-width: 0;
+  animation: ms-copy-arrive 300ms var(--ms-ease) both;
+}
+
+.ms-experience .ms-phone-note b {
+  display: block;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.ms-experience .ms-phone-note-copy > span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 6px;
+  color: #d3e6cc;
+  font-size: 11px;
+}
+
+.ms-experience .ms-phone-note svg {
+  flex: none;
+}
+
+@media (min-width: 701px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .ms-experience .ms-phone-frame {
+    transform: rotateX(var(--ms-phone-tilt-x, 2deg)) rotateY(var(--ms-phone-tilt-y, -7deg));
+    transition: transform 480ms var(--ms-ease);
+  }
+
+  .ms-experience .ms-phone-scene[data-tilting=true] .ms-phone-frame {
+    transition-duration: 150ms;
+  }
+}
+
+@media (max-width: 1160px) {
+  .ms-experience .ms-phone-stage {
+    grid-template-columns: minmax(0, 355px);
+    justify-content: center;
+    gap: 9px;
+  }
+
+  .ms-experience .ms-phone-note {
+    flex-direction: row;
+    align-items: center;
+    margin-inline: 8px;
+    padding: 11px 13px;
+  }
 }
 
 .ms-experience .ms-mode-switch {
@@ -423,7 +588,6 @@
   min-height: 515px;
   border-radius: 24px;
   box-shadow: none;
-  animation: ms-panel-arrive 240ms ease both;
 }
 
 .ms-experience .ms-feature-copy {
@@ -590,9 +754,22 @@
   to { opacity: 1; transform: none; }
 }
 
-@keyframes ms-panel-arrive {
-  from { opacity: .75; }
-  to { opacity: 1; }
+.ms-experience .ms-feature-panel .ms-feature-copy {
+  animation: ms-copy-arrive 300ms var(--ms-ease) both;
+}
+
+.ms-experience .ms-feature-panel .ms-preview-media {
+  animation: ms-preview-arrive 460ms var(--ms-ease) both;
+}
+
+@keyframes ms-copy-arrive {
+  from { opacity: .4; transform: translateY(5px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes ms-preview-arrive {
+  from { opacity: .35; transform: translateX(12px) scale(.985); }
+  to { opacity: 1; transform: none; }
 }
 
 @media (max-width: 1024px) {
@@ -678,14 +855,18 @@
     font-size: 12px;
   }
 
-  .ms-home.ms-experience .ms-hero-backdrop .ms-hero-stage {
-    padding: 10px;
-    border-radius: 20px;
+  .ms-experience .ms-phone-stage {
+    grid-template-columns: minmax(0, 350px);
   }
 
-  .ms-experience .ms-app-window {
-    padding: 14px 12px 0;
-    border-radius: 13px;
+  .ms-experience .ms-phone-scene {
+    padding-block: 0;
+  }
+
+  .ms-experience .ms-phone-frame .ms-app-window > .ms-mode-switch button {
+    gap: 4px;
+    padding-inline: 5px;
+    font-size: 11px;
   }
 
   .ms-experience .ms-season-nav > button {
@@ -795,5 +976,9 @@
 
   .ms-experience .ms-mode-switch::before {
     transition: none;
+  }
+
+  .ms-experience .ms-phone-note:hover {
+    transform: none;
   }
 }
