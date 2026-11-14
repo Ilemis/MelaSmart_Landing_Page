@@ -1,7 +1,7 @@
-import { Bot, Brain, Bug, Camera, Check, ChevronRight, CloudSun, Droplets, FileScan, FlaskConical, History, Layers, Leaf, Mic, Package, Plus, Search, Send, ShoppingCart, Tractor, Upload, Wind, Zap } from 'lucide-react';
+import { Bot, Brain, Bug, Camera, Check, ChevronRight, CloudSun, Droplets, FileScan, FlaskConical, History, Layers, Leaf, Mic, Package, Plus, Search, Send, ShoppingCart, Upload, Wind, Zap } from 'lucide-react';
 import './PreviewAppScreens.css';
 
-export type TreatmentScreen = 'mixture' | 'weather' | 'stock' | 'monitoring' | 'assistant';
+export type TreatmentScreen = 'weather' | 'stock' | 'monitoring' | 'assistant';
 
 // Editorial reconstructions of the current app UI, with synthetic sample data.
 // They are deliberately static: navigation and actions belong to the real app.
@@ -16,10 +16,6 @@ export default function PreviewAppScreens({ screen }: { screen: TreatmentScreen 
         <div className="ms-ai-input"><span>Scrivi la tua domanda…</span><Mic size={15}/></div><div className="ms-ai-actions"><span><Camera size={13}/> SCATTA</span><span><Upload size={13}/> CARICA</span><span><Send size={13}/> INVIA</span></div>
         <p className="ms-screen-footnote">Foto opzionale: con la foto le informazioni di contesto non vengono incluse.</p><div className="ms-ai-notice">L’AI può fornire informazioni inesatte o incomplete. Verifica sempre i dati ufficiali e le prescrizioni delle etichette.</div>
         <div className="ms-ai-history"><h4><History size={16}/> Cronologia domande</h4><span>Premium · fino a 200</span><div><small>DOMANDE SALVATE</small><b>Riapri una domanda dall’archivio <ChevronRight size={14}/></b></div></div>
-      </>}
-      {screen === 'mixture' && <>
-        <div className="ms-wizard-progress">{['Dove', 'Cosa', 'Come', 'Strategia'].map((label,i)=><span className={i===3?'is-current':''} key={label}><i>{i+1}</i>{label}</span>)}</div>
-        <div className="ms-strategy"><h4><Layers size={19} /> Strategia Miscela</h4><p>Area nominale: 1,2000 ha</p><p>Area corretta: 1,2000 ha · Riduzione: 0%</p><div className="ms-screen-action"><Tractor size={13} /> Modalità Campo</div><div className="ms-strategy-total"><small><Package size={12} /> Totali richiesti (Magazzino)</small><div><span>Prodotto di esempio A</span><b>1,20 kg</b></div><div><span>Prodotto di esempio B</span><b>0,60 L</b></div></div><div className="ms-water-summary"><div><small>Acqua totale</small><b>600 <em>L</em></b></div><div><small>Cariche</small><b>2 <em>× 300 L</em></b></div></div><div className="ms-load-row"><Droplets size={16}/><div><b>Per ogni carica da 300 L</b><small>A: 600 g · B: 300 ml</small></div><Check size={16}/></div><p className="ms-screen-footnote">Quantità dimostrative, senza valore agronomico.</p></div>
       </>}
       {screen === 'weather' && <>
         <h4><CloudSun size={19} /> Finestra di Trattamento</h4><p className="ms-screen-subtitle">3 campi selezionati · esempio di previsione</p>

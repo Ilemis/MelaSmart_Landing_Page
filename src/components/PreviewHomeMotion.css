@@ -714,6 +714,129 @@
   margin-top: 4px;
 }
 
+.ms-experience .ms-field-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  margin-top: 12px;
+  color: var(--ms-accent);
+  font-size: 14px;
+  font-weight: 650;
+  text-align: left;
+}
+
+.ms-experience .ms-field-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.ms-experience .ms-field-link svg {
+  flex: none;
+}
+
+.ms-experience .ms-field-mode {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
+  align-items: center;
+  gap: clamp(28px, 5.5vw, 76px);
+  margin-bottom: clamp(44px, 6vw, 80px);
+  padding: clamp(28px, 5.5vw, 76px);
+  border-radius: 30px;
+  color: var(--ms-paper);
+  background: #17212b;
+}
+
+.ms-experience .ms-field-copy h2 {
+  font-family: var(--ms-display);
+  font-size: clamp(37px, 4.2vw, 62px);
+  line-height: 1.04;
+}
+
+.ms-experience .ms-field-copy p {
+  color: #dbe4e7;
+  line-height: 1.65;
+}
+
+.ms-experience .ms-field-copy > p:first-of-type {
+  max-width: 445px;
+  margin-top: 14px;
+  font-size: clamp(16px, 1.5vw, 19px);
+}
+
+.ms-experience .ms-field-functions {
+  display: grid;
+  gap: 15px;
+  margin-block: 26px 22px;
+}
+
+.ms-experience .ms-field-functions > div {
+  padding-top: 15px;
+  border-top: 1px solid #3c4c54;
+}
+
+.ms-experience .ms-field-functions dt {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+}
+
+.ms-experience .ms-field-functions dt svg {
+  flex: none;
+  color: var(--ms-leaf);
+}
+
+.ms-experience .ms-field-functions dd {
+  max-width: 410px;
+  margin: 6px 0 0;
+  color: #dbe4e7;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.ms-experience .ms-field-copy .ms-field-launch {
+  font-size: 13px;
+}
+
+.ms-experience .ms-field-launch strong {
+  color: var(--ms-leaf);
+}
+
+.ms-experience .ms-field-visual {
+  width: min(100%, 256px);
+  min-width: 0;
+  margin: 0 auto;
+}
+
+.ms-experience .ms-field-screen {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid #51636a;
+  border-radius: 18px;
+  box-shadow: 0 16px 32px #080f1b80;
+}
+
+.ms-experience .ms-field-visual .ms-preview-caption {
+  margin-top: 12px;
+  color: #dbe4e7;
+}
+
+.ms-experience .ms-field-visual .ms-preview-caption button {
+  border-color: #62717c;
+  background: #263541;
+  color: var(--ms-paper);
+}
+
+.ms-experience .ms-field-visual .ms-preview-caption button:hover {
+  background: #364853;
+}
+
+.ms-experience .ms-field-visual .ms-preview-caption button:focus-visible {
+  outline-color: var(--ms-leaf);
+}
+
 .ms-experience .ms-how {
   padding-block: 56px;
   background: var(--ms-forest);
@@ -995,6 +1118,12 @@
 
   .ms-experience .ms-feature-visual {
     padding: 16px;
+  }
+
+  .ms-experience .ms-field-mode {
+    grid-template-columns: minmax(0, 1fr);
+    padding: clamp(20px, 6vw, 34px);
+    border-radius: 24px;
   }
 
   .ms-experience .ms-how {

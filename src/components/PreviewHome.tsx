@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import { useHomeMotion, usePhoneTilt } from './useHomeMotion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, ArrowUpRight, Check, ChevronDown, FlaskConical, Sprout, CloudSun, Package, Bot, BookOpen, Map, Boxes, ArrowRightLeft, Smartphone, Leaf, Bug, Menu, X, Maximize2, Plus } from 'lucide-react';
+import { ArrowDown, ArrowRight, ArrowUpRight, Check, ChevronDown, FlaskConical, Sprout, CloudSun, Package, Bot, BookOpen, Map, Boxes, ArrowRightLeft, Smartphone, Leaf, Bug, Menu, X, Maximize2, Plus, Gauge, ListChecks } from 'lucide-react';
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import Footer from './Footer';
 import icon from '@/assets/icon-melasmart.png';
@@ -9,6 +9,8 @@ import orchard from '@/assets/hero-banner.png';
 import treatmentsImage from '@/assets/app-screens/trattamenti.webp';
 import harvestImage from '@/assets/app-screens/raccolta.webp';
 import weatherImage from '@/assets/app-screens/meteo.webp';
+import mixtureImage from '@/assets/app-screens/miscela.webp';
+import fieldModeImage from '@/assets/app-screens/modalita-campo.webp';
 import PreviewAppScreens, { type TreatmentScreen } from './PreviewAppScreens';
 import './PreviewHome.css';
 import './PreviewHomeMotion.css';
@@ -47,6 +49,21 @@ const weatherCapture: Capture = {
   height: 1536,
   alt: 'Schede del meteo localizzato per oggi e domani, con avvisi, pioggia, vento, umidità e Delta T',
 };
+const mixtureCapture: Capture = {
+  src: mixtureImage,
+  width: 755,
+  height: 1536,
+  alt: 'Strategia Miscela con i totali di acqua e prodotti, il costo stimato e il pulsante per avviare la Modalità Campo',
+};
+const fieldModePreview = {
+  label: 'Modalità Campo',
+  image: {
+    src: fieldModeImage,
+    width: 761,
+    height: 1536,
+    alt: 'Modalità Campo con velocità GPS, confronto con la velocità impostata e checklist per botte piena e ultima carica',
+  },
+} satisfies Preview;
 
 const features: Record<Mode, Feature[]> = {
   treatments: [
@@ -57,7 +74,7 @@ const features: Record<Mode, Feature[]> = {
       description: 'Scegli i campi e i prodotti, imposta il volume d’acqua e calcola quanto serve per ogni carica. Salva l’intervento nel registro con i relativi costi.',
       bullets: ['Dosi e quantità per carica', 'Atomizzatore 3D con ugelli selezionabili', 'Registro degli interventi e dei costi'],
       details: 'Nel Garage puoi ruotare e ingrandire il modello 3D dell’atomizzatore e selezionare gli ugelli durante la calibrazione. Nel percorso guidato trovi anche dosi, acqua e strategia della miscela. Il TRV avanzato e l’esportazione completa del registro sono disponibili con Premium. Verifica sempre i dati inseriti e l’etichetta ufficiale del prodotto.',
-      screen: 'mixture',
+      image: mixtureCapture,
     },
     {
       label: 'Meteo',
@@ -303,6 +320,18 @@ export default function PreviewHome() {
                 <summary>Tutti i dettagli <Plus size={17} aria-hidden="true" /></summary>
                 <p>{feature.details}</p>
               </details>
+              {feature.image === mixtureCapture && (
+                <button
+                  type="button"
+                  className="ms-field-link"
+                  onClick={() => {
+                    jump('ms-field-mode');
+                    document.getElementById('ms-field-mode-title')?.focus({ preventScroll: true });
+                  }}
+                >
+                  Scopri la Modalità Campo <ArrowDown size={17} aria-hidden="true" />
+                </button>
+              )}
               {mode === 'harvest' && (
                 <span className="ms-free-note"><Check size={14} aria-hidden="true" /> Raccolta inclusa nel piano Free</span>
               )}
@@ -330,6 +359,37 @@ export default function PreviewHome() {
             </div>
           </div>
         </div>
+      </section>
+      <section id="ms-field-mode" className="ms-field-mode ms-shell" aria-labelledby="ms-field-mode-title">
+        <div className="ms-field-copy">
+          <h2 id="ms-field-mode-title" tabIndex={-1}>Modalità Campo</h2>
+          <p>Con il tablet o lo smartphone sul supporto in cabina, confronti a colpo d’occhio la velocità GPS con quella impostata per il trattamento.</p>
+          <dl className="ms-field-functions">
+            <div>
+              <dt><Gauge size={20} aria-hidden="true" /> Velocità sotto controllo</dt>
+              <dd>La barra e il colore segnalano se vai troppo piano o troppo forte. Puoi attivare l’avviso sonoro e la modalità notturna.</dd>
+            </div>
+            <div>
+              <dt><ListChecks size={20} aria-hidden="true" /> Una lista per ogni carica</dt>
+              <dd>Consulta le quantità per la botte piena e per l’ultima carica parziale, quando serve. Spunta i prodotti via via che li aggiungi.</dd>
+            </div>
+          </dl>
+          <p className="ms-field-launch">Prima di partire, apri <strong>Avvia Modalità Campo</strong> da <strong>Strategia Miscela</strong> e consenti l’accesso alla posizione.</p>
+        </div>
+        <figure className="ms-field-visual">
+          <CaptureImage capture={fieldModePreview.image} className="ms-field-screen" />
+          <figcaption className="ms-preview-caption">
+            <span>Schermata dell’app</span>
+            <button
+              type="button"
+              aria-label="Ingrandisci anteprima: Modalità Campo"
+              aria-haspopup="dialog"
+              onClick={event => openPreview(fieldModePreview, event.currentTarget)}
+            >
+              <Maximize2 size={14} aria-hidden="true" /> Ingrandisci
+            </button>
+          </figcaption>
+        </figure>
       </section>
       <section id="ms-how" className="ms-how"><div className="ms-shell"><div className="ms-section-heading"><div><span className="ms-eyebrow">Come funziona</span><h2>Un percorso semplice.<br />Anche a stagione iniziata.</h2></div><p>Parti da quello che ti serve oggi.<br />Il resto cresce insieme al tuo lavoro.</p></div><div className="ms-steps">{(mode === 'harvest' ? [['01', 'Organizza le varietà', 'Aggiungi le varietà. Se vuoi, disegna le zone oppure copia i confini dei campi.'], ['02', 'Registra la raccolta', 'Inserisci kg, casse o bins. Hai già iniziato? Parti dal totale raccolto finora.'], ['03', 'Segui le destinazioni', 'Registra gli utilizzi e programma quelli futuri, con le disponibilità sotto controllo.']] : [['01', 'Imposta il tuo campo', 'Seleziona gli appezzamenti e configura trattore e atomizzatore.'], ['02', 'Prepara il trattamento', 'Valuta il meteo, scegli i prodotti e calcola acqua e quantità per ogni carica.'], ['03', 'Conserva il lavoro fatto', 'Registra l’intervento e ritrova lo storico quando ne hai bisogno.']]).map(([n, title, text]) => <article key={n}><span>{n}</span><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
       <section id="ms-plans" className="ms-plans ms-shell"><div className="ms-section-heading"><div><span className="ms-eyebrow">Piani</span><h2>Free e Premium</h2></div><p>Inizia con il piano gratuito.<br />Passa a Premium quando ti servono più strumenti.</p></div><div className="ms-plan-grid"><article className="ms-plan-card"><div className="ms-plan-top"><div><span className="ms-eyebrow">Per iniziare</span><h3>Free</h3></div><div className="ms-price">0 €<small>senza abbonamento</small></div></div><p>Scopri MelaSmart e gestisci la tua raccolta.</p><ul><li><Check />Modalità Raccolta: diario, varietà e destinazioni</li><li><Check />Strumenti base per i trattamenti, con limiti</li><li><Check />Assistente AI Standard, con limiti giornalieri</li><li><Check />Accesso da smartphone, tablet e computer</li></ul><a className="ms-button ms-outline" href="https://app.melasmart.com" target="_blank" rel="noopener noreferrer">Inizia gratis <ArrowUpRight size={17} /></a></article><article className="ms-plan-card ms-premium"><div className="ms-plan-top"><div><span className="ms-eyebrow">Per più campi e strumenti</span><h3>Premium</h3></div><div className="ms-price">4,99 €<small>al mese</small></div></div><p>Più campi, più strumenti, più possibilità.</p><ul><li><Check />Fino a 50 campi, 50 trattori e 50 atomizzatori</li><li><Check />Agronomo AI Smart e Avanzato, analisi foto e cronologia</li><li><Check />OCR di fatture e DDT, Spesa Intelligente</li><li><Check />Meteo avanzato, TRV e cartografia aggiuntiva</li><li><Check />Esportazione completa dei trattamenti in PDF</li></ul><a className="ms-button ms-primary" href="https://app.melasmart.com" target="_blank" rel="noopener noreferrer">Scopri Premium nell’app <ArrowUpRight size={17} /></a></article></div><details className="ms-plan-details"><summary>Confronta tutte le funzioni <ChevronDown size={17} /></summary><div className="ms-table-wrap"><table><caption>Confronto dei piani MelaSmart</caption><thead><tr><th>Funzione</th><th>Free</th><th>Premium</th></tr></thead><tbody><tr><th scope="row">Gestione della raccolta</th><td>Inclusa</td><td>Inclusa: diario, varietà, casse e bins, destinazioni</td></tr><tr><th scope="row">Campi salvati per i trattamenti</th><td>1</td><td>Fino a 50</td></tr><tr><th scope="row">Trattori nel garage</th><td>1</td><td>Fino a 50</td></tr><tr><th scope="row">Atomizzatori nel garage</th><td>1</td><td>Fino a 50</td></tr><tr><th scope="row">TRV avanzato</th><td>Non incluso</td><td>Calcolo basato su chioma e ugelli attivi</td></tr><tr><th scope="row">Modalità AI</th><td>Standard</td><td>Anche Smart e Avanzato</td></tr><tr><th scope="row">Analisi AI delle fotografie</th><td>Non inclusa</td><td>Immagini di piante, sintomi e parassiti</td></tr><tr><th scope="row">Cronologia delle domande all’AI</th><td>Non salvata</td><td>Fino a 200 domande e risposte</td></tr><tr><th scope="row">Importazione fatture e DDT</th><td>Non inclusa</td><td>JPEG e PDF, con revisione prima del carico in magazzino</td></tr><tr><th scope="row">Spesa Intelligente</th><td>Non inclusa</td><td>Stime di fabbisogno e acquisti da consumi, superfici e scorte</td></tr><tr><th scope="row">Finestra di trattamento</th><td>Non inclusa</td><td>Pianificazione meteo per oggi e domani</td></tr><tr><th scope="row">Grafici meteo avanzati</th><td>Non inclusi</td><td>Andamenti orari di temperatura, nebbia, Delta T, pioggia e nuvole</td></tr><tr><th scope="row">Cartografia aggiuntiva</th><td>Mappa satellitare di base</td><td>Anche catasto, AGEA e livelli regionali, storici e tematici, dove disponibili</td></tr><tr><th scope="row">Esportazione PDF dei trattamenti</th><td>Massimo 3 righe</td><td>Esportazione completa</td></tr></tbody></table></div><p>Premium include 20 crediti AI al giorno. Smart usa 2 crediti e Avanzato 4 per risposta riuscita. Consulta nell’app i limiti e le condizioni aggiornate.</p></details></section>
