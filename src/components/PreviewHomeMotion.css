@@ -88,7 +88,7 @@
 }
 
 .ms-experience .ms-hero-backdrop .ms-hero-copy > p {
-  max-width: 42ch;
+  max-width: 410px;
   margin-top: 24px;
   color: #e1ebe0;
   font-size: 15px;
@@ -286,30 +286,86 @@
   transition-delay: 0s;
 }
 
-.ms-experience .ms-hero-demo .ms-demo-heading h3 {
-  font-size: 20px;
-  letter-spacing: -.025em;
+.ms-experience .ms-hero-demo-layer {
+  display: flex;
+  flex-direction: column;
+  background: #f6f7f9;
 }
 
-.ms-experience .ms-hero-demo .ms-demo-label {
-  color: var(--ms-muted);
-  font-size: 10px;
+.ms-experience .ms-hero-demo {
+  margin-top: 10px;
+  border-radius: 13px;
+  background: #f6f7f9;
 }
 
-.ms-experience .ms-hero-demo-layer .ms-weather-bars > i {
-  transform: scaleY(.55);
-  transform-origin: bottom;
-  transition: transform 480ms var(--ms-ease);
+.ms-experience .ms-phone-capture {
+  display: block;
+  width: 100%;
+  height: auto;
+  flex: none;
 }
 
-.ms-experience .ms-hero-demo-layer .ms-bar-track > i {
-  transform: scaleX(.2);
-  transform-origin: left;
-  transition: transform 480ms var(--ms-ease);
+.ms-experience .ms-phone-intro {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 9px;
+  margin: 10px 10px 1px;
+  padding: 13px 12px;
+  border-radius: 13px;
+  background: #e8f1e5;
+  color: var(--ms-forest);
 }
 
-.ms-experience .ms-hero-demo-layer[data-active=true] :is(.ms-weather-bars, .ms-bar-track) > i {
-  transform: none;
+.ms-experience .ms-phone-intro svg {
+  flex: none;
+  margin-top: 2px;
+}
+
+.ms-experience .ms-phone-intro b,
+.ms-experience .ms-phone-intro span {
+  display: block;
+}
+
+.ms-experience .ms-phone-intro b {
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.ms-experience .ms-phone-intro span {
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.ms-experience .ms-phone-actions {
+  display: grid;
+  gap: 10px;
+  min-width: 0;
+}
+
+.ms-experience .ms-phone-zoom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 8px 10px;
+  border: 1px solid #e1eddb70;
+  border-radius: 14px;
+  background: #17392ded;
+  color: #f2f6ee;
+  font-size: 11px;
+  font-weight: 600;
+  text-align: center;
+  transition: background 180ms ease;
+}
+
+.ms-experience .ms-phone-zoom svg {
+  flex: none;
+}
+
+.ms-experience .ms-phone-zoom:hover {
+  background: #23503f;
 }
 
 .ms-experience .ms-phone-note {
@@ -391,10 +447,13 @@
     gap: 9px;
   }
 
+  .ms-experience .ms-phone-actions {
+    margin-inline: 8px;
+  }
+
   .ms-experience .ms-phone-note {
     flex-direction: row;
     align-items: center;
-    margin-inline: 8px;
     padding: 11px 13px;
   }
 }
@@ -525,7 +584,7 @@
 
 .ms-experience .ms-section-heading > div > p,
 .ms-experience .ms-section-heading > p {
-  max-width: 42ch;
+  max-width: 410px;
   margin-top: 12px;
   color: var(--ms-muted);
   font-size: 15px;
@@ -622,6 +681,14 @@
 .ms-experience .ms-feature-visual {
   padding: 24px;
   background: var(--ms-tint);
+}
+
+.ms-experience .ms-feature-visual[data-capture=true] .ms-real-screen {
+  width: auto;
+  max-width: 100%;
+  max-height: 530px;
+  margin-inline: auto;
+  border-radius: 16px;
 }
 
 .ms-experience .ms-preview-caption {

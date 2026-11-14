@@ -12,7 +12,7 @@ export default function PreviewAppScreens({ screen }: { screen: TreatmentScreen 
     <div className="ms-screen-content">
       {screen === 'assistant' && <>
         <h4><Bot size={20}/> Assistente Agronomo</h4><p className="ms-screen-subtitle">MelaSmart AI™ Copilot</p>
-        <div className="ms-ai-levels"><span><Zap size={15}/><b>Standard</b></span><span><Brain size={15}/><b>Ragionamento</b><small>LOW</small></span><span><Brain size={15}/><b>Ragionamento</b><small>HIGH</small></span></div>
+        <div className="ms-ai-levels"><span><Zap size={15}/><b>Standard</b></span><span><Brain size={15}/><b>Smart</b></span><span><Brain size={15}/><b>Avanzato</b></span></div>
         <div className="ms-ai-input"><span>Scrivi la tua domanda…</span><Mic size={15}/></div><div className="ms-ai-actions"><span><Camera size={13}/> SCATTA</span><span><Upload size={13}/> CARICA</span><span><Send size={13}/> INVIA</span></div>
         <p className="ms-screen-footnote">Foto opzionale: con la foto le informazioni di contesto non vengono incluse.</p><div className="ms-ai-notice">L’AI può fornire informazioni inesatte o incomplete. Verifica sempre i dati ufficiali e le prescrizioni delle etichette.</div>
         <div className="ms-ai-history"><h4><History size={16}/> Cronologia domande</h4><span>Premium · fino a 200</span><div><small>DOMANDE SALVATE</small><b>Riapri una domanda dall’archivio <ChevronRight size={14}/></b></div></div>

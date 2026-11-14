@@ -6,25 +6,93 @@ import { Dialog, DialogContent, DialogTitle, DialogDescription } from '@/compone
 import Footer from './Footer';
 import icon from '@/assets/icon-melasmart.png';
 import orchard from '@/assets/hero-banner.png';
+import treatmentsImage from '@/assets/app-screens/trattamenti.webp';
+import harvestImage from '@/assets/app-screens/raccolta.webp';
+import weatherImage from '@/assets/app-screens/meteo.webp';
 import PreviewAppScreens, { type TreatmentScreen } from './PreviewAppScreens';
 import './PreviewHome.css';
 import './PreviewHomeMotion.css';
 
 type Mode = 'treatments' | 'harvest';
-type Feature = { label: string; icon: typeof Leaf; title: string; description: string; bullets: string[]; details: string; image?: string; screen?: TreatmentScreen; demo?: 'diary' | 'varieties' | 'containers' | 'destinations' };
+type Capture = { src: string; width: number; height: number; alt: string };
+type Preview = {
+  label: string;
+  image?: Capture;
+  screen?: TreatmentScreen;
+  demo?: 'varieties' | 'containers' | 'destinations';
+};
+type Feature = Preview & {
+  icon: typeof Leaf;
+  title: string;
+  description: string;
+  bullets: string[];
+  details: string;
+};
+
+const treatmentsCapture: Capture = {
+  src: treatmentsImage,
+  width: 759,
+  height: 840,
+  alt: 'Finestra di trattamento con grafico orario e navigazione della modalità Trattamenti',
+};
+const harvestCapture: Capture = {
+  src: harvestImage,
+  width: 763,
+  height: 1278,
+  alt: 'Diario di raccolta con totale stagionale stimato, quantità di oggi e casse per formato',
+};
+const weatherCapture: Capture = {
+  src: weatherImage,
+  width: 757,
+  height: 1536,
+  alt: 'Schede del meteo localizzato per oggi e domani, con avvisi, pioggia, vento, umidità e Delta T',
+};
+
 const features: Record<Mode, Feature[]> = {
   treatments: [
-    { label: 'Miscela e registro', icon: FlaskConical, title: 'Ogni trattamento,\ncon i conti già fatti.', description: 'Seleziona i campi, imposta prodotti e volume d’acqua. MelaSmart ti accompagna nella preparazione delle cariche e nella registrazione del lavoro.', bullets: ['Quantità per ogni carica dell’atomizzatore', 'Campi, macchine e configurazioni salvate', 'Storico degli interventi e costi'], details: 'Il percorso guidato riunisce scelta dei campi, dosi, volume d’acqua e strategia della miscela. Sono disponibili strumenti di calibrazione, calcolo TRV e modalità campo con velocità GPS. Esportazioni e strumenti avanzati dipendono dal piano. Verifica sempre i dati inseriti e l’etichetta ufficiale del prodotto.', screen: 'mixture' },
-    { label: 'Meteo', icon: CloudSun, title: 'La previsione diventa\nun’indicazione utile.', description: 'Consulta il meteo localizzato e le finestre di trattamento. Temperatura, vento, umidità e Delta T aiutano a leggere le condizioni previste.', bullets: ['Previsioni localizzate sui campi', 'Finestre orarie con semafori leggibili', 'Grafici e strumenti avanzati nel Premium'], details: 'I semafori sintetizzano le condizioni meteorologiche e aiutano a individuare le fasce orarie da valutare. Le indicazioni vanno confrontate con le condizioni reali in campo e con le prescrizioni del prodotto.', screen: 'weather' },
+    {
+      label: 'Miscela e registro',
+      icon: FlaskConical,
+      title: 'Prepara la miscela, conserva lo storico.',
+      description: 'Scegli i campi e i prodotti, imposta il volume d’acqua e calcola quanto serve per ogni carica. Salva l’intervento nel registro con i relativi costi.',
+      bullets: ['Dosi e quantità per carica', 'Atomizzatore 3D con ugelli selezionabili', 'Registro degli interventi e dei costi'],
+      details: 'Nel Garage puoi ruotare e ingrandire il modello 3D dell’atomizzatore e selezionare gli ugelli durante la calibrazione. Nel percorso guidato trovi anche dosi, acqua e strategia della miscela. Il TRV avanzato e l’esportazione completa del registro sono disponibili con Premium. Verifica sempre i dati inseriti e l’etichetta ufficiale del prodotto.',
+      screen: 'mixture',
+    },
+    {
+      label: 'Meteo',
+      icon: CloudSun,
+      title: 'Leggi il meteo prima di entrare in campo.',
+      description: 'Confronta le schede giornaliere per i campi selezionati o per una località. Ogni scheda mette in evidenza il livello di attenzione e le condizioni che lo determinano.',
+      bullets: ['Temperatura, vento, umidità, pioggia e Delta T', 'Segnalazione di probabile nebbia', 'Finestre orarie per oggi e domani con Premium'],
+      details: 'Le schede riportano le ragioni del semaforo, come pioggia in arrivo, raffiche o umidità elevata. Premium aggiunge finestre di trattamento orarie e grafici avanzati. Confronta le previsioni con le condizioni in campo e le prescrizioni del prodotto.',
+      image: weatherCapture,
+    },
     { label: 'Magazzino e spesa', icon: Package, title: 'Dalle scorte\nalla spesa intelligente.', description: 'Tieni sotto controllo i prodotti e pianifica gli acquisti partendo dal fabbisogno e da ciò che hai già in magazzino.', bullets: ['Scorte, consumi e costi nello stesso posto', 'Suggerimenti sui formati verificati', 'Foto e PDF di fatture con OCR Premium'], details: 'La spesa intelligente confronta fabbisogno e disponibilità. Quando il catalogo contiene confezioni verificate, propone formati e quantità da acquistare. Con OCR Premium puoi acquisire JPEG o PDF leggibili fino a 4 pagine e 8 MB, rivedendo i dati prima del carico.', screen: 'stock' },
-    { label: 'Assistente AI', icon: Bot, title: 'Le tue domande.\nIl contesto del tuo campo.', description: 'Interroga MelaSmart AI Copilot per approfondire dubbi agronomici e consultare informazioni utili al tuo lavoro.', bullets: ['Livello Standard e modalità Premium', 'Analisi di immagini con Vision Premium', 'Cronologia delle domande nel Premium'], details: 'L’assistente utilizza modelli Google Gemini. Disponibilità e limiti sono indicati nell’app. L’AI può commettere errori: è un supporto alla consultazione e non sostituisce l’etichetta ufficiale o la valutazione di un tecnico qualificato.', screen: 'assistant' },
+    {
+      label: 'Agronomo AI',
+      icon: Bot,
+      title: 'Un aiuto per leggere etichette e orientarti.',
+      description: 'Chiedi un supporto su prodotti, miscele o sintomi. Scegli una risposta rapida oppure un’analisi più approfondita, secondo il piano.',
+      bullets: ['Standard nel piano Free', 'Smart e Avanzato nel Premium', 'Analisi delle foto e cronologia nel Premium'],
+      details: 'Il livello Avanzato è pensato per le richieste più articolate e può presentare passaggi ed elementi da verificare. Le risposte sono un aiuto alla consultazione. Fai sempre riferimento all’etichetta ufficiale e al tuo tecnico.',
+      screen: 'assistant',
+    },
     { label: 'Monitoraggio', icon: Bug, title: 'Osservazioni in campo,\nsempre a portata di mano.', description: 'Segui il monitoraggio della carpocapsa sul melo, registra le catture e consulta l’avanzamento dei gradi giorno.', bullets: ['Registrazione delle catture', 'Biofix e calcolo dei gradi giorno', 'Avvisi al raggiungimento delle soglie'], details: 'Il monitoraggio Carpocapsa è dedicato alla coltura Melo e segue il ciclo a generazioni. Le informazioni aiutano a organizzare le osservazioni: le decisioni di intervento richiedono sempre una valutazione delle condizioni del frutteto.', screen: 'monitoring' },
   ],
   harvest: [
-    { label: 'Diario', icon: BookOpen, title: 'Sai quanto raccogli.\nE come sta andando.', description: 'Registra la raccolta per varietà, in kg oppure in casse e bins. Ritrova il totale della stagione e l’andamento delle giornate in un’unica vista.', bullets: ['Quantità per varietà e zona facoltativa', 'Totale iniziale per partire a stagione avviata', 'Pesi effettivi e stime chiaramente distinti'], details: 'Puoi inserire il totale già raccolto fino a una data, poi continuare giorno per giorno. I riepiloghi sono separati per coltura e anno; le registrazioni sono organizzate in mesi richiudibili. I totali iniziali non sono distribuiti nel grafico giornaliero.', demo: 'diary' },
+    {
+      label: 'Diario',
+      icon: BookOpen,
+      title: 'Tutta la raccolta, giorno per giorno.',
+      description: 'Registra kg, casse o bins per varietà. Nel diario ritrovi il totale della stagione, la quantità di oggi e i contenitori raggruppati per formato.',
+      bullets: ['Totale stagionale e riepilogo di oggi', 'Contenitori raggruppati per formato', 'Totale iniziale per partire a stagione avviata'],
+      details: 'I pesi stimati dai contenitori sono distinti da quelli effettivi. Puoi inserire una pesata quando la conosci. I riepiloghi restano separati per coltura e anno.',
+      image: harvestCapture,
+    },
     { label: 'Varietà e mappa', icon: Map, title: 'Il tuo frutteto,\nvarietà per varietà.', description: 'Organizza le varietà, assegna un colore e disegna le loro zone sulla mappa. Anche più gruppi di filari possono appartenere alla stessa varietà.', bullets: ['Zone e superfici sempre consultabili', 'Confini disegnati o copiati dai campi', 'Mappa integrata nella sezione Varietà'], details: 'I confini copiati dai campi dei trattamenti restano indipendenti dagli originali. Per registrare una raccolta non è obbligatorio disegnare una zona: puoi iniziare dalla sola varietà.', demo: 'varieties' },
     { label: 'Casse e bins', icon: Boxes, title: 'Tu conti le casse.\nMelaSmart stima i kg.', description: 'Configura i tuoi contenitori con il riempimento medio. Quando hai una pesata effettiva, inseriscila per usare il peso misurato.', bullets: ['Formati personalizzati di casse e bins', 'Peso medio distinto dalla capacità nominale', 'Ricalcolo delle stime con anteprima'], details: 'Ad esempio, 20 casse con riempimento medio di 13 kg corrispondono a circa 260 kg. Una pesata effettiva ha precedenza sulla stima. Puoi aggiornare esplicitamente le stime passate scegliendo coltura e stagione; le pesate effettive rimangono invariate.', demo: 'containers' },
-    { label: 'Destinazioni', icon: ArrowRightLeft, title: 'Sai dove va la frutta.\nE quanta ne resta.', description: 'Segui vendite, conferimenti, trasformazioni e scarti. Programma gli utilizzi futuri e distingui le quantità impegnate da quelle ancora disponibili.', bullets: ['Utilizzi registrati o programmati', 'Disponibilità complessiva e per varietà', 'Prodotti ottenuti dalle trasformazioni'], details: 'Una destinazione può essere completata in più passaggi. Per le trasformazioni puoi annotare il prodotto ottenuto in litri o kg. I saldi dipendono dai pesi e dalle registrazioni inserite; la funzione segue i flussi della raccolta, senza gestire clienti, incassi o contabilità.', demo: 'destinations' },
+    { label: 'Destinazioni', icon: ArrowRightLeft, title: 'Sai dove va la frutta.\nE quanta ne resta.', description: 'Segui vendite, conferimenti, trasformazioni e scarti. Programma gli utilizzi futuri e distingui le quantità impegnate da quelle ancora disponibili.', bullets: ['Casse e bins raccolti, utilizzati e impegnati', 'Disponibilità complessiva e per varietà', 'Prodotti ottenuti dalle trasformazioni'], details: 'Nelle destinazioni trovi una riga per ogni formato, con i conteggi di raccolto, utilizzato e impegnato. I pesi medi storici si possono consultare nel dettaglio. Per le trasformazioni puoi annotare il prodotto ottenuto in litri o kg. I saldi dipendono dai pesi e dalle registrazioni inserite; la funzione segue i flussi della raccolta, senza gestire clienti, incassi o contabilità.', demo: 'destinations' },
   ],
 };
 
@@ -35,10 +103,9 @@ function ModeSwitch({ mode, setMode, label }: { mode: Mode; setMode: (mode: Mode
   </div>;
 }
 
-function HarvestDemo({ view = 'diary' }: { view?: Feature['demo'] }) {
+function HarvestDemo({ view }: { view?: Preview['demo'] }) {
   return <div className="ms-harvest-demo">
-    <div className="ms-demo-heading"><div><small>RACCOLTA · MELO</small><h3>{view === 'destinations' ? 'Dove va la tua raccolta' : view === 'varieties' ? 'Le tue varietà' : view === 'containers' ? 'I tuoi contenitori' : 'Il tuo raccolto'}</h3></div><span className="ms-year">2026</span></div>
-    {view === 'diary' && <><div className="ms-harvest-totals"><div><small>Totale della stagione</small><strong>4.860 <em>kg</em></strong><span>Raccolto registrato</span></div><div><small>Ultima giornata</small><strong>390 <em>kg</em></strong><span>30 casse · peso stimato</span></div></div><div className="ms-demo-box"><b>Raccolto per varietà</b>{[['Golden Delicious', '2.080 kg', '82%'], ['Renetta del Canada', '1.560 kg', '62%'], ['Royal Gala', '1.220 kg', '49%']].map(([name, kg, width]) => <div className="ms-variety-row" key={name}><div><span>{name}</span><b>{kg}</b></div><div className="ms-bar-track"><i style={{ width }} /></div></div>)}</div><div className="ms-demo-foot"><BookOpen size={15} /> Diario <span>Varietà · Destinazioni</span></div></>}
+    <div className="ms-demo-heading"><div><small>RACCOLTA · MELO</small><h3>{view === 'destinations' ? 'Dove va la tua raccolta' : view === 'varieties' ? 'Le tue varietà' : 'I tuoi contenitori'}</h3></div><span className="ms-year">2026</span></div>
     {view === 'varieties' && <><p className="ms-demo-sub">Zone e superfici organizzate per varietà.</p>{[['Golden Delicious', '2 zone', '0,80 ha'], ['Renetta del Canada', '3 zone', '0,65 ha'], ['Royal Gala', '1 zona', '0,40 ha']].map(([name, zones, area], i) => <div className="ms-demo-variety" key={name}><i style={{ background: ['#d6aa48', '#7e9651', '#bc6759'][i] }} /><div><b>{name}</b><small>{zones} · {area}</small></div><ChevronDown size={17} /></div>)}<div className="ms-map-note"><Map size={24} /><div><b>Una mappa, tutte le varietà</b><p>Disegna le zone o copia i confini dei tuoi campi.</p></div></div></>}
     {view === 'containers' && <><div className="ms-container-card"><Boxes size={42} /><h4>Cassa da 15 kg</h4><span>Riempimento medio: 13 kg</span></div><div className="ms-conversion"><div><strong>20</strong><small>casse registrate</small></div><ArrowRight size={23} /><div><strong>≈ 260</strong><small>kg stimati</small></div></div><p className="ms-demo-notice"><Check size={16} />Hai una pesata? Il peso effettivo sostituisce la stima.</p></>}
     {view === 'destinations' && <><div className="ms-destination-total"><small>Disponibile da destinare</small><strong>1.860 <em>kg</em></strong><span>su 4.860 kg raccolti</span></div><div className="ms-destination-bar"><i /><i /><i /></div><div className="ms-balance"><span>Utilizzati</span><b>2.400 kg</b><span>Ancora impegnati</span><b>600 kg</b><span>Disponibili</span><b>1.860 kg</b></div><div className="ms-demo-notice"><ArrowRightLeft size={18} /><span><b>Trasformazione in succo</b><br />Quantità e prodotto ottenuto nello stesso percorso.</span></div></>}
@@ -46,8 +113,22 @@ function HarvestDemo({ view = 'diary' }: { view?: Feature['demo'] }) {
   </div>;
 }
 
-function TreatmentDemo() {
-  return <div className="ms-treatment-demo"><div className="ms-demo-heading"><div><small>TRATTAMENTI · MELO</small><h3>La giornata in campo</h3></div><CloudSun size={30} /></div><div className="ms-weather-demo"><div><b>Finestra di trattamento</b><span>Condizioni previste</span></div><div className="ms-weather-bars" aria-hidden="true">{[29, 40, 56, 72, 88, 95, 90, 82, 64, 48, 32, 25].map((h, i) => <i key={i} style={{ height: `${h}%`, background: i > 2 && i < 8 ? '#72964f' : '#d2b471' }} />)}</div><div className="ms-weather-hours"><span>06:00</span><b>09:00 – 14:00</b><span>18:00</span></div></div><div className="ms-treatment-metrics"><div><small>Campi selezionati</small><b>3 <em>appezzamenti</em></b></div><div><small>Superficie</small><b>1,85 <em>ha</em></b></div></div><div className="ms-demo-work"><FlaskConical size={21} /><div><b>Prepara il tuo trattamento</b><span>Campi, prodotti, acqua e cariche</span></div><ArrowRight size={19} /></div><p className="ms-demo-label">Anteprima illustrativa · dati di esempio</p></div>;
+function CaptureImage({ capture, className, loading = 'lazy' }: {
+  capture: Capture;
+  className?: string;
+  loading?: 'eager' | 'lazy';
+}) {
+  return (
+    <img
+      src={capture.src}
+      alt={capture.alt}
+      width={capture.width}
+      height={capture.height}
+      loading={loading}
+      decoding="async"
+      className={className}
+    />
+  );
 }
 
 export default function PreviewHome() {
@@ -59,10 +140,15 @@ export default function PreviewHome() {
   const [mode, setModeState] = useState<Mode>('treatments');
   const [active, setActive] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [zoom, setZoom] = useState<Feature | null>(null);
+  const [zoom, setZoom] = useState<Preview | null>(null);
   const feature = features[mode][active];
   const harvestMode = mode === 'harvest';
   const phoneFeature = harvestMode ? 'Destinazioni' : 'Meteo';
+  const phoneCapture = harvestMode ? harvestCapture : treatmentsCapture;
+  const openPreview = (preview: Preview, trigger: HTMLButtonElement) => {
+    zoomTrigger.current = trigger;
+    setZoom(preview);
+  };
   const changeMode = (next: Mode) => {
     if (next === mode) return;
     setModeState(next);
@@ -89,8 +175,8 @@ export default function PreviewHome() {
             </button>
             <h1 id="ms-hero-title">Dal primo<br />trattamento<br />all’ultima cassa.</h1>
             <p>
-              Gestisci meteo, miscele e registro dei trattamenti. Segui la raccolta
-              per varietà, dalle casse alle destinazioni. Tutto in MelaSmart, per frutteti e vigneti.
+              Controlla il meteo dei tuoi campi, prepara le miscele e registra gli interventi.
+              Segui la raccolta per varietà, dalle casse alle destinazioni.
             </p>
             <div className="ms-hero-cta">
               <a className="ms-button ms-primary" href="https://app.melasmart.com" target="_blank" rel="noopener noreferrer">
@@ -113,15 +199,19 @@ export default function PreviewHome() {
                   <div className="ms-app-top">
                     <img src={icon} alt="" width="24" height="24" />
                     <b>MelaSmart</b>
-                    <span className="ms-phone-demo-tag">Demo</span>
+                    <span className="ms-phone-demo-tag">Anteprima</span>
                   </div>
                   <ModeSwitch mode={mode} setMode={changeMode} label="Scegli la modalità nell’anteprima" />
                   <div className="ms-hero-demo" data-workspace={mode}>
                     <div className="ms-hero-demo-layer" data-active={!harvestMode} aria-hidden={harvestMode}>
-                      <TreatmentDemo />
+                      <div className="ms-phone-intro">
+                        <FlaskConical size={19} aria-hidden="true" />
+                        <div><b>Prima di trattare</b><span>Controlla la finestra oraria per i tuoi campi con Premium.</span></div>
+                      </div>
+                      <CaptureImage capture={treatmentsCapture} className="ms-phone-capture" loading="eager" />
                     </div>
                     <div className="ms-hero-demo-layer" data-active={harvestMode} aria-hidden={!harvestMode}>
-                      <HarvestDemo />
+                      <CaptureImage capture={harvestCapture} className="ms-phone-capture" loading="eager" />
                     </div>
                   </div>
                   <div className="ms-phone-home-indicator" aria-hidden="true" />
@@ -129,24 +219,34 @@ export default function PreviewHome() {
               </div>
             </div>
 
-            <button
-              className="ms-phone-note"
-              onClick={() => {
-                setActive(Math.max(0, features[mode].findIndex(item => item.label === phoneFeature)));
-                jump('ms-functions');
-              }}
-            >
-              <span className="ms-phone-note-icon">
-                {harvestMode ? <Boxes size={22} aria-hidden="true" /> : <CloudSun size={22} aria-hidden="true" />}
-              </span>
-              <span className="ms-phone-note-copy" key={mode}>
-                <b>{harvestMode ? 'Segui ogni cassa' : 'Scegli quando entrare in campo'}</b>
-                <span>
-                  {harvestMode ? 'Esplora le destinazioni' : 'Esplora il meteo'}
-                  <ArrowUpRight size={14} aria-hidden="true" />
+            <div className="ms-phone-actions">
+              <button
+                className="ms-phone-note"
+                onClick={() => {
+                  setActive(Math.max(0, features[mode].findIndex(item => item.label === phoneFeature)));
+                  jump('ms-functions');
+                }}
+              >
+                <span className="ms-phone-note-icon">
+                  {harvestMode ? <Boxes size={22} aria-hidden="true" /> : <CloudSun size={22} aria-hidden="true" />}
                 </span>
-              </span>
-            </button>
+                <span className="ms-phone-note-copy" key={mode}>
+                  <b>{harvestMode ? 'Segui ogni cassa' : 'Scegli quando entrare in campo'}</b>
+                  <span>
+                    {harvestMode ? 'Esplora le destinazioni' : 'Esplora il meteo'}
+                    <ArrowUpRight size={14} aria-hidden="true" />
+                  </span>
+                </span>
+              </button>
+              <button
+                type="button"
+                className="ms-phone-zoom"
+                aria-haspopup="dialog"
+                onClick={event => openPreview({ label: harvestMode ? 'Diario di raccolta' : 'Finestra di trattamento', image: phoneCapture }, event.currentTarget)}
+              >
+                <Maximize2 size={15} aria-hidden="true" /> Ingrandisci schermata
+              </button>
+            </div>
           </div>
         </section>
       </div>
@@ -207,10 +307,10 @@ export default function PreviewHome() {
                 <span className="ms-free-note"><Check size={14} aria-hidden="true" /> Raccolta inclusa nel piano Free</span>
               )}
             </div>
-            <div className="ms-feature-visual">
+            <div className="ms-feature-visual" data-capture={Boolean(feature.image)}>
               <div className="ms-preview-media">
                 {feature.image ? (
-                  <img className="ms-real-screen" src={feature.image} alt={`Schermata MelaSmart: ${feature.label}`} loading="lazy" width="580" height="354" />
+                  <CaptureImage capture={feature.image} className="ms-real-screen" />
                 ) : feature.screen ? (
                   <PreviewAppScreens screen={feature.screen} />
                 ) : (
@@ -221,10 +321,7 @@ export default function PreviewHome() {
                   <button
                     aria-label={`Ingrandisci anteprima: ${feature.label}`}
                     aria-haspopup="dialog"
-                    onClick={event => {
-                      zoomTrigger.current = event.currentTarget;
-                      setZoom(feature);
-                    }}
+                    onClick={event => openPreview(feature, event.currentTarget)}
                   >
                     <Maximize2 size={14} aria-hidden="true" /> Ingrandisci
                   </button>
@@ -235,7 +332,7 @@ export default function PreviewHome() {
         </div>
       </section>
       <section id="ms-how" className="ms-how"><div className="ms-shell"><div className="ms-section-heading"><div><span className="ms-eyebrow">Come funziona</span><h2>Un percorso semplice.<br />Anche a stagione iniziata.</h2></div><p>Parti da quello che ti serve oggi.<br />Il resto cresce insieme al tuo lavoro.</p></div><div className="ms-steps">{(mode === 'harvest' ? [['01', 'Organizza le varietà', 'Aggiungi le varietà. Se vuoi, disegna le zone oppure copia i confini dei campi.'], ['02', 'Registra la raccolta', 'Inserisci kg, casse o bins. Hai già iniziato? Parti dal totale raccolto finora.'], ['03', 'Segui le destinazioni', 'Registra gli utilizzi e programma quelli futuri, con le disponibilità sotto controllo.']] : [['01', 'Imposta il tuo campo', 'Seleziona gli appezzamenti e configura trattore e atomizzatore.'], ['02', 'Prepara il trattamento', 'Valuta il meteo, scegli i prodotti e calcola acqua e quantità per ogni carica.'], ['03', 'Conserva il lavoro fatto', 'Registra l’intervento e ritrova lo storico quando ne hai bisogno.']]).map(([n, title, text]) => <article key={n}><span>{n}</span><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
-      <section id="ms-plans" className="ms-plans ms-shell"><div className="ms-section-heading"><div><span className="ms-eyebrow">Piani</span><h2>Free e Premium</h2></div><p>Inizia con il piano gratuito.<br />Passa a Premium quando ti servono più strumenti.</p></div><div className="ms-plan-grid"><article className="ms-plan-card"><div className="ms-plan-top"><div><span className="ms-eyebrow">Per iniziare</span><h3>Free</h3></div><div className="ms-price">0 €<small>senza abbonamento</small></div></div><p>Scopri MelaSmart e gestisci la tua raccolta.</p><ul><li><Check />Modalità Raccolta: diario, varietà e destinazioni</li><li><Check />Strumenti base per i trattamenti, con limiti</li><li><Check />Assistente AI Standard, con limiti giornalieri</li><li><Check />Accesso da smartphone, tablet e computer</li></ul><a className="ms-button ms-outline" href="https://app.melasmart.com" target="_blank" rel="noopener noreferrer">Inizia gratis <ArrowUpRight size={17} /></a></article><article className="ms-plan-card ms-premium"><div className="ms-plan-top"><div><span className="ms-eyebrow">Per più campi e strumenti</span><h3>Premium</h3></div><div className="ms-price">4,99 €<small>al mese</small></div></div><p>Più campi, più strumenti, più possibilità.</p><ul><li><Check />Fino a 50 campi, 50 trattori e 50 atomizzatori</li><li><Check />AI Low e High, analisi foto e cronologia</li><li><Check />OCR di fatture e DDT, Spesa Intelligente</li><li><Check />Meteo avanzato, TRV e cartografia aggiuntiva</li><li><Check />Esportazione completa dei trattamenti in PDF</li></ul><a className="ms-button ms-primary" href="https://app.melasmart.com" target="_blank" rel="noopener noreferrer">Scopri Premium nell’app <ArrowUpRight size={17} /></a></article></div><details className="ms-plan-details"><summary>Confronta tutte le funzioni <ChevronDown size={17} /></summary><div className="ms-table-wrap"><table><caption>Confronto dei piani MelaSmart</caption><thead><tr><th>Funzione</th><th>Free</th><th>Premium</th></tr></thead><tbody><tr><th scope="row">Gestione della raccolta</th><td>Inclusa</td><td>Inclusa: diario, varietà, casse e bins, destinazioni</td></tr><tr><th scope="row">Campi salvati per i trattamenti</th><td>1</td><td>Fino a 50</td></tr><tr><th scope="row">Trattori nel garage</th><td>1</td><td>Fino a 50</td></tr><tr><th scope="row">Atomizzatori nel garage</th><td>1</td><td>Fino a 50</td></tr><tr><th scope="row">TRV avanzato</th><td>Non incluso</td><td>Calcolo basato su chioma e ugelli attivi</td></tr><tr><th scope="row">Modalità AI</th><td>Standard</td><td>Anche Ragionamento Low e High</td></tr><tr><th scope="row">Analisi AI delle fotografie</th><td>Non inclusa</td><td>Immagini di piante, sintomi e parassiti</td></tr><tr><th scope="row">Cronologia delle domande all’AI</th><td>Non salvata</td><td>Fino a 200 domande e risposte</td></tr><tr><th scope="row">Importazione fatture e DDT</th><td>Non inclusa</td><td>JPEG e PDF, con revisione prima del carico in magazzino</td></tr><tr><th scope="row">Spesa Intelligente</th><td>Non inclusa</td><td>Stime di fabbisogno e acquisti da consumi, superfici e scorte</td></tr><tr><th scope="row">Finestra di trattamento</th><td>Non inclusa</td><td>Pianificazione meteo per oggi e domani</td></tr><tr><th scope="row">Grafici meteo avanzati</th><td>Non inclusi</td><td>Andamenti orari di temperatura, nebbia, Delta T, pioggia e nuvole</td></tr><tr><th scope="row">Cartografia aggiuntiva</th><td>Mappa satellitare di base</td><td>Anche catasto, AGEA e livelli regionali, storici e tematici, dove disponibili</td></tr><tr><th scope="row">Esportazione PDF dei trattamenti</th><td>Massimo 3 righe</td><td>Esportazione completa</td></tr></tbody></table></div><p>Premium include 20 crediti AI al giorno: le modalità avanzate consumano più crediti per risposta. Consulta nell’app i limiti e le condizioni aggiornate.</p></details></section>
+      <section id="ms-plans" className="ms-plans ms-shell"><div className="ms-section-heading"><div><span className="ms-eyebrow">Piani</span><h2>Free e Premium</h2></div><p>Inizia con il piano gratuito.<br />Passa a Premium quando ti servono più strumenti.</p></div><div className="ms-plan-grid"><article className="ms-plan-card"><div className="ms-plan-top"><div><span className="ms-eyebrow">Per iniziare</span><h3>Free</h3></div><div className="ms-price">0 €<small>senza abbonamento</small></div></div><p>Scopri MelaSmart e gestisci la tua raccolta.</p><ul><li><Check />Modalità Raccolta: diario, varietà e destinazioni</li><li><Check />Strumenti base per i trattamenti, con limiti</li><li><Check />Assistente AI Standard, con limiti giornalieri</li><li><Check />Accesso da smartphone, tablet e computer</li></ul><a className="ms-button ms-outline" href="https://app.melasmart.com" target="_blank" rel="noopener noreferrer">Inizia gratis <ArrowUpRight size={17} /></a></article><article className="ms-plan-card ms-premium"><div className="ms-plan-top"><div><span className="ms-eyebrow">Per più campi e strumenti</span><h3>Premium</h3></div><div className="ms-price">4,99 €<small>al mese</small></div></div><p>Più campi, più strumenti, più possibilità.</p><ul><li><Check />Fino a 50 campi, 50 trattori e 50 atomizzatori</li><li><Check />Agronomo AI Smart e Avanzato, analisi foto e cronologia</li><li><Check />OCR di fatture e DDT, Spesa Intelligente</li><li><Check />Meteo avanzato, TRV e cartografia aggiuntiva</li><li><Check />Esportazione completa dei trattamenti in PDF</li></ul><a className="ms-button ms-primary" href="https://app.melasmart.com" target="_blank" rel="noopener noreferrer">Scopri Premium nell’app <ArrowUpRight size={17} /></a></article></div><details className="ms-plan-details"><summary>Confronta tutte le funzioni <ChevronDown size={17} /></summary><div className="ms-table-wrap"><table><caption>Confronto dei piani MelaSmart</caption><thead><tr><th>Funzione</th><th>Free</th><th>Premium</th></tr></thead><tbody><tr><th scope="row">Gestione della raccolta</th><td>Inclusa</td><td>Inclusa: diario, varietà, casse e bins, destinazioni</td></tr><tr><th scope="row">Campi salvati per i trattamenti</th><td>1</td><td>Fino a 50</td></tr><tr><th scope="row">Trattori nel garage</th><td>1</td><td>Fino a 50</td></tr><tr><th scope="row">Atomizzatori nel garage</th><td>1</td><td>Fino a 50</td></tr><tr><th scope="row">TRV avanzato</th><td>Non incluso</td><td>Calcolo basato su chioma e ugelli attivi</td></tr><tr><th scope="row">Modalità AI</th><td>Standard</td><td>Anche Smart e Avanzato</td></tr><tr><th scope="row">Analisi AI delle fotografie</th><td>Non inclusa</td><td>Immagini di piante, sintomi e parassiti</td></tr><tr><th scope="row">Cronologia delle domande all’AI</th><td>Non salvata</td><td>Fino a 200 domande e risposte</td></tr><tr><th scope="row">Importazione fatture e DDT</th><td>Non inclusa</td><td>JPEG e PDF, con revisione prima del carico in magazzino</td></tr><tr><th scope="row">Spesa Intelligente</th><td>Non inclusa</td><td>Stime di fabbisogno e acquisti da consumi, superfici e scorte</td></tr><tr><th scope="row">Finestra di trattamento</th><td>Non inclusa</td><td>Pianificazione meteo per oggi e domani</td></tr><tr><th scope="row">Grafici meteo avanzati</th><td>Non inclusi</td><td>Andamenti orari di temperatura, nebbia, Delta T, pioggia e nuvole</td></tr><tr><th scope="row">Cartografia aggiuntiva</th><td>Mappa satellitare di base</td><td>Anche catasto, AGEA e livelli regionali, storici e tematici, dove disponibili</td></tr><tr><th scope="row">Esportazione PDF dei trattamenti</th><td>Massimo 3 righe</td><td>Esportazione completa</td></tr></tbody></table></div><p>Premium include 20 crediti AI al giorno. Smart usa 2 crediti e Avanzato 4 per risposta riuscita. Consulta nell’app i limiti e le condizioni aggiornate.</p></details></section>
       <section className="ms-origin ms-shell"><div className="ms-origin-mark"><Leaf size={35} /><span>DAL CAMPO,<br />PER IL CAMPO.</span></div><div><span className="ms-eyebrow">Le origini</span><h2>Creata da un agricoltore.<br />Per chi il campo lo vive.</h2><p>MelaSmart nasce dall’esperienza diretta: preparare un trattamento, controllare le scorte, contare le casse. Problemi quotidiani, strumenti concreti.</p></div><Link to="/contatti" className="ms-text-button">Parliamone <ArrowUpRight size={18} /></Link></section>
       <section className="ms-faq ms-shell"><div><span className="ms-eyebrow">FAQ</span><h2>Le risposte, subito.</h2><Link to="/faq" className="ms-text-button">Tutte le domande frequenti <ArrowRight size={17} /></Link></div><div>{[['Devo installare qualcosa?', 'Puoi aprire MelaSmart direttamente nel browser. Sui dispositivi compatibili puoi anche aggiungerla alla schermata Home, come un’app.'], ['Posso usare la Raccolta gratuitamente?', 'Sì. La modalità Raccolta è disponibile anche nel piano Free, per Melo e Vite, con dati separati per coltura e anno.'], ['Funziona anche senza connessione?', 'Il supporto offline è parziale. Alcune funzioni locali possono restare disponibili dopo un utilizzo online; accesso, salvataggi sul server, meteo e AI richiedono una connessione.']].map(([q, a]) => <details key={q}><summary>{q}<Plus size={18} /></summary><p>{a}</p></details>)}</div></section>
       <section className="ms-final ms-shell"><div><span className="ms-eyebrow">Inizia gratis</span><h2>Porta MelaSmart<br />nel tuo campo.</h2></div><div><a href="https://app.melasmart.com" target="_blank" rel="noopener noreferrer" className="ms-button">Prova gratis <ArrowRight size={19} /></a><p>Nessuna carta. Parti dal tuo primo campo.</p></div></section>
@@ -248,6 +345,6 @@ export default function PreviewHome() {
         event.preventDefault();
         zoomTrigger.current.focus();
       }}
-    ><DialogTitle>{zoom?.label}</DialogTitle><DialogDescription>{zoom?.image ? 'Schermata reale dell’app, acquisita a novembre 2026.' : 'Ricostruzione illustrativa dell’interfaccia attuale con dati di esempio. Non è una sessione operativa.'}</DialogDescription>{zoom?.image && <img src={zoom.image} alt={`Schermata ingrandita: ${zoom.label}`} className="mx-auto max-h-[73dvh] w-auto object-contain rounded-2xl" />}{zoom && !zoom.image && <div className="ms-home ms-enlarged">{zoom.screen ? <PreviewAppScreens screen={zoom.screen} /> : <HarvestDemo view={zoom.demo} />}</div>}</DialogContent></Dialog>
+    ><DialogTitle>{zoom?.label}</DialogTitle><DialogDescription>{zoom?.image ? 'Schermata dell’app acquisita il 14 novembre 2026.' : 'Ricostruzione illustrativa dell’interfaccia attuale con dati di esempio. Non è una sessione operativa.'}</DialogDescription>{zoom?.image && <CaptureImage capture={zoom.image} className="mx-auto max-h-[73dvh] w-auto object-contain rounded-2xl" loading="eager" />}{zoom && !zoom.image && <div className="ms-home ms-enlarged">{zoom.screen ? <PreviewAppScreens screen={zoom.screen} /> : <HarvestDemo view={zoom.demo} />}</div>}</DialogContent></Dialog>
   </div>;
 }
