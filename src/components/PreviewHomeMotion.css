@@ -95,6 +95,34 @@
   line-height: 1.75;
 }
 
+.ms-experience .ms-update {
+  min-height: 44px;
+  gap: 9px;
+  margin-bottom: 24px;
+  padding: 6px 13px 6px 7px;
+  border-color: #ffffff50;
+  background: #18362c;
+  color: #eff5e9;
+  font-size: 12px;
+}
+
+.ms-experience .ms-update:hover {
+  background: #284a39;
+}
+
+.ms-experience .ms-update > span {
+  padding: 5px 9px;
+  background: #f5e6db;
+  color: #803729;
+  font-size: 11px;
+  letter-spacing: 0;
+}
+
+.ms-experience .ms-update > svg {
+  display: block;
+  flex: none;
+}
+
 .ms-experience .ms-hero .ms-primary,
 .ms-experience .ms-premium .ms-primary {
   background: var(--ms-leaf);
@@ -235,9 +263,6 @@
 .ms-experience .ms-hero-demo {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  grid-template-rows: minmax(0, 1fr);
-  aspect-ratio: 4 / 5;
-  min-height: 0;
   overflow: hidden;
 }
 
@@ -283,17 +308,33 @@
 .ms-experience .ms-phone-intro {
   display: flex;
   align-items: center;
-  flex: none;
-  gap: 8px;
-  padding: 8px 12px;
+  flex: 1;
+  gap: 9px;
+  margin: 10px 10px 1px;
+  padding: 13px 12px;
+  border-radius: 13px;
   background: #e8f1e5;
   color: var(--ms-forest);
-  font-size: 12px;
-  font-weight: 600;
 }
 
 .ms-experience .ms-phone-intro svg {
   flex: none;
+  margin-top: 2px;
+}
+
+.ms-experience .ms-phone-intro b,
+.ms-experience .ms-phone-intro span {
+  display: block;
+}
+
+.ms-experience .ms-phone-intro b {
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.ms-experience .ms-phone-intro span {
+  font-size: 12px;
+  line-height: 1.45;
 }
 
 .ms-experience .ms-phone-actions {
@@ -472,6 +513,52 @@
 .ms-experience .ms-app-window button:focus-visible {
   outline-color: var(--ms-accent);
   outline-offset: -2px;
+}
+
+.ms-experience .ms-season-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid var(--ms-line);
+}
+
+.ms-experience .ms-season-nav > button {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 84px;
+  padding: 16px 24px;
+  color: var(--ms-ink);
+  text-align: left;
+  transition: background 160ms ease;
+}
+
+.ms-experience .ms-season-nav > button + button {
+  border-left: 1px solid var(--ms-line);
+}
+
+.ms-experience .ms-season-nav > button:hover {
+  background: #eaf0e6;
+}
+
+.ms-experience .ms-season-nav > button > svg {
+  flex: none;
+  color: var(--ms-accent);
+}
+
+.ms-experience .ms-season-nav > button > svg:last-child {
+  margin-left: auto;
+}
+
+.ms-experience .ms-season-nav b {
+  display: block;
+  font-size: 15px;
+  font-weight: 650;
+}
+
+.ms-experience .ms-season-nav button span > span {
+  display: block;
+  color: var(--ms-muted);
+  font-size: 13px;
 }
 
 .ms-experience :is(.ms-section-heading, .ms-origin, .ms-faq, .ms-final) h2 {
@@ -717,40 +804,22 @@
 }
 
 .ms-experience .ms-field-visual {
-  display: grid;
-  gap: 12px;
-  width: min(100%, 420px);
+  width: min(100%, 256px);
   min-width: 0;
   margin: 0 auto;
 }
 
-.ms-experience .ms-field-screen-detail {
-  overflow: hidden;
-  border: 1px solid #51636a;
-  border-radius: 14px;
-  background: #1f2937;
-}
-
-.ms-experience .ms-field-screen-detail img {
+.ms-experience .ms-field-screen {
   display: block;
   width: 100%;
   height: auto;
-}
-
-.ms-experience .ms-field-screen-speed {
-  aspect-ratio: 761 / 542;
-}
-
-.ms-experience .ms-field-screen-loads {
-  aspect-ratio: 761 / 427;
-}
-
-.ms-experience .ms-field-screen-loads img {
-  transform: translateY(-36.2%);
+  border: 1px solid #51636a;
+  border-radius: 18px;
+  box-shadow: 0 16px 32px #080f1b80;
 }
 
 .ms-experience .ms-field-visual .ms-preview-caption {
-  max-width: none;
+  margin-top: 12px;
   color: #dbe4e7;
 }
 
@@ -812,17 +881,6 @@
   box-shadow: none;
 }
 
-.ms-experience .ms-plans-shared {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.ms-experience .ms-plans-shared svg {
-  flex: none;
-  color: var(--ms-forest);
-}
-
 .ms-experience .ms-plan-card :is(p, li) {
   font-size: 14px;
 }
@@ -879,48 +937,6 @@
 
 .ms-experience .ms-final p {
   font-size: 12px;
-}
-
-.ms-zoom-control {
-  display: inline-flex;
-  align-items: center;
-  justify-self: start;
-  gap: 8px;
-  min-height: 44px;
-  padding-inline: 14px;
-  border: 1px solid #d9e3d7;
-  border-radius: 999px;
-  background: #e9f1e6;
-  color: #17392d;
-  font-size: 14px;
-  font-weight: 600;
-}
-
-.ms-image-viewer {
-  min-width: 0;
-  max-height: 65dvh;
-  overflow: auto;
-  border-radius: 14px;
-  background: #f6f8f2;
-  overscroll-behavior: contain;
-}
-
-.ms-image-viewer img {
-  display: block;
-  width: auto;
-  height: auto;
-  max-width: min(100%, 520px);
-  margin-inline: auto;
-}
-
-.ms-image-viewer[data-zoomed=true] img {
-  max-width: none;
-}
-
-.ms-zoom-control:focus-visible,
-.ms-image-viewer:focus-visible {
-  outline: 2px solid #326944;
-  outline-offset: 2px;
 }
 
 @keyframes ms-stage-arrive {
@@ -1015,6 +1031,11 @@
     margin-top: 16px;
   }
 
+  .ms-experience .ms-update {
+    margin-bottom: 18px;
+    font-size: 11px;
+  }
+
   .ms-experience .ms-hero-cta {
     margin-top: 20px;
     gap: 8px 15px;
@@ -1032,9 +1053,31 @@
     padding-block: 0;
   }
 
-  .ms-experience .ms-phone-frame .ms-app-window > .ms-mode-switch,
-  .ms-experience .ms-phone-note {
+  .ms-experience .ms-phone-frame .ms-app-window > .ms-mode-switch button {
+    gap: 4px;
+    padding-inline: 5px;
+    font-size: 11px;
+  }
+
+  .ms-experience .ms-season-nav > button {
+    gap: 9px;
+    padding: 12px 9px;
+  }
+
+  .ms-experience .ms-season-nav > button > svg:first-child {
+    width: 18px;
+  }
+
+  .ms-experience .ms-season-nav > button > svg:last-child {
     display: none;
+  }
+
+  .ms-experience .ms-season-nav b {
+    font-size: 13px;
+  }
+
+  .ms-experience .ms-season-nav button span > span {
+    font-size: 11px;
   }
 
   .ms-experience .ms-explorer {
